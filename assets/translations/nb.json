@@ -1,0 +1,294 @@
+{
+  "appTitle": "Listox",
+  "loading": {
+    "just_a_moment": "Et øyeblikk..."
+  },
+  "error": {
+    "generic_titles": {
+      "title1": "Oi!",
+      "title2": "Noe gikk galt",
+      "title3": "Å, nei!",
+      "title4": "Hmm...",
+      "title5": "Vel",
+      "title6": "Uventet!",
+      "title7": "Igjen!",
+      "title8": "Au",
+      "title9": "Feil",
+      "title10": "Se her",
+      "title11": "Oops"
+    }
+  },
+  "error_message": {
+    "grocery_not_found": "Varen ble ikke funnet",
+    "grocery_storage": "Lagring av data mislyktes",
+    "common": {
+      "unexpected": "Oops! Det oppstod en uventet feil... Vi jobber med det! 🚨"
+    },
+    "email": {
+      "failed_to_open_support": "Oops! Klarte ikke å åpne e-postappen... Du kan kontakte oss på {} 💌"
+    },
+    "preferences_unexpected": "Det oppstod et uventet problem"
+  },
+  "label": {
+    "oops": "Oops",
+    "whoops": "Oops!"
+  },
+  "snackbar": {
+    "badConnection": {
+      "title": "Ingen tilkobling",
+      "description": "Sjekk internettilkoblingen din"
+    }
+  },
+  "common": {
+    "cancel": "Avbryt",
+    "delete": "Slett",
+    "edit": "Rediger"
+  },
+  "account": {
+    "title": "Konto",
+    "premium_status_premium": "Premium-bruker",
+    "premium_status_upgrade": "Premium",
+    "premium_expiry": "Premium aktiv til {date}. Takk for støtten <3",
+    "premium_upgrade_cta": "Oppgrader til Premium for ubegrenset administrasjon!",
+    "notifications_enabled": "Aktivert",
+    "notifications_disabled": "Deaktivert",
+    "notifications_description": "En rask påminnelse før handler",
+    "section_notifications": "Varsler",
+    "section_preferences": "Innstillinger",
+    "language_title": "Språk",
+    "language_subtitle": "Grensesnittspråk",
+    "haptics_title": "Haptics",
+    "haptics_subtitle": "Vibrasjonsfeedback",
+    "section_theme": "Tema",
+    "theme_system": "System",
+    "theme_light": "Lys",
+    "theme_dark": "Mørk",
+    "section_colorations": "Farger",
+    "section_more": "Mer",
+    "about_app": "Om appen",
+    "privacy_terms": "Personvern",
+    "contact_support": "Kontakt support"
+  },
+  "dialog": {
+    "delete_grocery": {
+      "title": "Slett vare?",
+      "subtitle": "Er du sikker på at du vil slette \"{name}\"? Denne handlingen kan ikke angres ⛔️"
+    },
+    "notification_mode": {
+      "title": "Påminnelsesplan",
+      "auto_label": "Automatisk",
+      "auto_description": "Forutsier neste kjøp",
+      "custom_days_label": "Egendefinerte dager",
+      "custom_days_description": "Velg bestemte dager"
+    },
+    "permission": {
+      "notifications_title": "Tillatelse",
+      "notifications_subtitle": "For å motta varsler, tillat denne appen",
+      "notifications_subtitle_settings": "For å motta varsler, tillat denne appen i systeminnstillingene"
+    }
+  },
+  "edit_grocery": {
+    "title": "Rediger vare\n\"{name}\"",
+    "input_name_hint": "Hva heter den?",
+    "input_period_hint": "Hvor mange dager mellom kjøpene?",
+    "input_period_default": {
+      "one": "Hver {} dag",
+      "other": "Hver {} dag"
+    },
+    "input_period_description": "Angi en omtrentlig periode. Listox vil lære av kjøpshistorikken din!",
+    "button_update": "Oppdater"
+  },
+  "home": {
+    "header_title": "Produkter du kanskje trenger å kjøpe",
+    "tab_this_week": "Denne Uken",
+    "tab_later": "Senere",
+    "purchase_confirmed": "Kjøp bekreftet!",
+    "purchase_confirmed_description": "Vi lærer av bruken din og forutsier når du trenger disse varene igjen",
+    "due_overdue": {
+      "one": "{} dag forsinket",
+      "other": "{} dager forsinket"
+    },
+    "due_today": "Forfaller i dag",
+    "due_tomorrow": "Forfaller i morgen",
+    "due_in_days": {
+      "one": "Om {} dag",
+      "other": "Om {} dager"
+    },
+    "pre_list_this_week": "Kan være nødvendig denne uken",
+    "pre_list_later": "Kan være nødvendig senere",
+    "checked_section_title": "Avkryssede varer",
+    "fully_stocked": "Beholdningen din er tilstrekkelig!",
+    "premium_lock_cta": "Oppgrader til Premium for å se alt",
+    "premium_upgrade_hint": "Lås opp alle varene dine med Premium"
+  },
+  "purchase_banner": {
+    "fully_stocked": "Alt klart! Trykk \"Kjøp\" for å bekrefte",
+    "items_checked": {
+      "one": "1 vare avkrysset! Trykk \"Kjøp\" for å bekrefte",
+      "other": "{} varer avkrysset! Trykk \"Kjøp\" for å bekrefte"
+    },
+    "button_purchase": "Kjøp"
+  },
+  "tutorial": {
+    "schedule_heading": "DIN HANDLEPLAN",
+    "this_week_body": "Her ser du varene som Listox forutsier at du trenger på neste handletur.",
+    "later_body": "Her ser du varene du har nok av. De flyttes til \"Denne Uken\" når det er tid for å fylle på.",
+    "skip": "HOPP OVER"
+  },
+  "welcome": {
+    "title": "Velkommen til Listox",
+    "onboarding_subtitle": "Din smarte handleliste som lærer hva du kjøper og minner deg på når du trenger å fylle på",
+    "bullet1_title": "Følg med på det essensielle",
+    "bullet1_subtitle": "Legg til det du jevnlig kjøper og ha alt på ett sted",
+    "bullet2_title": "Glem aldri noe",
+    "bullet2_subtitle": "Listox lærer og forutsier når det er på tide å fylle på",
+    "bullet3_title": "Alltid klar for handel",
+    "bullet3_subtitle": "Se hva du kanskje trenger denne uken før du drar",
+    "cta": "Fortsett"
+  },
+  "select_groceries": {
+    "heading": "Velg det essensielle",
+    "description": "Velg produktene du kjøper ofte. Listox vil følge med på når du trenger dem",
+    "button_done": "Ferdig",
+    "button_selected_suffix": "/{max} valgt",
+    "add": "Legg til",
+    "limit_reached": "Du kan foreløpig velge maksimalt {max} produkter"
+  },
+  "search_groceries": {
+    "hint": "Søk etter produkter..."
+  },
+  "weekdays_m": {
+    "mon": "Man",
+    "tue": "Tir",
+    "wed": "Ons",
+    "thu": "Tor",
+    "fri": "Fre",
+    "sat": "Lør",
+    "sun": "Søn"
+  },
+  "weekdays_s": {
+    "mon": "M",
+    "tue": "Ti",
+    "wed": "O",
+    "thu": "To",
+    "fri": "F",
+    "sat": "L",
+    "sun": "S"
+  },
+  "notifications": {
+    "mode_auto": "Automatisk",
+    "prompts": {
+      "title_1": "Snart til supermarkedet? 🏪",
+      "body_1": "Sjekk listen så du ikke glemmer noe",
+
+      "title_2": "Skal du handle? 🛒",
+      "body_2": "Se hvilke basisvarer som er i ferd med å ta slutt",
+
+      "title_3": "Neste handletur 🛒",
+      "body_3": "Kast et raskt blikk på hva du kanskje trenger",
+
+      "title_4": "Snart handling? 🛒",
+      "body_4": "Sjekk hva som trenger å fylles på",
+
+      "title_5": "Skal du i butikken? 🏪",
+      "body_5": "Listen din er klar! Ta en titt",
+
+      "title_6": "Ikke glem noe 🛒",
+      "body_6": "Handlelisten din er klar",
+
+      "title_7": "Planlegger du et butikkbesøk? 🏪",
+      "body_7": "Sjekk listen og få mest mulig ut av turen",
+
+      "title_8": "Før handel 🛍️",
+      "body_8": "Et raskt blikk på listen kan spare tid",
+
+      "title_9": "Stikker du innom butikken? 🛒",
+      "body_9": "Basisvarene du kanskje trenger er allerede på listen din",
+
+      "title_10": "Er noe i ferd med å ta slutt? ⏰",
+      "body_10": "Handlelisten din er oppdatert, ta en titt"
+    }
+  },
+  "add_custom_grocery": {
+    "heading": "Opprett egendefinert\nvare",
+    "input_name_hint": "Hva heter den?",
+    "input_period_hint": "Hvor mange dager mellom kjøpene?",
+    "input_period_description": "Angi en omtrentlig periode. Listox vil lære av kjøpshistorikken din!",
+    "button_create": "Opprett"
+  },
+  "quick_add": {
+    "tile_label": "Rask tillegg",
+    "dialog_title": "Rask tillegg",
+    "dialog_subtitle": "Varen vil bli fjernet etter bekreftelse av kjøpet.",
+    "hint": "Skriv inn et navn",
+    "empty_state_hint": "Trenger du noe bare én gang? Trykk hvor som helst for å legge til"
+  },
+  "paywall": {
+    "bullet1": "Følg med på ubegrenset antall produkter",
+    "bullet2": "Bygg en komplett liste over essensielle varer",
+    "bullet3": "Alltid vit hva du trenger før du handler"
+  },
+  "smart_engine_banner": {
+    "title": "Smart Profil",
+    "description": "Listox lærer hva du kjøper og foreslår handlelister før beholdningen går tom."
+  },
+  "categories": {
+    "food": "Mat",
+    "bathroom": "Bad",
+    "kitchen": "Kjøkken",
+    "cleaning": "Rengjøring",
+    "health": "Helse",
+    "other": "Annet"
+  },
+  "groceries": {
+    "milk": "Melk",
+    "eggs": "Egg",
+    "bread": "Brød",
+    "cheese": "Ost",
+    "yogurt": "Yoghurt",
+    "rice": "Ris",
+    "pasta": "Pasta",
+    "coffee": "Kaffe",
+    "water": "Vann",
+    "chicken": "Kylling",
+    "bananas": "Bananer",
+    "apples": "Epler",
+    "potatoes": "Poteter",
+    "onions": "Løk",
+    "butter": "Smør",
+    "pepper": "Pepper",
+    "garlic": "Hvitløk",
+    "carrot": "Gulrot",
+    "toilet_paper": "Toalettpapir",
+    "shampoo": "Sjampo",
+    "toothpaste": "Tannkrem",
+    "soap": "Såpe",
+    "deodorant": "Deodorant",
+    "toothbrush": "Tannbørste",
+    "shaving_cream": "Barberkrem",
+    "dish_soap": "Oppvaskmiddel",
+    "paper_towels": "Kjøkkenpapir",
+    "salt": "Salt",
+    "olive_oil": "Olivenolje",
+    "sugar": "Sukker",
+    "flour": "Mel",
+    "foil": "Aluminiumsfolie",
+    "baking_paper": "Bakepapir",
+    "laundry_detergent": "Vaskemiddel",
+    "trash_bags": "Søppelposer",
+    "toilet_cleaner": "Toalettrens",
+    "multi_surface_cleaner": "Universalrens",
+    "glass_cleaner": "Glassrens",
+    "disinfectant_spray": "Desinfeksjonsspray",
+    "wipes": "Våtservietter",
+    "painkillers": "Smertestillende",
+    "vitamins": "Vitaminer",
+    "bandages": "Plaster",
+    "cough_syrup": "Hostesaft",
+    "first_aid_kit": "Førstehjelpsett",
+    "batteries": "Batterier",
+    "light_bulbs": "Lyspærer",
+    "pet_food": "Dyremat",
+    "printer_paper": "Skriverpapir"
+  }
+}

@@ -1,0 +1,294 @@
+{
+  "appTitle": "Listox",
+  "loading": {
+    "just_a_moment": "Một chút thôi..."
+  },
+  "error": {
+    "generic_titles": {
+      "title1": "Ôi!",
+      "title2": "Có gì đó sai rồi",
+      "title3": "Ồ không!",
+      "title4": "Hmm...",
+      "title5": "Thôi được",
+      "title6": "Bất ngờ quá!",
+      "title7": "Lại nữa rồi!",
+      "title8": "Trời ơi",
+      "title9": "Lỗi",
+      "title10": "Ôi chao",
+      "title11": "Ối"
+    }
+  },
+  "error_message": {
+    "grocery_not_found": "Không tìm thấy sản phẩm",
+    "grocery_storage": "Lưu dữ liệu thất bại",
+    "common": {
+      "unexpected": "Ôi! Đã xảy ra lỗi không mong muốn... Chúng tôi đang xử lý! 🚨"
+    },
+    "email": {
+      "failed_to_open_support": "Ôi! Không thể mở ứng dụng email... Bạn có thể liên hệ chúng tôi tại {} 💌"
+    },
+    "preferences_unexpected": "Đã xảy ra sự cố không mong muốn"
+  },
+  "label": {
+    "oops": "Ôi",
+    "whoops": "Ôi!"
+  },
+  "snackbar": {
+    "badConnection": {
+      "title": "Không có kết nối",
+      "description": "Kiểm tra kết nối internet của bạn"
+    }
+  },
+  "common": {
+    "cancel": "Hủy",
+    "delete": "Xóa",
+    "edit": "Sửa"
+  },
+  "account": {
+    "title": "Tài khoản",
+    "premium_status_premium": "Người dùng Premium",
+    "premium_status_upgrade": "Premium",
+    "premium_expiry": "Premium có hiệu lực đến {date}. Cảm ơn bạn đã ủng hộ <3",
+    "premium_upgrade_cta": "Nâng cấp Premium để quản lý không giới hạn!",
+    "notifications_enabled": "Bật",
+    "notifications_disabled": "Tắt",
+    "notifications_description": "Nhắc nhở nhanh trước khi đi mua sắm",
+    "section_notifications": "Thông báo",
+    "section_preferences": "Tùy chọn",
+    "language_title": "Ngôn ngữ",
+    "language_subtitle": "Ngôn ngữ giao diện",
+    "haptics_title": "Haptic",
+    "haptics_subtitle": "Phản hồi rung",
+    "section_theme": "Giao diện",
+    "theme_system": "Hệ thống",
+    "theme_light": "Sáng",
+    "theme_dark": "Tối",
+    "section_colorations": "Màu sắc",
+    "section_more": "Khác",
+    "about_app": "Về ứng dụng",
+    "privacy_terms": "Quyền riêng tư",
+    "contact_support": "Liên hệ hỗ trợ"
+  },
+  "dialog": {
+    "delete_grocery": {
+      "title": "Xóa sản phẩm?",
+      "subtitle": "Bạn có chắc muốn xóa \"{name}\"? Hành động này không thể hoàn tác ⛔️"
+    },
+    "notification_mode": {
+      "title": "Lịch nhắc nhở",
+      "auto_label": "Tự động",
+      "auto_description": "Dự đoán lần mua sắm tiếp theo",
+      "custom_days_label": "Ngày tùy chỉnh",
+      "custom_days_description": "Chọn các ngày cụ thể"
+    },
+    "permission": {
+      "notifications_title": "Quyền",
+      "notifications_subtitle": "Để nhận thông báo, hãy cho phép ứng dụng này",
+      "notifications_subtitle_settings": "Để nhận thông báo, hãy cho phép ứng dụng này trong cài đặt hệ thống"
+    }
+  },
+  "edit_grocery": {
+    "title": "Sửa sản phẩm\n\"{name}\"",
+    "input_name_hint": "Tên là gì?",
+    "input_period_hint": "Bao nhiêu ngày mua một lần?",
+    "input_period_default": {
+      "one": "Mỗi {} ngày",
+      "other": "Mỗi {} ngày"
+    },
+    "input_period_description": "Nhập chu kỳ ước tính. Listox sẽ học từ lịch sử mua sắm của bạn!",
+    "button_update": "Cập nhật"
+  },
+  "home": {
+    "header_title": "Sản phẩm bạn có thể cần mua",
+    "tab_this_week": "Tuần Này",
+    "tab_later": "Sau",
+    "purchase_confirmed": "Đã xác nhận mua hàng!",
+    "purchase_confirmed_description": "Chúng tôi sẽ học từ cách dùng của bạn và dự đoán khi nào bạn cần những mặt hàng này lần nữa",
+    "due_overdue": {
+      "one": "Trễ {} ngày",
+      "other": "Trễ {} ngày"
+    },
+    "due_today": "Đến hạn hôm nay",
+    "due_tomorrow": "Đến hạn ngày mai",
+    "due_in_days": {
+      "one": "Trong {} ngày",
+      "other": "Trong {} ngày"
+    },
+    "pre_list_this_week": "Có thể cần trong tuần này",
+    "pre_list_later": "Có thể cần sau",
+    "checked_section_title": "Sản phẩm đã chọn",
+    "fully_stocked": "Kho hàng của bạn đủ rồi!",
+    "premium_lock_cta": "Nâng cấp Premium để xem tất cả",
+    "premium_upgrade_hint": "Mở khóa tất cả thực phẩm với Premium"
+  },
+  "purchase_banner": {
+    "fully_stocked": "Tất cả đầy đủ! Nhấn \"Mua\" để xác nhận",
+    "items_checked": {
+      "one": "1 sản phẩm đã chọn! Nhấn \"Mua\" để xác nhận",
+      "other": "{} sản phẩm đã chọn! Nhấn \"Mua\" để xác nhận"
+    },
+    "button_purchase": "Mua"
+  },
+  "tutorial": {
+    "schedule_heading": "LỊCH MUA SẮM CỦA BẠN",
+    "this_week_body": "Tại đây bạn sẽ thấy các sản phẩm Listox dự đoán bạn cần trong chuyến mua sắm tiếp theo.",
+    "later_body": "Tại đây bạn sẽ thấy các sản phẩm còn đủ hàng. Chúng sẽ chuyển sang \"Tuần Này\" khi đến lúc bổ sung.",
+    "skip": "BỎ QUA"
+  },
+  "welcome": {
+    "title": "Chào mừng đến Listox",
+    "onboarding_subtitle": "Danh sách mua sắm thông minh học những gì bạn mua và nhắc khi nào cần bổ sung",
+    "bullet1_title": "Theo dõi nhu yếu phẩm",
+    "bullet1_subtitle": "Thêm những thứ bạn mua thường xuyên và giữ tất cả ở một nơi",
+    "bullet2_title": "Không bao giờ quên nữa",
+    "bullet2_subtitle": "Listox học và dự đoán khi nào đến lúc bổ sung",
+    "bullet3_title": "Luôn sẵn sàng mua sắm",
+    "bullet3_subtitle": "Xem những gì bạn có thể cần tuần này trước khi ra ngoài",
+    "cta": "Tiếp tục"
+  },
+  "select_groceries": {
+    "heading": "Chọn Nhu Yếu Phẩm",
+    "description": "Chọn những sản phẩm bạn hay mua. Listox sẽ theo dõi khi nào bạn cần",
+    "button_done": "Xong",
+    "button_selected_suffix": "/{max} đã chọn",
+    "add": "Thêm",
+    "limit_reached": "Hiện tại bạn có thể chọn tối đa {max} sản phẩm"
+  },
+  "search_groceries": {
+    "hint": "Tìm kiếm sản phẩm..."
+  },
+  "weekdays_m": {
+    "mon": "T2",
+    "tue": "T3",
+    "wed": "T4",
+    "thu": "T5",
+    "fri": "T6",
+    "sat": "T7",
+    "sun": "CN"
+  },
+  "weekdays_s": {
+    "mon": "T2",
+    "tue": "T3",
+    "wed": "T4",
+    "thu": "T5",
+    "fri": "T6",
+    "sat": "T7",
+    "sun": "CN"
+  },
+  "notifications": {
+    "mode_auto": "Tự động",
+    "prompts": {
+      "title_1": "Sắp đi siêu thị chưa? 🏪",
+      "body_1": "Kiểm tra danh sách để không bỏ sót gì",
+
+      "title_2": "Đi mua sắm không? 🛒",
+      "body_2": "Xem những nhu yếu phẩm nào sắp hết",
+
+      "title_3": "Chuyến mua sắm tiếp theo 🛒",
+      "body_3": "Xem nhanh những gì bạn có thể cần",
+
+      "title_4": "Sắp đi mua sắm chưa? 🛒",
+      "body_4": "Kiểm tra những gì cần bổ sung",
+
+      "title_5": "Đi cửa hàng không? 🏪",
+      "body_5": "Danh sách của bạn đã sẵn sàng! Xem nhanh thôi",
+
+      "title_6": "Đừng quên bất cứ thứ gì 🛒",
+      "body_6": "Danh sách mua sắm của bạn đã sẵn sàng",
+
+      "title_7": "Có kế hoạch đến cửa hàng không? 🏪",
+      "body_7": "Kiểm tra danh sách và tận dụng chuyến đi",
+
+      "title_8": "Trước khi đi mua sắm 🛍️",
+      "body_8": "Xem nhanh danh sách có thể tiết kiệm thời gian",
+
+      "title_9": "Ghé qua cửa hàng chút nhé? 🛒",
+      "body_9": "Những nhu yếu phẩm bạn có thể cần đã có trong danh sách",
+
+      "title_10": "Có gì sắp hết không? ⏰",
+      "body_10": "Danh sách mua sắm của bạn đã được cập nhật, hãy xem qua"
+    }
+  },
+  "add_custom_grocery": {
+    "heading": "Tạo sản phẩm\ntùy chỉnh",
+    "input_name_hint": "Tên là gì?",
+    "input_period_hint": "Bao nhiêu ngày mua một lần?",
+    "input_period_description": "Nhập chu kỳ ước tính. Listox sẽ học từ lịch sử mua sắm của bạn!",
+    "button_create": "Tạo"
+  },
+  "quick_add": {
+    "tile_label": "Thêm nhanh",
+    "dialog_title": "Thêm nhanh",
+    "dialog_subtitle": "Sản phẩm sẽ bị xóa sau khi xác nhận mua hàng.",
+    "hint": "Nhập tên",
+    "empty_state_hint": "Chỉ cần một lần? Nhấn vào bất kỳ đâu để thêm"
+  },
+  "paywall": {
+    "bullet1": "Theo dõi nhu yếu phẩm không giới hạn",
+    "bullet2": "Xây dựng danh sách nhu yếu phẩm hoàn chỉnh",
+    "bullet3": "Luôn biết mình cần gì trước khi đi mua sắm"
+  },
+  "smart_engine_banner": {
+    "title": "Hồ Sơ Thông Minh",
+    "description": "Listox học những gì bạn mua và gợi ý danh sách mua sắm trước khi hết hàng."
+  },
+  "categories": {
+    "food": "Thực phẩm",
+    "bathroom": "Phòng tắm",
+    "kitchen": "Nhà bếp",
+    "cleaning": "Vệ sinh",
+    "health": "Sức khỏe",
+    "other": "Khác"
+  },
+  "groceries": {
+    "milk": "Sữa",
+    "eggs": "Trứng",
+    "bread": "Bánh mì",
+    "cheese": "Phô mai",
+    "yogurt": "Sữa chua",
+    "rice": "Gạo",
+    "pasta": "Mì ống",
+    "coffee": "Cà phê",
+    "water": "Nước suối",
+    "chicken": "Thịt gà",
+    "bananas": "Chuối",
+    "apples": "Táo",
+    "potatoes": "Khoai tây",
+    "onions": "Hành tây",
+    "butter": "Bơ",
+    "pepper": "Hạt tiêu",
+    "garlic": "Tỏi",
+    "carrot": "Cà rốt",
+    "toilet_paper": "Giấy vệ sinh",
+    "shampoo": "Dầu gội",
+    "toothpaste": "Kem đánh răng",
+    "soap": "Xà phòng",
+    "deodorant": "Lăn khử mùi",
+    "toothbrush": "Bàn chải đánh răng",
+    "shaving_cream": "Kem cạo râu",
+    "dish_soap": "Nước rửa bát",
+    "paper_towels": "Khăn giấy bếp",
+    "salt": "Muối",
+    "olive_oil": "Dầu ô liu",
+    "sugar": "Đường",
+    "flour": "Bột mì",
+    "foil": "Giấy bạc",
+    "baking_paper": "Giấy nướng",
+    "laundry_detergent": "Bột giặt",
+    "trash_bags": "Túi rác",
+    "toilet_cleaner": "Nước tẩy toilet",
+    "multi_surface_cleaner": "Chất tẩy đa năng",
+    "glass_cleaner": "Nước lau kính",
+    "disinfectant_spray": "Xịt khử trùng",
+    "wipes": "Khăn ướt",
+    "painkillers": "Thuốc giảm đau",
+    "vitamins": "Vitamin",
+    "bandages": "Băng dán",
+    "cough_syrup": "Siro ho",
+    "first_aid_kit": "Hộp sơ cứu",
+    "batteries": "Pin",
+    "light_bulbs": "Bóng đèn",
+    "pet_food": "Thức ăn thú cưng",
+    "printer_paper": "Giấy in"
+  }
+}

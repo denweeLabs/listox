@@ -1,0 +1,294 @@
+{
+  "appTitle": "Listox",
+  "loading": {
+    "just_a_moment": "잠시만요..."
+  },
+  "error": {
+    "generic_titles": {
+      "title1": "이런!",
+      "title2": "문제가 발생했어요",
+      "title3": "아 이런!",
+      "title4": "음...",
+      "title5": "그렇군요",
+      "title6": "예상 밖이에요!",
+      "title7": "또요!",
+      "title8": "어머",
+      "title9": "오류",
+      "title10": "난감해요",
+      "title11": "실수가 생겼어요"
+    }
+  },
+  "error_message": {
+    "grocery_not_found": "상품을 찾을 수 없어요",
+    "grocery_storage": "데이터 저장에 실패했어요",
+    "common": {
+      "unexpected": "예상치 못한 오류가 발생했어요... 해결 중이에요! 🚨"
+    },
+    "email": {
+      "failed_to_open_support": "이런! 이메일 앱을 열 수 없었어요... {} 으로 언제든지 연락 주세요 💌"
+    },
+    "preferences_unexpected": "예상치 못한 문제가 발생했어요"
+  },
+  "label": {
+    "oops": "이런",
+    "whoops": "이런!"
+  },
+  "snackbar": {
+    "badConnection": {
+      "title": "연결 없음",
+      "description": "인터넷 연결을 확인해 주세요"
+    }
+  },
+  "common": {
+    "cancel": "취소",
+    "delete": "삭제",
+    "edit": "편집"
+  },
+  "account": {
+    "title": "계정",
+    "premium_status_premium": "프리미엄 사용자",
+    "premium_status_upgrade": "프리미엄",
+    "premium_expiry": "프리미엄이 {date}까지 유효해요. 지원해 주셔서 감사해요 <3",
+    "premium_upgrade_cta": "프리미엄으로 무제한 관리를 시작하세요!",
+    "notifications_enabled": "켜짐",
+    "notifications_disabled": "꺼짐",
+    "notifications_description": "장보기 전 빠른 알림",
+    "section_notifications": "알림",
+    "section_preferences": "환경설정",
+    "language_title": "언어",
+    "language_subtitle": "인터페이스 언어",
+    "haptics_title": "햅틱스",
+    "haptics_subtitle": "진동 피드백",
+    "section_theme": "테마",
+    "theme_system": "시스템",
+    "theme_light": "라이트",
+    "theme_dark": "다크",
+    "section_colorations": "색상",
+    "section_more": "더보기",
+    "about_app": "앱 정보",
+    "privacy_terms": "개인정보처리방침",
+    "contact_support": "고객센터 문의"
+  },
+  "dialog": {
+    "delete_grocery": {
+      "title": "상품을 삭제할까요?",
+      "subtitle": "\"{name}\"을(를) 정말 삭제할까요? 이 작업은 되돌릴 수 없어요 ⛔️"
+    },
+    "notification_mode": {
+      "title": "알림 일정",
+      "auto_label": "자동",
+      "auto_description": "다음 장보기를 예측해요",
+      "custom_days_label": "요일 선택",
+      "custom_days_description": "특정 요일을 선택하세요"
+    },
+    "permission": {
+      "notifications_title": "권한",
+      "notifications_subtitle": "알림을 받으려면 이 앱의 권한을 허용해 주세요",
+      "notifications_subtitle_settings": "알림을 받으려면 시스템 설정에서 이 앱의 권한을 허용해 주세요"
+    }
+  },
+  "edit_grocery": {
+    "title": "상품 편집\n\"{name}\"",
+    "input_name_hint": "이름을 알려주세요",
+    "input_period_hint": "며칠마다 구매하나요?",
+    "input_period_default": {
+      "one": "{}일마다",
+      "other": "{}일마다"
+    },
+    "input_period_description": "대략적인 주기를 입력해 주세요. Listox가 구매 기록으로 학습할 거예요!",
+    "button_update": "업데이트"
+  },
+  "home": {
+    "header_title": "구매가 필요할 수 있는 상품",
+    "tab_this_week": "이번 주",
+    "tab_later": "나중에",
+    "purchase_confirmed": "구매가 확인됐어요!",
+    "purchase_confirmed_description": "사용 패턴을 학습하여 이 항목이 다시 필요한 시기를 예측합니다",
+    "due_overdue": {
+      "one": "{}일 지났어요",
+      "other": "{}일 지났어요"
+    },
+    "due_today": "오늘이 기한이에요",
+    "due_tomorrow": "내일이 기한이에요",
+    "due_in_days": {
+      "one": "{}일 후",
+      "other": "{}일 후"
+    },
+    "pre_list_this_week": "이번 주에 필요할 것 같아요",
+    "pre_list_later": "나중에 필요할 것 같아요",
+    "checked_section_title": "체크한 상품",
+    "fully_stocked": "재고가 충분해요!",
+    "premium_lock_cta": "프리미엄으로 전체 보기",
+    "premium_upgrade_hint": "프리미엄으로 모든 식료품을 잠금 해제"
+  },
+  "purchase_banner": {
+    "fully_stocked": "재고 충분! 「구매」를 탭해서 확인하세요",
+    "items_checked": {
+      "one": "1개 체크됐어요! 「구매」를 탭해서 확인하세요",
+      "other": "{}개 체크됐어요! 「구매」를 탭해서 확인하세요"
+    },
+    "button_purchase": "구매"
+  },
+  "tutorial": {
+    "schedule_heading": "내 장보기 일정",
+    "this_week_body": "Listox가 다음 장보기에 필요할 것으로 예측한 상품이 표시돼요.",
+    "later_body": "아직 충분한 상품이 표시돼요. 보충할 때가 되면 「이번 주」로 이동해요.",
+    "skip": "건너뛰기"
+  },
+  "welcome": {
+    "title": "Listox에 오신 것을 환영해요",
+    "onboarding_subtitle": "구매 습관을 학습하고 재고 보충 시기를 알려주는 스마트 장보기 목록",
+    "bullet1_title": "필수품 추적",
+    "bullet1_subtitle": "정기적으로 구매하는 것을 추가하고 한 곳에서 관리해요",
+    "bullet2_title": "다시는 잊지 않아요",
+    "bullet2_subtitle": "Listox가 구매 빈도를 학습하고 보충 시기를 예측해요",
+    "bullet3_title": "언제나 장보기 준비 완료",
+    "bullet3_subtitle": "외출 전 이번 주에 필요한 것을 확인하세요",
+    "cta": "계속하기"
+  },
+  "select_groceries": {
+    "heading": "필수품 선택",
+    "description": "자주 구매하는 상품을 선택하세요. Listox가 필요한 시기를 추적할 거예요",
+    "button_done": "완료",
+    "button_selected_suffix": "/{max} 선택됨",
+    "add": "추가",
+    "limit_reached": "지금은 최대 {max}개까지 선택할 수 있어요"
+  },
+  "search_groceries": {
+    "hint": "상품 검색..."
+  },
+  "weekdays_m": {
+    "mon": "월",
+    "tue": "화",
+    "wed": "수",
+    "thu": "목",
+    "fri": "금",
+    "sat": "토",
+    "sun": "일"
+  },
+  "weekdays_s": {
+    "mon": "월",
+    "tue": "화",
+    "wed": "수",
+    "thu": "목",
+    "fri": "금",
+    "sat": "토",
+    "sun": "일"
+  },
+  "notifications": {
+    "mode_auto": "자동",
+    "prompts": {
+      "title_1": "곧 마트에 가나요? 🏪",
+      "body_1": "목록을 확인해서 빠뜨리지 마세요",
+
+      "title_2": "장보기 계획 중이신가요? 🛒",
+      "body_2": "부족한 필수품을 확인해 보세요",
+
+      "title_3": "다음 장보기 🛒",
+      "body_3": "필요한 것을 빠르게 확인해 보세요",
+
+      "title_4": "곧 장보러 가나요? 🛒",
+      "body_4": "보충이 필요한 것을 확인해 보세요",
+
+      "title_5": "마트에 가시나요? 🏪",
+      "body_5": "목록이 준비됐어요! 확인해 보세요",
+
+      "title_6": "하나도 빠뜨리지 마세요 🛒",
+      "body_6": "장보기 목록이 준비됐어요",
+
+      "title_7": "장보기를 계획 중인가요? 🏪",
+      "body_7": "목록을 확인하고 알차게 다녀오세요",
+
+      "title_8": "장보기 전에 🛍️",
+      "body_8": "목록을 빠르게 확인하면 시간이 절약돼요",
+
+      "title_9": "잠깐 마트에 들를 건가요? 🛒",
+      "body_9": "필요한 상품이 이미 목록에 있어요",
+
+      "title_10": "뭔가 떨어져 가나요? ⏰",
+      "body_10": "장보기 목록이 최신 상태예요, 확인해 보세요"
+    }
+  },
+  "add_custom_grocery": {
+    "heading": "커스텀\n필수품 만들기",
+    "input_name_hint": "이름을 알려주세요",
+    "input_period_hint": "며칠마다 구매하나요?",
+    "input_period_description": "대략적인 주기를 입력해 주세요. Listox가 구매 기록으로 학습할 거예요!",
+    "button_create": "만들기"
+  },
+  "quick_add": {
+    "tile_label": "빠른 추가",
+    "dialog_title": "빠른 추가",
+    "dialog_subtitle": "구매 확인 후 이 상품은 삭제돼요.",
+    "hint": "이름 입력",
+    "empty_state_hint": "딱 한 번만 필요한 것이 있나요? 아무 곳이나 탭해서 추가하세요"
+  },
+  "paywall": {
+    "bullet1": "필수품을 무제한으로 관리",
+    "bullet2": "완전한 필수품 목록 만들기",
+    "bullet3": "장보기 전 항상 필요한 것 파악하기"
+  },
+  "smart_engine_banner": {
+    "title": "스마트 프로필",
+    "description": "Listox가 구매 습관을 기록하고 재고가 떨어지기 전에 목록을 제안해요."
+  },
+  "categories": {
+    "food": "식품",
+    "bathroom": "욕실",
+    "kitchen": "주방",
+    "cleaning": "청소",
+    "health": "건강",
+    "other": "기타"
+  },
+  "groceries": {
+    "milk": "우유",
+    "eggs": "계란",
+    "bread": "빵",
+    "cheese": "치즈",
+    "yogurt": "요거트",
+    "rice": "쌀",
+    "pasta": "파스타",
+    "coffee": "커피",
+    "water": "생수",
+    "chicken": "닭고기",
+    "bananas": "바나나",
+    "apples": "사과",
+    "potatoes": "감자",
+    "onions": "양파",
+    "butter": "버터",
+    "pepper": "후추",
+    "garlic": "마늘",
+    "carrot": "당근",
+    "toilet_paper": "화장지",
+    "shampoo": "샴푸",
+    "toothpaste": "치약",
+    "soap": "비누",
+    "deodorant": "데오도란트",
+    "toothbrush": "칫솔",
+    "shaving_cream": "면도 크림",
+    "dish_soap": "주방세제",
+    "paper_towels": "키친타월",
+    "salt": "소금",
+    "olive_oil": "올리브오일",
+    "sugar": "설탕",
+    "flour": "밀가루",
+    "foil": "알루미늄 호일",
+    "baking_paper": "베이킹 페이퍼",
+    "laundry_detergent": "세탁 세제",
+    "trash_bags": "쓰레기봉투",
+    "toilet_cleaner": "변기 세정제",
+    "multi_surface_cleaner": "다목적 클리너",
+    "glass_cleaner": "유리 클리너",
+    "disinfectant_spray": "소독 스프레이",
+    "wipes": "물티슈",
+    "painkillers": "진통제",
+    "vitamins": "비타민",
+    "bandages": "밴드",
+    "cough_syrup": "기침 시럽",
+    "first_aid_kit": "응급처치 키트",
+    "batteries": "건전지",
+    "light_bulbs": "전구",
+    "pet_food": "반려동물 사료",
+    "printer_paper": "프린터 용지"
+  }
+}

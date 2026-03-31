@@ -1,0 +1,294 @@
+{
+  "appTitle": "Listox",
+  "loading": {
+    "just_a_moment": "请稍候..."
+  },
+  "error": {
+    "generic_titles": {
+      "title1": "哎呀！",
+      "title2": "出错了",
+      "title3": "糟糕！",
+      "title4": "嗯...",
+      "title5": "好吧",
+      "title6": "意外！",
+      "title7": "又来了！",
+      "title8": "哦不",
+      "title9": "错误",
+      "title10": "糟了",
+      "title11": "出错啦"
+    }
+  },
+  "error_message": {
+    "grocery_not_found": "找不到该商品",
+    "grocery_storage": "数据保存失败",
+    "common": {
+      "unexpected": "发生了意外错误... 我们正在处理！🚨"
+    },
+    "email": {
+      "failed_to_open_support": "哎呀！无法打开邮件应用... 你可以随时发邮件至 {} 联系我们 💌"
+    },
+    "preferences_unexpected": "发生了意外问题"
+  },
+  "label": {
+    "oops": "哎呀",
+    "whoops": "哎呀！"
+  },
+  "snackbar": {
+    "badConnection": {
+      "title": "无网络连接",
+      "description": "请检查你的网络连接"
+    }
+  },
+  "common": {
+    "cancel": "取消",
+    "delete": "删除",
+    "edit": "编辑"
+  },
+  "account": {
+    "title": "账户",
+    "premium_status_premium": "高级用户",
+    "premium_status_upgrade": "高级版",
+    "premium_expiry": "高级版有效期至 {date}。感谢你的支持 <3",
+    "premium_upgrade_cta": "升级高级版，无限管理购物清单！",
+    "notifications_enabled": "已开启",
+    "notifications_disabled": "已关闭",
+    "notifications_description": "出门购物前收到提醒",
+    "section_notifications": "通知",
+    "section_preferences": "偏好设置",
+    "language_title": "语言",
+    "language_subtitle": "界面语言",
+    "haptics_title": "触感反馈",
+    "haptics_subtitle": "振动反馈",
+    "section_theme": "主题",
+    "theme_system": "跟随系统",
+    "theme_light": "浅色",
+    "theme_dark": "深色",
+    "section_colorations": "配色",
+    "section_more": "更多",
+    "about_app": "关于应用",
+    "privacy_terms": "隐私与条款",
+    "contact_support": "联系客服"
+  },
+  "dialog": {
+    "delete_grocery": {
+      "title": "删除商品？",
+      "subtitle": "确定要删除\"{name}\"吗？此操作无法撤销 ⛔️"
+    },
+    "notification_mode": {
+      "title": "提醒计划",
+      "auto_label": "自动",
+      "auto_description": "预测下次购物时间",
+      "custom_days_label": "自定义",
+      "custom_days_description": "选择特定星期几"
+    },
+    "permission": {
+      "notifications_title": "权限",
+      "notifications_subtitle": "请允许此应用的通知权限以接收提醒",
+      "notifications_subtitle_settings": "请在系统设置中允许此应用的通知权限"
+    }
+  },
+  "edit_grocery": {
+    "title": "编辑商品\n\"{name}\"",
+    "input_name_hint": "叫什么名字？",
+    "input_period_hint": "多少天买一次？",
+    "input_period_default": {
+      "one": "每 {} 天",
+      "other": "每 {} 天"
+    },
+    "input_period_description": "输入大概的周期，Listox 会从你的购买记录中学习！",
+    "button_update": "更新"
+  },
+  "home": {
+    "header_title": "你可能需要购买的商品",
+    "tab_this_week": "本周",
+    "tab_later": "稍后",
+    "purchase_confirmed": "购买已确认！",
+    "purchase_confirmed_description": "我们将学习您的使用习惯，预测您何时再次需要这些商品",
+    "due_overdue": {
+      "one": "已超期 {} 天",
+      "other": "已超期 {} 天"
+    },
+    "due_today": "今天到期",
+    "due_tomorrow": "明天到期",
+    "due_in_days": {
+      "one": "还剩 {} 天",
+      "other": "还剩 {} 天"
+    },
+    "pre_list_this_week": "本周可能需要",
+    "pre_list_later": "之后可能需要",
+    "checked_section_title": "已选商品",
+    "fully_stocked": "库存充足！",
+    "premium_lock_cta": "升级高级版查看全部",
+    "premium_upgrade_hint": "用高级版解锁所有杂货"
+  },
+  "purchase_banner": {
+    "fully_stocked": "库存充足！点击「购买」确认",
+    "items_checked": {
+      "one": "已选 1 件！点击「购买」确认",
+      "other": "已选 {} 件！点击「购买」确认"
+    },
+    "button_purchase": "购买"
+  },
+  "tutorial": {
+    "schedule_heading": "你的购物计划",
+    "this_week_body": "这里显示 Listox 预测你下次购物需要的商品。",
+    "later_body": "这里显示暂时还有余量的商品，到了补货时间会移至「本周」。",
+    "skip": "跳过"
+  },
+  "welcome": {
+    "title": "欢迎使用 Listox",
+    "onboarding_subtitle": "智能购物清单，记住你的购买习惯，提醒你何时补货",
+    "bullet1_title": "追踪必需品",
+    "bullet1_subtitle": "添加你常买的商品，统一管理",
+    "bullet2_title": "再也不会忘记",
+    "bullet2_subtitle": "Listox 学习你的购买频率，预测补货时间",
+    "bullet3_title": "随时准备好购物",
+    "bullet3_subtitle": "出门前查看本周需要购买的商品",
+    "cta": "继续"
+  },
+  "select_groceries": {
+    "heading": "选择必需品",
+    "description": "选择你经常购买的商品，Listox 会追踪你何时需要它们",
+    "button_done": "完成",
+    "button_selected_suffix": "/{max} 已选",
+    "add": "添加",
+    "limit_reached": "目前最多可选 {max} 件商品"
+  },
+  "search_groceries": {
+    "hint": "搜索商品..."
+  },
+  "weekdays_m": {
+    "mon": "周一",
+    "tue": "周二",
+    "wed": "周三",
+    "thu": "周四",
+    "fri": "周五",
+    "sat": "周六",
+    "sun": "周日"
+  },
+  "weekdays_s": {
+    "mon": "一",
+    "tue": "二",
+    "wed": "三",
+    "thu": "四",
+    "fri": "五",
+    "sat": "六",
+    "sun": "日"
+  },
+  "notifications": {
+    "mode_auto": "自动",
+    "prompts": {
+      "title_1": "快去超市了？🏪",
+      "body_1": "查看清单，不要漏掉任何东西",
+
+      "title_2": "准备去购物？🛒",
+      "body_2": "看看哪些必需品快用完了",
+
+      "title_3": "下次购物提醒 🛒",
+      "body_3": "出发前快看看你需要什么",
+
+      "title_4": "快去买东西了？🛒",
+      "body_4": "查看哪些商品需要补货",
+
+      "title_5": "准备去超市？🏪",
+      "body_5": "你的购物清单已准备好，快看看吧",
+
+      "title_6": "别忘了任何东西 🛒",
+      "body_6": "你的购物清单已更新",
+
+      "title_7": "计划去购物？🏪",
+      "body_7": "查看清单，充分利用这次购物",
+
+      "title_8": "购物前 🛍️",
+      "body_8": "快速查看清单能为你省不少时间",
+
+      "title_9": "顺路去趟超市？🛒",
+      "body_9": "你可能需要的商品已在清单上",
+
+      "title_10": "有什么快用完了？⏰",
+      "body_10": "你的购物清单已是最新，快看看吧"
+    }
+  },
+  "add_custom_grocery": {
+    "heading": "创建自定义\n必需品",
+    "input_name_hint": "叫什么名字？",
+    "input_period_hint": "多少天买一次？",
+    "input_period_description": "输入大概的周期，Listox 会从你的购买记录中学习！",
+    "button_create": "创建"
+  },
+  "quick_add": {
+    "tile_label": "快速添加",
+    "dialog_title": "快速添加",
+    "dialog_subtitle": "确认购买后，该商品将被移除。",
+    "hint": "输入名称",
+    "empty_state_hint": "临时需要某样东西？点击任意处添加"
+  },
+  "paywall": {
+    "bullet1": "无限追踪必需品",
+    "bullet2": "建立完整的购物清单",
+    "bullet3": "购物前清楚知道需要什么"
+  },
+  "smart_engine_banner": {
+    "title": "智能档案",
+    "description": "Listox 记录你的购买习惯，在你缺货前推荐购物清单。"
+  },
+  "categories": {
+    "food": "食品",
+    "bathroom": "卫浴",
+    "kitchen": "厨房",
+    "cleaning": "清洁",
+    "health": "健康",
+    "other": "其他"
+  },
+  "groceries": {
+    "milk": "牛奶",
+    "eggs": "鸡蛋",
+    "bread": "面包",
+    "cheese": "奶酪",
+    "yogurt": "酸奶",
+    "rice": "大米",
+    "pasta": "意面",
+    "coffee": "咖啡",
+    "water": "矿泉水",
+    "chicken": "鸡肉",
+    "bananas": "香蕉",
+    "apples": "苹果",
+    "potatoes": "土豆",
+    "onions": "洋葱",
+    "butter": "黄油",
+    "pepper": "胡椒",
+    "garlic": "大蒜",
+    "carrot": "胡萝卜",
+    "toilet_paper": "卫生纸",
+    "shampoo": "洗发水",
+    "toothpaste": "牙膏",
+    "soap": "肥皂",
+    "deodorant": "止汗剂",
+    "toothbrush": "牙刷",
+    "shaving_cream": "剃须膏",
+    "dish_soap": "洗洁精",
+    "paper_towels": "厨房纸",
+    "salt": "盐",
+    "olive_oil": "橄榄油",
+    "sugar": "白糖",
+    "flour": "面粉",
+    "foil": "锡纸",
+    "baking_paper": "烘焙纸",
+    "laundry_detergent": "洗衣液",
+    "trash_bags": "垃圾袋",
+    "toilet_cleaner": "马桶清洁剂",
+    "multi_surface_cleaner": "多功能清洁剂",
+    "glass_cleaner": "玻璃清洁剂",
+    "disinfectant_spray": "消毒喷雾",
+    "wipes": "湿巾",
+    "painkillers": "止痛药",
+    "vitamins": "维生素",
+    "bandages": "创可贴",
+    "cough_syrup": "止咳糖浆",
+    "first_aid_kit": "急救箱",
+    "batteries": "电池",
+    "light_bulbs": "灯泡",
+    "pet_food": "宠物粮",
+    "printer_paper": "打印纸"
+  }
+}

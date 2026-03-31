@@ -1,0 +1,294 @@
+{
+  "appTitle": "Listox",
+  "loading": {
+    "just_a_moment": "Bir saniye..."
+  },
+  "error": {
+    "generic_titles": {
+      "title1": "Hay aksi!",
+      "title2": "Bir şeyler yanlış gitti",
+      "title3": "Ah hayır!",
+      "title4": "Hmm...",
+      "title5": "Peki öyleyse",
+      "title6": "Beklenmedik!",
+      "title7": "Yine mi!",
+      "title8": "Aman",
+      "title9": "Hata",
+      "title10": "Vay canına",
+      "title11": "Hata oluştu"
+    }
+  },
+  "error_message": {
+    "grocery_not_found": "Ürün bulunamadı",
+    "grocery_storage": "Veriler kaydedilemedi",
+    "common": {
+      "unexpected": "Beklenmedik bir hata oluştu... Üzerinde çalışıyoruz! 🚨"
+    },
+    "email": {
+      "failed_to_open_support": "Hay aksi! E-posta uygulaması açılamadı... {} adresinden bize ulaşabilirsin 💌"
+    },
+    "preferences_unexpected": "Beklenmedik bir sorun oluştu"
+  },
+  "label": {
+    "oops": "Hay aksi",
+    "whoops": "Hay aksi!"
+  },
+  "snackbar": {
+    "badConnection": {
+      "title": "Bağlantı yok",
+      "description": "İnternet bağlantını kontrol et"
+    }
+  },
+  "common": {
+    "cancel": "İptal",
+    "delete": "Sil",
+    "edit": "Düzenle"
+  },
+  "account": {
+    "title": "Hesap",
+    "premium_status_premium": "Premium Kullanıcı",
+    "premium_status_upgrade": "Premium",
+    "premium_expiry": "Premium {date} tarihine kadar geçerli. Desteğin için teşekkürler <3",
+    "premium_upgrade_cta": "Sınırsız yönetim için Premium'a geç!",
+    "notifications_enabled": "Açık",
+    "notifications_disabled": "Kapalı",
+    "notifications_description": "Markete gitmeden önce hızlı bir hatırlatıcı",
+    "section_notifications": "Bildirimler",
+    "section_preferences": "Tercihler",
+    "language_title": "Dil",
+    "language_subtitle": "Arayüz dili",
+    "haptics_title": "Dokunsal",
+    "haptics_subtitle": "Titreşim geri bildirimi",
+    "section_theme": "Tema",
+    "theme_system": "Sistem",
+    "theme_light": "Açık",
+    "theme_dark": "Koyu",
+    "section_colorations": "Renkler",
+    "section_more": "Daha fazla",
+    "about_app": "Uygulama hakkında",
+    "privacy_terms": "Gizlilik",
+    "contact_support": "Destek ile iletişim"
+  },
+  "dialog": {
+    "delete_grocery": {
+      "title": "Ürün silinsin mi?",
+      "subtitle": "\"{name}\" ürününü silmek istediğinden emin misin? Bu işlem geri alınamaz ⛔️"
+    },
+    "notification_mode": {
+      "title": "Hatırlatıcı Planı",
+      "auto_label": "Otomatik",
+      "auto_description": "Bir sonraki alışverişi tahmin eder",
+      "custom_days_label": "Özel günler",
+      "custom_days_description": "Belirli günleri seç"
+    },
+    "permission": {
+      "notifications_title": "İzin",
+      "notifications_subtitle": "Bildirim almak için bu uygulamaya izin ver",
+      "notifications_subtitle_settings": "Bildirim almak için sistem ayarlarından bu uygulamaya izin ver"
+    }
+  },
+  "edit_grocery": {
+    "title": "Ürünü düzenle\n\"{name}\"",
+    "input_name_hint": "Ne diye çağıralım?",
+    "input_period_hint": "Kaç günde bir satın alıyorsun?",
+    "input_period_default": {
+      "one": "Her {} günde",
+      "other": "Her {} günde"
+    },
+    "input_period_description": "Yaklaşık bir süre gir. Listox alışveriş geçmişinden öğrenecek!",
+    "button_update": "Güncelle"
+  },
+  "home": {
+    "header_title": "Satın almanız gerekebilecek ürünler",
+    "tab_this_week": "Bu Hafta",
+    "tab_later": "Sonra",
+    "purchase_confirmed": "Alışveriş onaylandı!",
+    "purchase_confirmed_description": "Kullanımınızı öğreneceğiz ve bu ürünlere tekrar ne zaman ihtiyaç duyacağınızı tahmin edeceğiz",
+    "due_overdue": {
+      "one": "{} gün gecikmiş",
+      "other": "{} gün gecikmiş"
+    },
+    "due_today": "Bugün alınmalı",
+    "due_tomorrow": "Yarın alınmalı",
+    "due_in_days": {
+      "one": "{} gün sonra",
+      "other": "{} gün sonra"
+    },
+    "pre_list_this_week": "Bu hafta gerekli olabilir",
+    "pre_list_later": "Sonra gerekli olabilir",
+    "checked_section_title": "İşaretlenen ürünler",
+    "fully_stocked": "Stoğun yeterli!",
+    "premium_lock_cta": "Her şeyi görmek için Premium'a geç",
+    "premium_upgrade_hint": "Premium ile tüm ürünlerin kilidini aç"
+  },
+  "purchase_banner": {
+    "fully_stocked": "Her şey tamam! Onaylamak için \"Satın Al\"a dokun",
+    "items_checked": {
+      "one": "1 ürün işaretlendi! Onaylamak için \"Satın Al\"a dokun",
+      "other": "{} ürün işaretlendi! Onaylamak için \"Satın Al\"a dokun"
+    },
+    "button_purchase": "Satın Al"
+  },
+  "tutorial": {
+    "schedule_heading": "ALIŞVERİŞ TAKVİMİN",
+    "this_week_body": "Burada Listox'un bir sonraki alışverişinde ihtiyaç duyacağını tahmin ettiği ürünleri göreceksin.",
+    "later_body": "Burada henüz yeterince stokta olan ürünleri göreceksin. Yenileme zamanı gelince \"Bu Hafta\"ya geçerler.",
+    "skip": "GEÇ"
+  },
+  "welcome": {
+    "title": "Listox'a Hoş Geldin",
+    "onboarding_subtitle": "Ne satın aldığını öğrenen ve ne zaman yenileme yapman gerektiğini hatırlatan akıllı alışveriş listen",
+    "bullet1_title": "Temel ihtiyaçları takip et",
+    "bullet1_subtitle": "Düzenli olarak satın aldıklarını ekle ve hepsini tek bir yerde tut",
+    "bullet2_title": "Bir daha unutma",
+    "bullet2_subtitle": "Listox satın alma sıklığını öğrenir ve ne zaman yenileme yapman gerektiğini tahmin eder",
+    "bullet3_title": "Markete her zaman hazır",
+    "bullet3_subtitle": "Çıkmadan önce bu hafta neye ihtiyacın olabileceğini gör",
+    "cta": "Devam"
+  },
+  "select_groceries": {
+    "heading": "Temel ihtiyaçları seç",
+    "description": "Sık satın aldığın ürünleri seç. Listox ne zaman ihtiyaç duyacağını takip edecek",
+    "button_done": "Tamam",
+    "button_selected_suffix": "/{max} seçildi",
+    "add": "Ekle",
+    "limit_reached": "Şimdilik en fazla {max} ürün seçebilirsin"
+  },
+  "search_groceries": {
+    "hint": "Ürün ara..."
+  },
+  "weekdays_m": {
+    "mon": "Pzt",
+    "tue": "Sal",
+    "wed": "Çar",
+    "thu": "Per",
+    "fri": "Cum",
+    "sat": "Cmt",
+    "sun": "Paz"
+  },
+  "weekdays_s": {
+    "mon": "Pt",
+    "tue": "Sa",
+    "wed": "Ça",
+    "thu": "Pe",
+    "fri": "Cu",
+    "sat": "Ct",
+    "sun": "Pz"
+  },
+  "notifications": {
+    "mode_auto": "Otomatik",
+    "prompts": {
+      "title_1": "Yakında markete mi gidiyorsun? 🏪",
+      "body_1": "Hiçbir şeyi kaçırmamak için listeni kontrol et",
+
+      "title_2": "Alışveriş yapmaya gidiyor musun? 🛒",
+      "body_2": "Hangi temel ihtiyaçların azaldığını gör",
+
+      "title_3": "Bir sonraki alışverişin 🛒",
+      "body_3": "Neye ihtiyacın olabileceğine hızlıca bak",
+
+      "title_4": "Yakında alışveriş mi? 🛒",
+      "body_4": "Neyin yenilenmesi gerektiğini kontrol et",
+
+      "title_5": "Markete gidiyor musun? 🏪",
+      "body_5": "Listen hazır! Hızlıca bak",
+
+      "title_6": "Hiçbir şeyi unutma 🛒",
+      "body_6": "Alışveriş listen hazır",
+
+      "title_7": "Markete gitmeyi planlıyor musun? 🏪",
+      "body_7": "Listeni kontrol et ve geziden yararlan",
+
+      "title_8": "Alışverişe gitmeden önce 🛍️",
+      "body_8": "Listeye hızlı bir bakış sana zaman kazandırabilir",
+
+      "title_9": "Yakında marketten geçecek misin? 🛒",
+      "body_9": "İhtiyaç duyabileceğin temel ürünler zaten listende",
+
+      "title_10": "Bir şeyler bitiyor mu? ⏰",
+      "body_10": "Alışveriş listen güncel, bir göz at"
+    }
+  },
+  "add_custom_grocery": {
+    "heading": "Özel ürün\noluştur",
+    "input_name_hint": "Ne diye çağıralım?",
+    "input_period_hint": "Kaç günde bir satın alıyorsun?",
+    "input_period_description": "Yaklaşık bir süre gir. Listox alışveriş geçmişinden öğrenecek!",
+    "button_create": "Oluştur"
+  },
+  "quick_add": {
+    "tile_label": "Hızlı ekle",
+    "dialog_title": "Hızlı ekle",
+    "dialog_subtitle": "Ürün, alışveriş onaylandıktan sonra kaldırılacak.",
+    "hint": "Ad gir",
+    "empty_state_hint": "Sadece bir kez bir şeye mi ihtiyacın var? Eklemek için herhangi bir yere dokun"
+  },
+  "paywall": {
+    "bullet1": "Sınırsız temel ürün takibi",
+    "bullet2": "Eksiksiz temel ürün listenizi oluşturun",
+    "bullet3": "Alışverişten önce her zaman neye ihtiyaç duyduğunuzu bilin"
+  },
+  "smart_engine_banner": {
+    "title": "Akıllı Profil",
+    "description": "Listox satın aldıklarını öğrenir ve stok bitmeden önce alışveriş listeleri önerir."
+  },
+  "categories": {
+    "food": "Gıda",
+    "bathroom": "Banyo",
+    "kitchen": "Mutfak",
+    "cleaning": "Temizlik",
+    "health": "Sağlık",
+    "other": "Diğer"
+  },
+  "groceries": {
+    "milk": "Süt",
+    "eggs": "Yumurta",
+    "bread": "Ekmek",
+    "cheese": "Peynir",
+    "yogurt": "Yoğurt",
+    "rice": "Pirinç",
+    "pasta": "Makarna",
+    "coffee": "Kahve",
+    "water": "Su",
+    "chicken": "Tavuk",
+    "bananas": "Muz",
+    "apples": "Elma",
+    "potatoes": "Patates",
+    "onions": "Soğan",
+    "butter": "Tereyağı",
+    "pepper": "Karabiber",
+    "garlic": "Sarımsak",
+    "carrot": "Havuç",
+    "toilet_paper": "Tuvalet kağıdı",
+    "shampoo": "Şampuan",
+    "toothpaste": "Diş macunu",
+    "soap": "Sabun",
+    "deodorant": "Deodorant",
+    "toothbrush": "Diş fırçası",
+    "shaving_cream": "Tıraş köpüğü",
+    "dish_soap": "Bulaşık deterjanı",
+    "paper_towels": "Kağıt havlu",
+    "salt": "Tuz",
+    "olive_oil": "Zeytinyağı",
+    "sugar": "Şeker",
+    "flour": "Un",
+    "foil": "Alüminyum folyo",
+    "baking_paper": "Fırın kağıdı",
+    "laundry_detergent": "Çamaşır deterjanı",
+    "trash_bags": "Çöp torbası",
+    "toilet_cleaner": "Tuvalet temizleyici",
+    "multi_surface_cleaner": "Çok amaçlı temizleyici",
+    "glass_cleaner": "Cam temizleyici",
+    "disinfectant_spray": "Dezenfektan sprey",
+    "wipes": "Islak mendil",
+    "painkillers": "Ağrı kesici",
+    "vitamins": "Vitamin",
+    "bandages": "Yara bandı",
+    "cough_syrup": "Öksürük şurubu",
+    "first_aid_kit": "İlk yardım çantası",
+    "batteries": "Pil",
+    "light_bulbs": "Ampul",
+    "pet_food": "Evcil hayvan maması",
+    "printer_paper": "Yazıcı kağıdı"
+  }
+}

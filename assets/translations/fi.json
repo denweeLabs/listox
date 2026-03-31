@@ -1,0 +1,294 @@
+{
+  "appTitle": "Listox",
+  "loading": {
+    "just_a_moment": "Hetki..."
+  },
+  "error": {
+    "generic_titles": {
+      "title1": "Voi!",
+      "title2": "Jokin meni pieleen",
+      "title3": "Voi ei!",
+      "title4": "Hmm...",
+      "title5": "No niin",
+      "title6": "Odottamatonta!",
+      "title7": "Taas!",
+      "title8": "Ai",
+      "title9": "Virhe",
+      "title10": "Kuules",
+      "title11": "Oops"
+    }
+  },
+  "error_message": {
+    "grocery_not_found": "Tuotetta ei löydy",
+    "grocery_storage": "Tietojen tallentaminen epäonnistui",
+    "common": {
+      "unexpected": "Oops! Tapahtui odottamaton virhe... Työskentelemme sen parissa! 🚨"
+    },
+    "email": {
+      "failed_to_open_support": "Oops! Sähköpostisovelluksen avaaminen epäonnistui... Voit ottaa meihin yhteyttä osoitteessa {} 💌"
+    },
+    "preferences_unexpected": "Ilmeni odottamaton ongelma"
+  },
+  "label": {
+    "oops": "Oops",
+    "whoops": "Oops!"
+  },
+  "snackbar": {
+    "badConnection": {
+      "title": "Ei yhteyttä",
+      "description": "Tarkista internet-yhteys"
+    }
+  },
+  "common": {
+    "cancel": "Peruuta",
+    "delete": "Poista",
+    "edit": "Muokkaa"
+  },
+  "account": {
+    "title": "Tili",
+    "premium_status_premium": "Premium-käyttäjä",
+    "premium_status_upgrade": "Premium",
+    "premium_expiry": "Premium aktiivinen {date} asti. Kiitos tuestasi <3",
+    "premium_upgrade_cta": "Päivitä Premiumiin rajoittamatonta hallintaa varten!",
+    "notifications_enabled": "Käytössä",
+    "notifications_disabled": "Ei käytössä",
+    "notifications_description": "Nopea muistutus ennen ostoksia",
+    "section_notifications": "Ilmoitukset",
+    "section_preferences": "Asetukset",
+    "language_title": "Kieli",
+    "language_subtitle": "Käyttöliittymän kieli",
+    "haptics_title": "Haptiikka",
+    "haptics_subtitle": "Värinäpalaute",
+    "section_theme": "Teema",
+    "theme_system": "Järjestelmä",
+    "theme_light": "Vaalea",
+    "theme_dark": "Tumma",
+    "section_colorations": "Värit",
+    "section_more": "Lisää",
+    "about_app": "Tietoja sovelluksesta",
+    "privacy_terms": "Tietosuoja",
+    "contact_support": "Ota yhteyttä tukeen"
+  },
+  "dialog": {
+    "delete_grocery": {
+      "title": "Poista tuote?",
+      "subtitle": "Haluatko varmasti poistaa \"{name}\"? Tätä toimintoa ei voi kumota ⛔️"
+    },
+    "notification_mode": {
+      "title": "Muistutusaikataulu",
+      "auto_label": "Automaattinen",
+      "auto_description": "Ennustaa seuraavan oston",
+      "custom_days_label": "Mukautetut päivät",
+      "custom_days_description": "Valitse tietyt päivät"
+    },
+    "permission": {
+      "notifications_title": "Lupa",
+      "notifications_subtitle": "Salli tämä sovellus ilmoitusten vastaanottamiseksi",
+      "notifications_subtitle_settings": "Salli tämä sovellus järjestelmäasetuksissa ilmoitusten vastaanottamiseksi"
+    }
+  },
+  "edit_grocery": {
+    "title": "Muokkaa tuotetta\n\"{name}\"",
+    "input_name_hint": "Mikä sen nimi on?",
+    "input_period_hint": "Kuinka monen päivän välein ostat?",
+    "input_period_default": {
+      "one": "Joka {} päivä",
+      "other": "Joka {} päivä"
+    },
+    "input_period_description": "Anna likimääräinen jakso. Listox oppii ostohistoriastasi!",
+    "button_update": "Päivitä"
+  },
+  "home": {
+    "header_title": "Tuotteet, jotka sinun ehkä pitää ostaa",
+    "tab_this_week": "Tällä Viikolla",
+    "tab_later": "Myöhemmin",
+    "purchase_confirmed": "Osto vahvistettu!",
+    "purchase_confirmed_description": "Opimme käyttötottumuksesi ja ennustamme, milloin tarvitset nämä tuotteet uudelleen",
+    "due_overdue": {
+      "one": "{} päivä myöhässä",
+      "other": "{} päivää myöhässä"
+    },
+    "due_today": "Erääntyy tänään",
+    "due_tomorrow": "Erääntyy huomenna",
+    "due_in_days": {
+      "one": "{} päivän päästä",
+      "other": "{} päivän päästä"
+    },
+    "pre_list_this_week": "Saattaa tarvita tällä viikolla",
+    "pre_list_later": "Saattaa tarvita myöhemmin",
+    "checked_section_title": "Valitut tuotteet",
+    "fully_stocked": "Varastosi on riittävä!",
+    "premium_lock_cta": "Päivitä Premiumiin nähdäksesi kaikki",
+    "premium_upgrade_hint": "Avaa kaikki ruokasi Premiumilla"
+  },
+  "purchase_banner": {
+    "fully_stocked": "Kaikki valmiina! Paina \"Osta\" vahvistaaksesi",
+    "items_checked": {
+      "one": "1 tuote valittu! Paina \"Osta\" vahvistaaksesi",
+      "other": "{} tuotetta valittu! Paina \"Osta\" vahvistaaksesi"
+    },
+    "button_purchase": "Osta"
+  },
+  "tutorial": {
+    "schedule_heading": "OSTOSSUUNNITELMASI",
+    "this_week_body": "Täällä näet tuotteet, jotka Listox ennustaa tarvitsevasi seuraavalla ostosreissullasi.",
+    "later_body": "Täällä näet tuotteet, joita sinulla on vielä tarpeeksi. Ne siirtyvät \"Tällä Viikolla\" -välilehdelle, kun on aika täydentää varastoa.",
+    "skip": "OHITA"
+  },
+  "welcome": {
+    "title": "Tervetuloa Listoxiin",
+    "onboarding_subtitle": "Älykäs ostoslistasi, joka oppii mitä ostat ja muistuttaa milloin täydentää varastoa",
+    "bullet1_title": "Seuraa tärkeimpiä tavaroita",
+    "bullet1_subtitle": "Lisää mitä säännöllisesti ostat ja pidä kaikki yhdessä paikassa",
+    "bullet2_title": "Älä koskaan unohda",
+    "bullet2_subtitle": "Listox oppii ja ennustaa milloin on aika täydentää varastoa",
+    "bullet3_title": "Aina valmis ostoksille",
+    "bullet3_subtitle": "Katso mitä saattaa tarvita tällä viikolla ennen lähtöä",
+    "cta": "Jatka"
+  },
+  "select_groceries": {
+    "heading": "Valitse tärkeimmät tavarat",
+    "description": "Valitse tuotteet, joita ostat usein. Listox seuraa milloin tarvitset niitä",
+    "button_done": "Valmis",
+    "button_selected_suffix": "/{max} valittu",
+    "add": "Lisää",
+    "limit_reached": "Voit tällä hetkellä valita enintään {max} tuotetta"
+  },
+  "search_groceries": {
+    "hint": "Etsi tuotteita..."
+  },
+  "weekdays_m": {
+    "mon": "Ma",
+    "tue": "Ti",
+    "wed": "Ke",
+    "thu": "To",
+    "fri": "Pe",
+    "sat": "La",
+    "sun": "Su"
+  },
+  "weekdays_s": {
+    "mon": "M",
+    "tue": "Ti",
+    "wed": "K",
+    "thu": "To",
+    "fri": "P",
+    "sat": "L",
+    "sun": "S"
+  },
+  "notifications": {
+    "mode_auto": "Automaattinen",
+    "prompts": {
+      "title_1": "Pian supermarketiin? 🏪",
+      "body_1": "Tarkista lista, ettei mitään unohdu",
+
+      "title_2": "Menet ostoksille? 🛒",
+      "body_2": "Katso mitkä perustavarat ovat lopussa",
+
+      "title_3": "Seuraavat ostokset 🛒",
+      "body_3": "Vilkaise nopeasti mitä saattaa tarvita",
+
+      "title_4": "Pian ostoksille? 🛒",
+      "body_4": "Tarkista mitä pitää täydentää",
+
+      "title_5": "Menet kauppaan? 🏪",
+      "body_5": "Listasi on valmis! Katso se",
+
+      "title_6": "Älä unohda mitään 🛒",
+      "body_6": "Ostoslistasi on valmis",
+
+      "title_7": "Suunnitteletko kauppakäyntiä? 🏪",
+      "body_7": "Tarkista lista ja hyödynnä matka",
+
+      "title_8": "Ennen ostoksia 🛍️",
+      "body_8": "Nopea vilkaisu listaan voi säästää aikaa",
+
+      "title_9": "Poikkeatko kaupassa? 🛒",
+      "body_9": "Tarvitsemasi perustavarat ovat jo listallasi",
+
+      "title_10": "Onko jokin loppumassa? ⏰",
+      "body_10": "Ostoslistasi on päivitetty, vilkaise se"
+    }
+  },
+  "add_custom_grocery": {
+    "heading": "Luo mukautettu\ntuote",
+    "input_name_hint": "Mikä sen nimi on?",
+    "input_period_hint": "Kuinka monen päivän välein ostat?",
+    "input_period_description": "Anna likimääräinen jakso. Listox oppii ostohistoriastasi!",
+    "button_create": "Luo"
+  },
+  "quick_add": {
+    "tile_label": "Pikalisäys",
+    "dialog_title": "Pikalisäys",
+    "dialog_subtitle": "Tuote poistetaan oston vahvistamisen jälkeen.",
+    "hint": "Kirjoita nimi",
+    "empty_state_hint": "Tarvitsetko jotain vain kerran? Kosketa minne tahansa lisätäksesi"
+  },
+  "paywall": {
+    "bullet1": "Seuraa rajatonta määrää tuotteita",
+    "bullet2": "Rakenna täydellinen lista tärkeimmistä tavaroista",
+    "bullet3": "Tiedä aina mitä tarvitset ennen ostoksia"
+  },
+  "smart_engine_banner": {
+    "title": "Älykäs Profiili",
+    "description": "Listox oppii mitä ostat ja ehdottaa ostoslistoja ennen kuin varastot loppuvat."
+  },
+  "categories": {
+    "food": "Ruoka",
+    "bathroom": "Kylpyhuone",
+    "kitchen": "Keittiö",
+    "cleaning": "Siivous",
+    "health": "Terveys",
+    "other": "Muut"
+  },
+  "groceries": {
+    "milk": "Maito",
+    "eggs": "Munat",
+    "bread": "Leipä",
+    "cheese": "Juusto",
+    "yogurt": "Jogurtti",
+    "rice": "Riisi",
+    "pasta": "Pasta",
+    "coffee": "Kahvi",
+    "water": "Vesi",
+    "chicken": "Kana",
+    "bananas": "Banaanit",
+    "apples": "Omenat",
+    "potatoes": "Perunat",
+    "onions": "Sipulit",
+    "butter": "Voi",
+    "pepper": "Pippuri",
+    "garlic": "Valkosipuli",
+    "carrot": "Porkkana",
+    "toilet_paper": "WC-paperi",
+    "shampoo": "Shampoo",
+    "toothpaste": "Hammastahna",
+    "soap": "Saippua",
+    "deodorant": "Deodorantti",
+    "toothbrush": "Hammasharja",
+    "shaving_cream": "Partavaahto",
+    "dish_soap": "Astianpesuaine",
+    "paper_towels": "Talouspaperi",
+    "salt": "Suola",
+    "olive_oil": "Oliiviöljy",
+    "sugar": "Sokeri",
+    "flour": "Jauhot",
+    "foil": "Alumiinifolio",
+    "baking_paper": "Leivinpaperi",
+    "laundry_detergent": "Pyykinpesuaine",
+    "trash_bags": "Roskapussit",
+    "toilet_cleaner": "WC-puhdistusaine",
+    "multi_surface_cleaner": "Yleispuhdistusaine",
+    "glass_cleaner": "Lasinpuhdistusaine",
+    "disinfectant_spray": "Desinfiointisuihke",
+    "wipes": "Kosteuspyyhkeet",
+    "painkillers": "Särkylääke",
+    "vitamins": "Vitamiinit",
+    "bandages": "Laastari",
+    "cough_syrup": "Yskänlääke",
+    "first_aid_kit": "Ensiapupakkaus",
+    "batteries": "Paristot",
+    "light_bulbs": "Lamput",
+    "pet_food": "Lemmikkieläinruoka",
+    "printer_paper": "Tulostinpaperi"
+  }
+}

@@ -1,0 +1,294 @@
+{
+  "appTitle": "Listox",
+  "loading": {
+    "just_a_moment": "รอสักครู่..."
+  },
+  "error": {
+    "generic_titles": {
+      "title1": "โอ้โห!",
+      "title2": "มีบางอย่างผิดพลาด",
+      "title3": "โอ้ไม่!",
+      "title4": "อืม...",
+      "title5": "โอเค",
+      "title6": "ไม่คาดคิด!",
+      "title7": "อีกครั้งแล้ว!",
+      "title8": "โอ้",
+      "title9": "ข้อผิดพลาด",
+      "title10": "อ๊ะ",
+      "title11": "อุ๊ปส์"
+    }
+  },
+  "error_message": {
+    "grocery_not_found": "ไม่พบสินค้า",
+    "grocery_storage": "บันทึกข้อมูลล้มเหลว",
+    "common": {
+      "unexpected": "อุ๊ปส์! เกิดข้อผิดพลาดที่ไม่คาดคิด... กำลังแก้ไข! 🚨"
+    },
+    "email": {
+      "failed_to_open_support": "อุ๊ปส์! ไม่สามารถเปิดแอปอีเมลได้... ติดต่อเราได้ที่ {} 💌"
+    },
+    "preferences_unexpected": "เกิดปัญหาที่ไม่คาดคิด"
+  },
+  "label": {
+    "oops": "อุ๊ปส์",
+    "whoops": "อุ๊ปส์!"
+  },
+  "snackbar": {
+    "badConnection": {
+      "title": "ไม่มีการเชื่อมต่อ",
+      "description": "ตรวจสอบการเชื่อมต่ออินเทอร์เน็ตของคุณ"
+    }
+  },
+  "common": {
+    "cancel": "ยกเลิก",
+    "delete": "ลบ",
+    "edit": "แก้ไข"
+  },
+  "account": {
+    "title": "บัญชี",
+    "premium_status_premium": "ผู้ใช้ Premium",
+    "premium_status_upgrade": "Premium",
+    "premium_expiry": "Premium มีผลถึง {date} ขอบคุณสำหรับการสนับสนุน <3",
+    "premium_upgrade_cta": "อัปเกรดเป็น Premium เพื่อจัดการไม่จำกัด!",
+    "notifications_enabled": "เปิด",
+    "notifications_disabled": "ปิด",
+    "notifications_description": "การแจ้งเตือนก่อนออกไปซื้อของ",
+    "section_notifications": "การแจ้งเตือน",
+    "section_preferences": "การตั้งค่า",
+    "language_title": "ภาษา",
+    "language_subtitle": "ภาษาของแอป",
+    "haptics_title": "Haptic",
+    "haptics_subtitle": "การสั่นสะเทือน",
+    "section_theme": "ธีม",
+    "theme_system": "ระบบ",
+    "theme_light": "สว่าง",
+    "theme_dark": "มืด",
+    "section_colorations": "สี",
+    "section_more": "เพิ่มเติม",
+    "about_app": "เกี่ยวกับแอป",
+    "privacy_terms": "ความเป็นส่วนตัว",
+    "contact_support": "ติดต่อฝ่ายสนับสนุน"
+  },
+  "dialog": {
+    "delete_grocery": {
+      "title": "ลบสินค้า?",
+      "subtitle": "แน่ใจว่าต้องการลบ \"{name}\"? การดำเนินการนี้ไม่สามารถยกเลิกได้ ⛔️"
+    },
+    "notification_mode": {
+      "title": "กำหนดการแจ้งเตือน",
+      "auto_label": "อัตโนมัติ",
+      "auto_description": "คาดการณ์การซื้อครั้งถัดไป",
+      "custom_days_label": "วันที่กำหนดเอง",
+      "custom_days_description": "เลือกวันที่ต้องการ"
+    },
+    "permission": {
+      "notifications_title": "สิทธิ์",
+      "notifications_subtitle": "เพื่อรับการแจ้งเตือน กรุณาอนุญาตแอปนี้",
+      "notifications_subtitle_settings": "เพื่อรับการแจ้งเตือน กรุณาอนุญาตแอปนี้ในการตั้งค่าระบบ"
+    }
+  },
+  "edit_grocery": {
+    "title": "แก้ไขสินค้า\n\"{name}\"",
+    "input_name_hint": "ชื่อคืออะไร?",
+    "input_period_hint": "ซื้อทุกกี่วัน?",
+    "input_period_default": {
+      "one": "ทุก {} วัน",
+      "other": "ทุก {} วัน"
+    },
+    "input_period_description": "ใส่ระยะเวลาโดยประมาณ Listox จะเรียนรู้จากประวัติการซื้อของคุณ!",
+    "button_update": "อัปเดต"
+  },
+  "home": {
+    "header_title": "สินค้าที่คุณอาจต้องซื้อ",
+    "tab_this_week": "สัปดาห์นี้",
+    "tab_later": "ภายหลัง",
+    "purchase_confirmed": "ยืนยันการซื้อแล้ว!",
+    "purchase_confirmed_description": "เราจะเรียนรู้การใช้งานของคุณและคาดการณ์ว่าคุณจะต้องการสินค้าเหล่านี้อีกเมื่อใด",
+    "due_overdue": {
+      "one": "เลย {} วัน",
+      "other": "เลย {} วัน"
+    },
+    "due_today": "ครบกำหนดวันนี้",
+    "due_tomorrow": "ครบกำหนดพรุ่งนี้",
+    "due_in_days": {
+      "one": "อีก {} วัน",
+      "other": "อีก {} วัน"
+    },
+    "pre_list_this_week": "อาจต้องใช้สัปดาห์นี้",
+    "pre_list_later": "อาจต้องใช้ภายหลัง",
+    "checked_section_title": "สินค้าที่เลือกแล้ว",
+    "fully_stocked": "สต็อกของคุณเพียงพอแล้ว!",
+    "premium_lock_cta": "อัปเกรด Premium เพื่อดูทั้งหมด",
+    "premium_upgrade_hint": "ปลดล็อกรายการทั้งหมดด้วย Premium"
+  },
+  "purchase_banner": {
+    "fully_stocked": "ครบทุกอย่าง! แตะ \"ซื้อ\" เพื่อยืนยัน",
+    "items_checked": {
+      "one": "เลือก 1 รายการ! แตะ \"ซื้อ\" เพื่อยืนยัน",
+      "other": "เลือก {} รายการ! แตะ \"ซื้อ\" เพื่อยืนยัน"
+    },
+    "button_purchase": "ซื้อ"
+  },
+  "tutorial": {
+    "schedule_heading": "ตารางซื้อของของคุณ",
+    "this_week_body": "ที่นี่คุณจะเห็นสินค้าที่ Listox คาดการณ์ว่าคุณต้องการในการซื้อของครั้งถัดไป",
+    "later_body": "ที่นี่คุณจะเห็นสินค้าที่ยังมีเพียงพอ จะย้ายไป \"สัปดาห์นี้\" เมื่อถึงเวลาเติม",
+    "skip": "ข้าม"
+  },
+  "welcome": {
+    "title": "ยินดีต้อนรับสู่ Listox",
+    "onboarding_subtitle": "รายการซื้อของอัจฉริยะที่เรียนรู้สิ่งที่คุณซื้อและแจ้งเมื่อต้องเติมสต็อก",
+    "bullet1_title": "ติดตามสิ่งจำเป็น",
+    "bullet1_subtitle": "เพิ่มสิ่งที่คุณซื้อเป็นประจำและเก็บทุกอย่างไว้ที่เดียว",
+    "bullet2_title": "ไม่ลืมอีกต่อไป",
+    "bullet2_subtitle": "Listox เรียนรู้และคาดการณ์ว่าเมื่อไหร่ต้องเติมสต็อก",
+    "bullet3_title": "พร้อมซื้อของเสมอ",
+    "bullet3_subtitle": "ดูสิ่งที่คุณอาจต้องใช้สัปดาห์นี้ก่อนออกไป",
+    "cta": "ต่อไป"
+  },
+  "select_groceries": {
+    "heading": "เลือกสิ่งจำเป็น",
+    "description": "เลือกสินค้าที่คุณซื้อบ่อย Listox จะติดตามว่าเมื่อไหร่คุณต้องการ",
+    "button_done": "เสร็จ",
+    "button_selected_suffix": "/{max} ที่เลือก",
+    "add": "เพิ่ม",
+    "limit_reached": "ตอนนี้คุณเลือกได้สูงสุด {max} รายการ"
+  },
+  "search_groceries": {
+    "hint": "ค้นหาสินค้า..."
+  },
+  "weekdays_m": {
+    "mon": "จ",
+    "tue": "อ",
+    "wed": "พ",
+    "thu": "พฤ",
+    "fri": "ศ",
+    "sat": "ส",
+    "sun": "อา"
+  },
+  "weekdays_s": {
+    "mon": "จ",
+    "tue": "อ",
+    "wed": "พ",
+    "thu": "พฤ",
+    "fri": "ศ",
+    "sat": "ส",
+    "sun": "อา"
+  },
+  "notifications": {
+    "mode_auto": "อัตโนมัติ",
+    "prompts": {
+      "title_1": "กำลังจะไปซูเปอร์มาร์เก็ตใช่ไหม? 🏪",
+      "body_1": "เช็กรายการเพื่อไม่ให้ลืมอะไร",
+
+      "title_2": "จะไปซื้อของใช่ไหม? 🛒",
+      "body_2": "ดูว่าสิ่งจำเป็นอะไรใกล้หมดบ้าง",
+
+      "title_3": "การซื้อของครั้งถัดไป 🛒",
+      "body_3": "ดูอย่างรวดเร็วว่าคุณอาจต้องการอะไร",
+
+      "title_4": "จะไปซื้อของเร็วๆ นี้ใช่ไหม? 🛒",
+      "body_4": "เช็กว่าอะไรต้องเติมบ้าง",
+
+      "title_5": "กำลังไปร้านค้าใช่ไหม? 🏪",
+      "body_5": "รายการของคุณพร้อมแล้ว! ดูเลย",
+
+      "title_6": "อย่าลืมอะไรเลย 🛒",
+      "body_6": "รายการซื้อของของคุณพร้อมแล้ว",
+
+      "title_7": "วางแผนจะไปร้านค้าใช่ไหม? 🏪",
+      "body_7": "เช็กรายการและใช้ประโยชน์จากการเดินทาง",
+
+      "title_8": "ก่อนไปซื้อของ 🛍️",
+      "body_8": "ดูรายการอย่างรวดเร็วอาจช่วยประหยัดเวลา",
+
+      "title_9": "แวะร้านค้าได้เลย? 🛒",
+      "body_9": "สิ่งจำเป็นที่คุณอาจต้องการมีอยู่ในรายการแล้ว",
+
+      "title_10": "มีอะไรใกล้หมดไหม? ⏰",
+      "body_10": "รายการซื้อของของคุณอัปเดตแล้ว ดูเลย"
+    }
+  },
+  "add_custom_grocery": {
+    "heading": "สร้างสินค้า\nกำหนดเอง",
+    "input_name_hint": "ชื่อคืออะไร?",
+    "input_period_hint": "ซื้อทุกกี่วัน?",
+    "input_period_description": "ใส่ระยะเวลาโดยประมาณ Listox จะเรียนรู้จากประวัติการซื้อของคุณ!",
+    "button_create": "สร้าง"
+  },
+  "quick_add": {
+    "tile_label": "เพิ่มด่วน",
+    "dialog_title": "เพิ่มด่วน",
+    "dialog_subtitle": "สินค้าจะถูกลบหลังจากยืนยันการซื้อ",
+    "hint": "ใส่ชื่อ",
+    "empty_state_hint": "ต้องการบางอย่างแค่ครั้งเดียว? แตะที่ไหนก็ได้เพื่อเพิ่ม"
+  },
+  "paywall": {
+    "bullet1": "ติดตามสิ่งจำเป็นไม่จำกัด",
+    "bullet2": "สร้างรายการสิ่งจำเป็นที่สมบูรณ์",
+    "bullet3": "รู้เสมอว่าต้องการอะไรก่อนซื้อของ"
+  },
+  "smart_engine_banner": {
+    "title": "โปรไฟล์อัจฉริยะ",
+    "description": "Listox เรียนรู้สิ่งที่คุณซื้อและแนะนำรายการซื้อของก่อนที่สต็อกจะหมด"
+  },
+  "categories": {
+    "food": "อาหาร",
+    "bathroom": "ห้องน้ำ",
+    "kitchen": "ครัว",
+    "cleaning": "ทำความสะอาด",
+    "health": "สุขภาพ",
+    "other": "อื่นๆ"
+  },
+  "groceries": {
+    "milk": "นม",
+    "eggs": "ไข่",
+    "bread": "ขนมปัง",
+    "cheese": "ชีส",
+    "yogurt": "โยเกิร์ต",
+    "rice": "ข้าว",
+    "pasta": "พาสต้า",
+    "coffee": "กาแฟ",
+    "water": "น้ำดื่ม",
+    "chicken": "ไก่",
+    "bananas": "กล้วย",
+    "apples": "แอปเปิ้ล",
+    "potatoes": "มันฝรั่ง",
+    "onions": "หัวหอม",
+    "butter": "เนย",
+    "pepper": "พริกไทย",
+    "garlic": "กระเทียม",
+    "carrot": "แครอท",
+    "toilet_paper": "กระดาษชำระ",
+    "shampoo": "แชมพู",
+    "toothpaste": "ยาสีฟัน",
+    "soap": "สบู่",
+    "deodorant": "ระงับกลิ่นกาย",
+    "toothbrush": "แปรงสีฟัน",
+    "shaving_cream": "ครีมโกนหนวด",
+    "dish_soap": "น้ำยาล้างจาน",
+    "paper_towels": "กระดาษทิชชู",
+    "salt": "เกลือ",
+    "olive_oil": "น้ำมันมะกอก",
+    "sugar": "น้ำตาล",
+    "flour": "แป้ง",
+    "foil": "กระดาษฟอยล์",
+    "baking_paper": "กระดาษรองอบ",
+    "laundry_detergent": "ผงซักฟอก",
+    "trash_bags": "ถุงขยะ",
+    "toilet_cleaner": "น้ำยาล้างห้องน้ำ",
+    "multi_surface_cleaner": "น้ำยาทำความสะอาดอเนกประสงค์",
+    "glass_cleaner": "น้ำยาเช็ดกระจก",
+    "disinfectant_spray": "สเปรย์ฆ่าเชื้อ",
+    "wipes": "ผ้าเปียก",
+    "painkillers": "ยาแก้ปวด",
+    "vitamins": "วิตามิน",
+    "bandages": "พลาสเตอร์",
+    "cough_syrup": "ยาแก้ไอ",
+    "first_aid_kit": "กล่องปฐมพยาบาล",
+    "batteries": "ถ่านไฟฉาย",
+    "light_bulbs": "หลอดไฟ",
+    "pet_food": "อาหารสัตว์เลี้ยง",
+    "printer_paper": "กระดาษพิมพ์"
+  }
+}

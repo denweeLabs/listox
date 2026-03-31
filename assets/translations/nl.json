@@ -1,0 +1,294 @@
+{
+  "appTitle": "Listox",
+  "loading": {
+    "just_a_moment": "Een ogenblik..."
+  },
+  "error": {
+    "generic_titles": {
+      "title1": "Oeps!",
+      "title2": "Er ging iets mis",
+      "title3": "Oh nee!",
+      "title4": "Hmm...",
+      "title5": "Nou ja",
+      "title6": "Onverwacht!",
+      "title7": "Weer hetzelfde!",
+      "title8": "Ai",
+      "title9": "Fout",
+      "title10": "Tjonge",
+      "title11": "Oeps"
+    }
+  },
+  "error_message": {
+    "grocery_not_found": "Product niet gevonden",
+    "grocery_storage": "Opslaan van gegevens mislukt",
+    "common": {
+      "unexpected": "Oeps! Er is een onverwachte fout opgetreden... We werken eraan! 🚨"
+    },
+    "email": {
+      "failed_to_open_support": "Oeps! E-mailapp kon niet worden geopend... Je kunt ons bereiken via {} 💌"
+    },
+    "preferences_unexpected": "Er is een onverwacht probleem opgetreden"
+  },
+  "label": {
+    "oops": "Oeps",
+    "whoops": "Oeps!"
+  },
+  "snackbar": {
+    "badConnection": {
+      "title": "Geen verbinding",
+      "description": "Controleer je internetverbinding"
+    }
+  },
+  "common": {
+    "cancel": "Annuleren",
+    "delete": "Verwijderen",
+    "edit": "Bewerken"
+  },
+  "account": {
+    "title": "Account",
+    "premium_status_premium": "Premium gebruiker",
+    "premium_status_upgrade": "Premium",
+    "premium_expiry": "Premium geldig tot {date}. Bedankt voor je steun <3",
+    "premium_upgrade_cta": "Upgrade naar Premium voor onbeperkt beheer!",
+    "notifications_enabled": "Aan",
+    "notifications_disabled": "Uit",
+    "notifications_description": "Snelle herinnering voor het winkelen",
+    "section_notifications": "Meldingen",
+    "section_preferences": "Voorkeuren",
+    "language_title": "Taal",
+    "language_subtitle": "Interfacetaal",
+    "haptics_title": "Haptics",
+    "haptics_subtitle": "Trillingsfeedback",
+    "section_theme": "Thema",
+    "theme_system": "Systeem",
+    "theme_light": "Licht",
+    "theme_dark": "Donker",
+    "section_colorations": "Kleuren",
+    "section_more": "Meer",
+    "about_app": "Over de app",
+    "privacy_terms": "Privacy",
+    "contact_support": "Contact opnemen"
+  },
+  "dialog": {
+    "delete_grocery": {
+      "title": "Product verwijderen?",
+      "subtitle": "Weet je zeker dat je \"{name}\" wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt ⛔️"
+    },
+    "notification_mode": {
+      "title": "Herinneringsschema",
+      "auto_label": "Automatisch",
+      "auto_description": "Voorspelt de volgende aankoop",
+      "custom_days_label": "Aangepaste dagen",
+      "custom_days_description": "Kies specifieke dagen"
+    },
+    "permission": {
+      "notifications_title": "Toestemming",
+      "notifications_subtitle": "Sta deze app toe om meldingen te ontvangen",
+      "notifications_subtitle_settings": "Sta deze app toe in de systeeminstellingen om meldingen te ontvangen"
+    }
+  },
+  "edit_grocery": {
+    "title": "Product bewerken\n\"{name}\"",
+    "input_name_hint": "Hoe heet het?",
+    "input_period_hint": "Elke hoeveel dagen koop je dit?",
+    "input_period_default": {
+      "one": "Elke {} dag",
+      "other": "Elke {} dagen"
+    },
+    "input_period_description": "Voer een geschatte periode in. Listox leert van je aankoopgeschiedenis!",
+    "button_update": "Bijwerken"
+  },
+  "home": {
+    "header_title": "Producten die je misschien moet kopen",
+    "tab_this_week": "Deze Week",
+    "tab_later": "Later",
+    "purchase_confirmed": "Aankoop bevestigd!",
+    "purchase_confirmed_description": "We leren je gebruikspatroon en voorspellen wanneer je deze items opnieuw nodig hebt",
+    "due_overdue": {
+      "one": "{} dag te laat",
+      "other": "{} dagen te laat"
+    },
+    "due_today": "Vandaag verwacht",
+    "due_tomorrow": "Morgen verwacht",
+    "due_in_days": {
+      "one": "Over {} dag",
+      "other": "Over {} dagen"
+    },
+    "pre_list_this_week": "Misschien nodig deze week",
+    "pre_list_later": "Misschien later nodig",
+    "checked_section_title": "Aangevinkte producten",
+    "fully_stocked": "Je voorraad is voldoende!",
+    "premium_lock_cta": "Upgrade naar Premium om alles te zien",
+    "premium_upgrade_hint": "Ontgrendel al je boodschappen met Premium"
+  },
+  "purchase_banner": {
+    "fully_stocked": "Alles compleet! Tik op \"Kopen\" om te bevestigen",
+    "items_checked": {
+      "one": "1 product aangevinkt! Tik op \"Kopen\" om te bevestigen",
+      "other": "{} producten aangevinkt! Tik op \"Kopen\" om te bevestigen"
+    },
+    "button_purchase": "Kopen"
+  },
+  "tutorial": {
+    "schedule_heading": "JOUW WINKELSCHEMA",
+    "this_week_body": "Hier zie je de producten waarvan Listox voorspelt dat je ze nodig hebt tijdens je volgende winkelrit.",
+    "later_body": "Hier zie je producten waarvan je nog genoeg hebt. Ze gaan naar \"Deze Week\" wanneer het tijd is om bij te vullen.",
+    "skip": "OVERSLAAN"
+  },
+  "welcome": {
+    "title": "Welkom bij Listox",
+    "onboarding_subtitle": "Je slimme boodschappenlijst die leert wat je koopt en je herinnert wanneer je moet aanvullen",
+    "bullet1_title": "Houd essentials bij",
+    "bullet1_subtitle": "Voeg toe wat je regelmatig koopt en houd alles op één plek",
+    "bullet2_title": "Nooit meer vergeten",
+    "bullet2_subtitle": "Listox leert en voorspelt wanneer het tijd is om bij te vullen",
+    "bullet3_title": "Altijd klaar om te winkelen",
+    "bullet3_subtitle": "Zie wat je misschien nodig hebt deze week voordat je de deur uitgaat",
+    "cta": "Doorgaan"
+  },
+  "select_groceries": {
+    "heading": "Kies je essentials",
+    "description": "Selecteer producten die je vaak koopt. Listox houdt bij wanneer je ze nodig hebt",
+    "button_done": "Klaar",
+    "button_selected_suffix": "/{max} geselecteerd",
+    "add": "Toevoegen",
+    "limit_reached": "Je kunt nu maximaal {max} producten selecteren"
+  },
+  "search_groceries": {
+    "hint": "Producten zoeken..."
+  },
+  "weekdays_m": {
+    "mon": "Ma",
+    "tue": "Di",
+    "wed": "Wo",
+    "thu": "Do",
+    "fri": "Vr",
+    "sat": "Za",
+    "sun": "Zo"
+  },
+  "weekdays_s": {
+    "mon": "M",
+    "tue": "Di",
+    "wed": "W",
+    "thu": "Do",
+    "fri": "V",
+    "sat": "Za",
+    "sun": "Zo"
+  },
+  "notifications": {
+    "mode_auto": "Automatisch",
+    "prompts": {
+      "title_1": "Ga je binnenkort naar de supermarkt? 🏪",
+      "body_1": "Controleer je lijst om niets te missen",
+
+      "title_2": "Ga je boodschappen doen? 🛒",
+      "body_2": "Bekijk welke essentials bijna op zijn",
+
+      "title_3": "Volgende winkelrit 🛒",
+      "body_3": "Kijk snel wat je misschien nodig hebt",
+
+      "title_4": "Binnenkort boodschappen? 🛒",
+      "body_4": "Controleer wat er bijgevuld moet worden",
+
+      "title_5": "Ga je naar de winkel? 🏪",
+      "body_5": "Je lijst staat klaar! Kijk even snel",
+
+      "title_6": "Vergeet niets 🛒",
+      "body_6": "Je boodschappenlijst staat klaar",
+
+      "title_7": "Van plan naar de winkel te gaan? 🏪",
+      "body_7": "Controleer je lijst en haal het meeste uit je trip",
+
+      "title_8": "Voor het winkelen 🛍️",
+      "body_8": "Een snelle blik op de lijst kan je tijd besparen",
+
+      "title_9": "Even langs de winkel? 🛒",
+      "body_9": "De essentials die je misschien nodig hebt staan al in je lijst",
+
+      "title_10": "Raakt er iets op? ⏰",
+      "body_10": "Je boodschappenlijst is bijgewerkt, kijk even"
+    }
+  },
+  "add_custom_grocery": {
+    "heading": "Maak een eigen\nproduct",
+    "input_name_hint": "Hoe heet het?",
+    "input_period_hint": "Elke hoeveel dagen koop je dit?",
+    "input_period_description": "Voer een geschatte periode in. Listox leert van je aankoopgeschiedenis!",
+    "button_create": "Aanmaken"
+  },
+  "quick_add": {
+    "tile_label": "Snel toevoegen",
+    "dialog_title": "Snel toevoegen",
+    "dialog_subtitle": "Het product wordt verwijderd na bevestiging van de aankoop.",
+    "hint": "Naam invoeren",
+    "empty_state_hint": "Heb je iets maar één keer nodig? Tik ergens om het toe te voegen"
+  },
+  "paywall": {
+    "bullet1": "Bijhouden van onbeperkte essentials",
+    "bullet2": "Bouw je volledige lijst met essentials",
+    "bullet3": "Weet altijd wat je nodig hebt voor het winkelen"
+  },
+  "smart_engine_banner": {
+    "title": "Slim Profiel",
+    "description": "Listox leert wat je koopt en stelt boodschappenlijsten voor voordat je door je voorraad heen bent."
+  },
+  "categories": {
+    "food": "Voedsel",
+    "bathroom": "Badkamer",
+    "kitchen": "Keuken",
+    "cleaning": "Schoonmaak",
+    "health": "Gezondheid",
+    "other": "Overig"
+  },
+  "groceries": {
+    "milk": "Melk",
+    "eggs": "Eieren",
+    "bread": "Brood",
+    "cheese": "Kaas",
+    "yogurt": "Yoghurt",
+    "rice": "Rijst",
+    "pasta": "Pasta",
+    "coffee": "Koffie",
+    "water": "Water",
+    "chicken": "Kip",
+    "bananas": "Bananen",
+    "apples": "Appels",
+    "potatoes": "Aardappelen",
+    "onions": "Uien",
+    "butter": "Boter",
+    "pepper": "Peper",
+    "garlic": "Knoflook",
+    "carrot": "Wortel",
+    "toilet_paper": "Toiletpapier",
+    "shampoo": "Shampoo",
+    "toothpaste": "Tandpasta",
+    "soap": "Zeep",
+    "deodorant": "Deodorant",
+    "toothbrush": "Tandenborstel",
+    "shaving_cream": "Scheerschuim",
+    "dish_soap": "Afwasmiddel",
+    "paper_towels": "Keukenpapier",
+    "salt": "Zout",
+    "olive_oil": "Olijfolie",
+    "sugar": "Suiker",
+    "flour": "Bloem",
+    "foil": "Aluminiumfolie",
+    "baking_paper": "Bakpapier",
+    "laundry_detergent": "Wasmiddel",
+    "trash_bags": "Vuilniszakken",
+    "toilet_cleaner": "Toiletreinger",
+    "multi_surface_cleaner": "Allesreiniger",
+    "glass_cleaner": "Glasreiniger",
+    "disinfectant_spray": "Desinfecterende spray",
+    "wipes": "Vochtige doekjes",
+    "painkillers": "Pijnstillers",
+    "vitamins": "Vitamines",
+    "bandages": "Pleisters",
+    "cough_syrup": "Hoestsiroop",
+    "first_aid_kit": "EHBO-doos",
+    "batteries": "Batterijen",
+    "light_bulbs": "Gloeilampen",
+    "pet_food": "Dierenvoer",
+    "printer_paper": "Printerpapier"
+  }
+}

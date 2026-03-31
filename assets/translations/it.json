@@ -1,0 +1,294 @@
+{
+  "appTitle": "Listox",
+  "loading": {
+    "just_a_moment": "Un momento..."
+  },
+  "error": {
+    "generic_titles": {
+      "title1": "Ops!",
+      "title2": "Qualcosa è andato storto",
+      "title3": "Oh no!",
+      "title4": "Hmm...",
+      "title5": "Beh, allora",
+      "title6": "Inaspettato!",
+      "title7": "Di nuovo!",
+      "title8": "Ahi",
+      "title9": "Errore",
+      "title10": "Accidenti",
+      "title11": "Oops"
+    }
+  },
+  "error_message": {
+    "grocery_not_found": "Articolo non trovato",
+    "grocery_storage": "Salvataggio dati fallito",
+    "common": {
+      "unexpected": "Ops! Si è verificato un errore imprevisto... Ci stiamo lavorando! 🚨"
+    },
+    "email": {
+      "failed_to_open_support": "Ops! Non siamo riusciti ad aprire l'app di posta... Puoi contattarci a {} 💌"
+    },
+    "preferences_unexpected": "Si è verificato un problema imprevisto"
+  },
+  "label": {
+    "oops": "Ops",
+    "whoops": "Ops!"
+  },
+  "snackbar": {
+    "badConnection": {
+      "title": "Nessuna connessione",
+      "description": "Controlla la tua connessione internet"
+    }
+  },
+  "common": {
+    "cancel": "Annulla",
+    "delete": "Elimina",
+    "edit": "Modifica"
+  },
+  "account": {
+    "title": "Account",
+    "premium_status_premium": "Utente Premium",
+    "premium_status_upgrade": "Premium",
+    "premium_expiry": "Premium valido fino al {date}. Grazie per il tuo supporto <3",
+    "premium_upgrade_cta": "Passa al Premium per una gestione illimitata!",
+    "notifications_enabled": "Attivate",
+    "notifications_disabled": "Disattivate",
+    "notifications_description": "Un promemoria veloce prima di fare la spesa",
+    "section_notifications": "Notifiche",
+    "section_preferences": "Preferenze",
+    "language_title": "Lingua",
+    "language_subtitle": "Lingua dell'interfaccia",
+    "haptics_title": "Aptico",
+    "haptics_subtitle": "Feedback vibrante",
+    "section_theme": "Tema",
+    "theme_system": "Sistema",
+    "theme_light": "Chiaro",
+    "theme_dark": "Scuro",
+    "section_colorations": "Colori",
+    "section_more": "Altro",
+    "about_app": "Informazioni",
+    "privacy_terms": "Privacy",
+    "contact_support": "Contatta il supporto"
+  },
+  "dialog": {
+    "delete_grocery": {
+      "title": "Eliminare l'articolo?",
+      "subtitle": "Sei sicuro di voler eliminare \"{name}\"? Questa azione è irreversibile ⛔️"
+    },
+    "notification_mode": {
+      "title": "Pianificazione promemoria",
+      "auto_label": "Auto",
+      "auto_description": "Prevede il prossimo acquisto",
+      "custom_days_label": "Giorni personalizzati",
+      "custom_days_description": "Scegli giorni specifici"
+    },
+    "permission": {
+      "notifications_title": "Permesso",
+      "notifications_subtitle": "Per ricevere notifiche, assicurati di consentire il permesso a questa app",
+      "notifications_subtitle_settings": "Per ricevere notifiche, consenti il permesso nelle impostazioni di sistema"
+    }
+  },
+  "edit_grocery": {
+    "title": "Modifica articolo\n\"{name}\"",
+    "input_name_hint": "Come si chiama?",
+    "input_period_hint": "Ogni quanti giorni lo compri?",
+    "input_period_default": {
+      "one": "Ogni {} giorno",
+      "other": "Ogni {} giorni"
+    },
+    "input_period_description": "Inserisci un periodo approssimativo. Listox imparerà dai tuoi acquisti!",
+    "button_update": "Aggiorna"
+  },
+  "home": {
+    "header_title": "Prodotti che potresti aver bisogno di comprare",
+    "tab_this_week": "Questa Settimana",
+    "tab_later": "Dopo",
+    "purchase_confirmed": "Acquisto confermato!",
+    "purchase_confirmed_description": "Impareremo le tue abitudini e prevederemo quando avrai di nuovo bisogno di questi articoli",
+    "due_overdue": {
+      "one": "{} giorno di ritardo",
+      "other": "{} giorni di ritardo"
+    },
+    "due_today": "Scade oggi",
+    "due_tomorrow": "Scade domani",
+    "due_in_days": {
+      "one": "Tra {} giorno",
+      "other": "Tra {} giorni"
+    },
+    "pre_list_this_week": "Probabilmente necessario questa settimana",
+    "pre_list_later": "Probabilmente necessario dopo",
+    "checked_section_title": "Articoli selezionati",
+    "fully_stocked": "Sei ben rifornito!",
+    "premium_lock_cta": "Passa al Premium per vedere tutto",
+    "premium_upgrade_hint": "Sblocca tutti i tuoi articoli con Premium"
+  },
+  "purchase_banner": {
+    "fully_stocked": "Tutto a posto! Tocca \"Acquista\" per confermare",
+    "items_checked": {
+      "one": "1 articolo selezionato! Tocca \"Acquista\" per confermare",
+      "other": "{} articoli selezionati! Tocca \"Acquista\" per confermare"
+    },
+    "button_purchase": "Acquista"
+  },
+  "tutorial": {
+    "schedule_heading": "IL TUO PIANO DELLA SPESA",
+    "this_week_body": "Qui vedrai gli articoli che Listox prevede ti serviranno nel prossimo giro della spesa.",
+    "later_body": "Qui vedrai gli articoli di cui hai ancora abbastanza. Passeranno a \"Questa Settimana\" quando sarà il momento di rifornirti.",
+    "skip": "SALTA"
+  },
+  "welcome": {
+    "title": "Benvenuto su Listox",
+    "onboarding_subtitle": "La tua lista della spesa intelligente che impara cosa compri e ti ricorda quando rifornirti",
+    "bullet1_title": "Tieni traccia degli essenziali",
+    "bullet1_subtitle": "Aggiungi ciò che compri regolarmente e tieni tutto in un unico posto",
+    "bullet2_title": "Non dimenticare mai più",
+    "bullet2_subtitle": "Listox impara e prevede quando è il momento di rifornirti",
+    "bullet3_title": "Sempre pronto per la spesa",
+    "bullet3_subtitle": "Scopri cosa potresti aver bisogno questa settimana prima di uscire",
+    "cta": "Continua"
+  },
+  "select_groceries": {
+    "heading": "Scegli gli essenziali",
+    "description": "Seleziona gli articoli che compri spesso. Listox seguirà quando ne avrai bisogno",
+    "button_done": "Fatto",
+    "button_selected_suffix": "/{max} selezionati",
+    "add": "Aggiungi",
+    "limit_reached": "Per ora puoi selezionare fino a {max} articoli"
+  },
+  "search_groceries": {
+    "hint": "Cerca articoli..."
+  },
+  "weekdays_m": {
+    "mon": "Lun",
+    "tue": "Mar",
+    "wed": "Mer",
+    "thu": "Gio",
+    "fri": "Ven",
+    "sat": "Sab",
+    "sun": "Dom"
+  },
+  "weekdays_s": {
+    "mon": "L",
+    "tue": "M",
+    "wed": "M",
+    "thu": "G",
+    "fri": "V",
+    "sat": "S",
+    "sun": "D"
+  },
+  "notifications": {
+    "mode_auto": "Auto",
+    "prompts": {
+      "title_1": "Vai al supermercato presto? 🏪",
+      "body_1": "Controlla la lista per non dimenticare niente",
+
+      "title_2": "Stai andando a fare la spesa? 🛒",
+      "body_2": "Guarda quali essenziali stanno per finire",
+
+      "title_3": "Prossima spesa 🛒",
+      "body_3": "Dai un'occhiata veloce a cosa potrebbe servirti",
+
+      "title_4": "Spesa in arrivo? 🛒",
+      "body_4": "Controlla cosa potrebbe aver bisogno di essere rifornito",
+
+      "title_5": "Stai andando al negozio? 🏪",
+      "body_5": "La tua lista è pronta! Dai un'occhiata",
+
+      "title_6": "Non dimenticare niente 🛒",
+      "body_6": "La tua lista della spesa è pronta",
+
+      "title_7": "Pianifichi una visita al negozio? 🏪",
+      "body_7": "Controlla la lista e approfitta del viaggio",
+
+      "title_8": "Prima di fare la spesa 🛍️",
+      "body_8": "Un'occhiata rapida alla lista può farti risparmiare tempo",
+
+      "title_9": "Passata veloce al negozio? 🛒",
+      "body_9": "Gli essenziali di cui potresti aver bisogno sono già nella tua lista",
+
+      "title_10": "Qualcosa sta finendo? ⏰",
+      "body_10": "La tua lista è aggiornata, dai un'occhiata"
+    }
+  },
+  "add_custom_grocery": {
+    "heading": "Crea un essenziale\npersonalizzato",
+    "input_name_hint": "Come si chiama?",
+    "input_period_hint": "Ogni quanti giorni lo compri?",
+    "input_period_description": "Inserisci un periodo approssimativo. Listox imparerà dai tuoi acquisti!",
+    "button_create": "Crea"
+  },
+  "quick_add": {
+    "tile_label": "Aggiunta rapida",
+    "dialog_title": "Aggiunta rapida",
+    "dialog_subtitle": "L'articolo verrà rimosso dopo la conferma dell'acquisto.",
+    "hint": "Inserisci un nome",
+    "empty_state_hint": "Hai bisogno di qualcosa solo questa volta? Tocca ovunque per aggiungerlo"
+  },
+  "paywall": {
+    "bullet1": "Tieni traccia di essenziali illimitati",
+    "bullet2": "Costruisci la tua lista completa di essenziali",
+    "bullet3": "Sappi sempre cosa ti serve prima di fare la spesa"
+  },
+  "smart_engine_banner": {
+    "title": "Profilo Intelligente",
+    "description": "Listox impara cosa compri e suggerisce liste prima che tu finisca le scorte."
+  },
+  "categories": {
+    "food": "Alimentari",
+    "bathroom": "Bagno",
+    "kitchen": "Cucina",
+    "cleaning": "Pulizia",
+    "health": "Salute",
+    "other": "Altro"
+  },
+  "groceries": {
+    "milk": "Latte",
+    "eggs": "Uova",
+    "bread": "Pane",
+    "cheese": "Formaggio",
+    "yogurt": "Yogurt",
+    "rice": "Riso",
+    "pasta": "Pasta",
+    "coffee": "Caffè",
+    "water": "Acqua",
+    "chicken": "Pollo",
+    "bananas": "Banane",
+    "apples": "Mele",
+    "potatoes": "Patate",
+    "onions": "Cipolle",
+    "butter": "Burro",
+    "pepper": "Pepe",
+    "garlic": "Aglio",
+    "carrot": "Carota",
+    "toilet_paper": "Carta igienica",
+    "shampoo": "Shampoo",
+    "toothpaste": "Dentifricio",
+    "soap": "Sapone",
+    "deodorant": "Deodorante",
+    "toothbrush": "Spazzolino",
+    "shaving_cream": "Schiuma da barba",
+    "dish_soap": "Detersivo piatti",
+    "paper_towels": "Carta da cucina",
+    "salt": "Sale",
+    "olive_oil": "Olio d'oliva",
+    "sugar": "Zucchero",
+    "flour": "Farina",
+    "foil": "Carta stagnola",
+    "baking_paper": "Carta da forno",
+    "laundry_detergent": "Detersivo bucato",
+    "trash_bags": "Sacchi dell'immondizia",
+    "toilet_cleaner": "Pulisci WC",
+    "multi_surface_cleaner": "Detergente multiuso",
+    "glass_cleaner": "Pulisci vetri",
+    "disinfectant_spray": "Spray disinfettante",
+    "wipes": "Salviette umidificate",
+    "painkillers": "Antidolorifici",
+    "vitamins": "Vitamine",
+    "bandages": "Cerotti",
+    "cough_syrup": "Sciroppo per la tosse",
+    "first_aid_kit": "Kit di pronto soccorso",
+    "batteries": "Batterie",
+    "light_bulbs": "Lampadine",
+    "pet_food": "Cibo per animali",
+    "printer_paper": "Carta per stampante"
+  }
+}

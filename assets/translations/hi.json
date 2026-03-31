@@ -1,0 +1,294 @@
+{
+  "appTitle": "Listox",
+  "loading": {
+    "just_a_moment": "एक पल..."
+  },
+  "error": {
+    "generic_titles": {
+      "title1": "उफ़!",
+      "title2": "कुछ गड़बड़ हो गई",
+      "title3": "ओह नहीं!",
+      "title4": "हम्म...",
+      "title5": "अच्छा फिर",
+      "title6": "अप्रत्याशित!",
+      "title7": "फिर से!",
+      "title8": "अरे",
+      "title9": "त्रुटि",
+      "title10": "अरे यार",
+      "title11": "गलती"
+    }
+  },
+  "error_message": {
+    "grocery_not_found": "आइटम नहीं मिला",
+    "grocery_storage": "डेटा सेव नहीं हो सका",
+    "common": {
+      "unexpected": "कुछ अनपेक्षित हो गया... हम इस पर काम कर रहे हैं! 🚨"
+    },
+    "email": {
+      "failed_to_open_support": "उफ़! ईमेल ऐप नहीं खुल सका... लेकिन आप {} पर हमसे संपर्क कर सकते हैं 💌"
+    },
+    "preferences_unexpected": "अनपेक्षित समस्या हुई"
+  },
+  "label": {
+    "oops": "उफ़",
+    "whoops": "उफ़!"
+  },
+  "snackbar": {
+    "badConnection": {
+      "title": "कोई कनेक्शन नहीं",
+      "description": "कृपया अपना इंटरनेट कनेक्शन जांचें"
+    }
+  },
+  "common": {
+    "cancel": "रद्द करें",
+    "delete": "हटाएं",
+    "edit": "संपादित करें"
+  },
+  "account": {
+    "title": "खाता",
+    "premium_status_premium": "प्रीमियम यूज़र",
+    "premium_status_upgrade": "प्रीमियम",
+    "premium_expiry": "प्रीमियम {date} तक वैध है। आपके समर्थन के लिए धन्यवाद <3",
+    "premium_upgrade_cta": "असीमित ग्रोसरी के लिए प्रीमियम लें!",
+    "notifications_enabled": "चालू",
+    "notifications_disabled": "बंद",
+    "notifications_description": "दुकान जाने से पहले एक रिमाइंडर",
+    "section_notifications": "सूचनाएं",
+    "section_preferences": "प्राथमिकताएं",
+    "language_title": "भाषा",
+    "language_subtitle": "इंटरफ़ेस भाषा",
+    "haptics_title": "हैप्टिक्स",
+    "haptics_subtitle": "वाइब्रेशन फ़ीडबैक",
+    "section_theme": "थीम",
+    "theme_system": "सिस्टम",
+    "theme_light": "हल्का",
+    "theme_dark": "गहरा",
+    "section_colorations": "रंग",
+    "section_more": "और",
+    "about_app": "ऐप के बारे में",
+    "privacy_terms": "गोपनीयता",
+    "contact_support": "सपोर्ट से संपर्क करें"
+  },
+  "dialog": {
+    "delete_grocery": {
+      "title": "आइटम हटाएं?",
+      "subtitle": "क्या आप सच में \"{name}\" हटाना चाहते हैं? यह क्रिया वापस नहीं होगी ⛔️"
+    },
+    "notification_mode": {
+      "title": "रिमाइंडर शेड्यूल",
+      "auto_label": "ऑटो",
+      "auto_description": "अगली शॉपिंग का अनुमान लगाता है",
+      "custom_days_label": "कस्टम दिन",
+      "custom_days_description": "विशेष दिन चुनें"
+    },
+    "permission": {
+      "notifications_title": "अनुमति",
+      "notifications_subtitle": "सूचनाएं पाने के लिए इस ऐप को अनुमति दें",
+      "notifications_subtitle_settings": "सिस्टम सेटिंग्स में इस ऐप को नोटिफिकेशन की अनुमति दें"
+    }
+  },
+  "edit_grocery": {
+    "title": "आइटम संपादित करें\n\"{name}\"",
+    "input_name_hint": "इसे क्या कहें?",
+    "input_period_hint": "कितने दिन में खरीदते हैं?",
+    "input_period_default": {
+      "one": "हर {} दिन",
+      "other": "हर {} दिन"
+    },
+    "input_period_description": "एक अनुमानित अवधि दर्ज करें। Listox आपकी खरीदारी से सीखेगा!",
+    "button_update": "अपडेट करें"
+  },
+  "home": {
+    "header_title": "जो चीज़ें शायद खरीदनी हों",
+    "tab_this_week": "इस हफ्ते",
+    "tab_later": "बाद में",
+    "purchase_confirmed": "खरीदारी की पुष्टि हो गई!",
+    "purchase_confirmed_description": "हम आपके उपयोग से सीखेंगे और अनुमान लगाएंगे कि आपको ये चीज़ें फिर कब चाहिए होंगी",
+    "due_overdue": {
+      "one": "{} दिन पहले देय था",
+      "other": "{} दिन पहले देय था"
+    },
+    "due_today": "आज देय है",
+    "due_tomorrow": "कल देय है",
+    "due_in_days": {
+      "one": "{} दिन में",
+      "other": "{} दिन में"
+    },
+    "pre_list_this_week": "इस हफ्ते ज़रूरत होगी",
+    "pre_list_later": "बाद में ज़रूरत होगी",
+    "checked_section_title": "चुने हुए आइटम",
+    "fully_stocked": "पूरा स्टॉक है!",
+    "premium_lock_cta": "सब देखने के लिए प्रीमियम लें",
+    "premium_upgrade_hint": "प्रीमियम के साथ सभी किराना अनलॉक करें"
+  },
+  "purchase_banner": {
+    "fully_stocked": "सब कुछ है! \"खरीदें\" दबाकर पुष्टि करें",
+    "items_checked": {
+      "one": "1 आइटम चुना! \"खरीदें\" दबाकर पुष्टि करें",
+      "other": "{} आइटम चुने! \"खरीदें\" दबाकर पुष्टि करें"
+    },
+    "button_purchase": "खरीदें"
+  },
+  "tutorial": {
+    "schedule_heading": "आपका शॉपिंग शेड्यूल",
+    "this_week_body": "यहाँ वो आइटम दिखेंगे जो Listox की राय में आपको अगली बार खरीदने चाहिए।",
+    "later_body": "यहाँ वो आइटम दिखेंगे जो अभी पर्याप्त हैं। जब भरने का समय होगा तो वे \"इस हफ्ते\" में आ जाएंगे।",
+    "skip": "छोड़ें"
+  },
+  "welcome": {
+    "title": "Listox में आपका स्वागत है",
+    "onboarding_subtitle": "स्मार्ट ग्रोसरी लिस्ट जो आपकी खरीदारी सीखती है और भरने की याद दिलाती है",
+    "bullet1_title": "ज़रूरी चीज़ें ट्रैक करें",
+    "bullet1_subtitle": "जो चीज़ें नियमित खरीदते हैं उन्हें जोड़ें और एक जगह रखें",
+    "bullet2_title": "फिर कभी न भूलें",
+    "bullet2_subtitle": "Listox सीखता है और बताता है कि कब भरना है",
+    "bullet3_title": "हमेशा दुकान के लिए तैयार",
+    "bullet3_subtitle": "निकलने से पहले देखें इस हफ्ते क्या चाहिए",
+    "cta": "जारी रखें"
+  },
+  "select_groceries": {
+    "heading": "ज़रूरी चीज़ें चुनें",
+    "description": "जो आइटम अक्सर खरीदते हैं उन्हें चुनें। Listox ट्रैक करेगा कब चाहिए",
+    "button_done": "हो गया",
+    "button_selected_suffix": "/{max} चुने",
+    "add": "जोड़ें",
+    "limit_reached": "अभी अधिकतम {max} आइटम चुन सकते हैं"
+  },
+  "search_groceries": {
+    "hint": "आइटम खोजें..."
+  },
+  "weekdays_m": {
+    "mon": "सोम",
+    "tue": "मंगल",
+    "wed": "बुध",
+    "thu": "गुरु",
+    "fri": "शुक्र",
+    "sat": "शनि",
+    "sun": "रवि"
+  },
+  "weekdays_s": {
+    "mon": "स",
+    "tue": "मं",
+    "wed": "बु",
+    "thu": "गु",
+    "fri": "शु",
+    "sat": "श",
+    "sun": "र"
+  },
+  "notifications": {
+    "mode_auto": "ऑटो",
+    "prompts": {
+      "title_1": "जल्द दुकान जाना है? 🏪",
+      "body_1": "लिस्ट देखें ताकि कुछ छूट न जाए",
+
+      "title_2": "शॉपिंग पर जाने वाले हैं? 🛒",
+      "body_2": "देखें कौन सी ज़रूरी चीज़ें कम हो रही हैं",
+
+      "title_3": "अगली शॉपिंग ट्रिप 🛒",
+      "body_3": "जल्दी से देखें आपको क्या चाहिए",
+
+      "title_4": "जल्द खरीदारी? 🛒",
+      "body_4": "देखें क्या भरना है",
+
+      "title_5": "दुकान जाने वाले हैं? 🏪",
+      "body_5": "आपकी शॉपिंग लिस्ट तैयार है! एक नज़र डालें",
+
+      "title_6": "कुछ मत भूलिए 🛒",
+      "body_6": "आपकी शॉपिंग लिस्ट तैयार है",
+
+      "title_7": "दुकान की योजना बना रहे हैं? 🏪",
+      "body_7": "लिस्ट देखें और यात्रा का सदुपयोग करें",
+
+      "title_8": "शॉपिंग से पहले 🛍️",
+      "body_8": "लिस्ट की जल्दी जांच से समय बचेगा",
+
+      "title_9": "जल्दी दुकान जाना है? 🛒",
+      "body_9": "जो चाहिए वो पहले से लिस्ट में है",
+
+      "title_10": "कुछ खत्म हो रहा है? ⏰",
+      "body_10": "आपकी शॉपिंग लिस्ट अप-टू-डेट है"
+    }
+  },
+  "add_custom_grocery": {
+    "heading": "कस्टम\nआइटम बनाएं",
+    "input_name_hint": "इसे क्या कहें?",
+    "input_period_hint": "कितने दिन में खरीदते हैं?",
+    "input_period_description": "एक अनुमानित अवधि दर्ज करें। Listox आपकी खरीदारी से सीखेगा!",
+    "button_create": "बनाएं"
+  },
+  "quick_add": {
+    "tile_label": "जल्दी जोड़ें",
+    "dialog_title": "जल्दी जोड़ें",
+    "dialog_subtitle": "खरीदारी की पुष्टि के बाद आइटम हट जाएगा।",
+    "hint": "नाम डालें",
+    "empty_state_hint": "बस एक बार कुछ चाहिए? कहीं भी टैप करके जोड़ें"
+  },
+  "paywall": {
+    "bullet1": "असीमित ज़रूरी चीज़ें ट्रैक करें",
+    "bullet2": "अपनी पूरी ज़रूरी चीज़ों की लिस्ट बनाएं",
+    "bullet3": "शॉपिंग से पहले हमेशा जानें क्या चाहिए"
+  },
+  "smart_engine_banner": {
+    "title": "स्मार्ट प्रोफाइल",
+    "description": "Listox आपकी खरीदारी की आदतें याद रखता है और खत्म होने से पहले लिस्ट सुझाता है।"
+  },
+  "categories": {
+    "food": "खाना",
+    "bathroom": "बाथरूम",
+    "kitchen": "रसोई",
+    "cleaning": "सफाई",
+    "health": "स्वास्थ्य",
+    "other": "अन्य"
+  },
+  "groceries": {
+    "milk": "दूध",
+    "eggs": "अंडे",
+    "bread": "ब्रेड",
+    "cheese": "चीज़",
+    "yogurt": "दही",
+    "rice": "चावल",
+    "pasta": "पास्ता",
+    "coffee": "कॉफी",
+    "water": "पानी",
+    "chicken": "चिकन",
+    "bananas": "केले",
+    "apples": "सेब",
+    "potatoes": "आलू",
+    "onions": "प्याज",
+    "butter": "मक्खन",
+    "pepper": "काली मिर्च",
+    "garlic": "लहसुन",
+    "carrot": "गाजर",
+    "toilet_paper": "टॉयलेट पेपर",
+    "shampoo": "शैम्पू",
+    "toothpaste": "टूथपेस्ट",
+    "soap": "साबुन",
+    "deodorant": "डिओडोरेंट",
+    "toothbrush": "टूथब्रश",
+    "shaving_cream": "शेविंग क्रीम",
+    "dish_soap": "बर्तन धोने का साबुन",
+    "paper_towels": "किचन रोल",
+    "salt": "नमक",
+    "olive_oil": "जैतून का तेल",
+    "sugar": "चीनी",
+    "flour": "आटा",
+    "foil": "एल्युमिनियम फॉइल",
+    "baking_paper": "बेकिंग पेपर",
+    "laundry_detergent": "कपड़े धोने का पाउडर",
+    "trash_bags": "कचरे की थैलियां",
+    "toilet_cleaner": "टॉयलेट क्लीनर",
+    "multi_surface_cleaner": "सर्फेस क्लीनर",
+    "glass_cleaner": "ग्लास क्लीनर",
+    "disinfectant_spray": "डिसइन्फेक्टेंट स्प्रे",
+    "wipes": "वेट वाइप्स",
+    "painkillers": "दर्द की दवा",
+    "vitamins": "विटामिन",
+    "bandages": "पट्टी",
+    "cough_syrup": "खांसी की दवाई",
+    "first_aid_kit": "प्राथमिक चिकित्सा किट",
+    "batteries": "बैटरी",
+    "light_bulbs": "बल्ब",
+    "pet_food": "पालतू जानवर का खाना",
+    "printer_paper": "प्रिंटर पेपर"
+  }
+}

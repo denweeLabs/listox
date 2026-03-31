@@ -1,0 +1,306 @@
+{
+  "appTitle": "Listox",
+  "loading": {
+    "just_a_moment": "لحظة من فضلك..."
+  },
+  "error": {
+    "generic_titles": {
+      "title1": "آخ!",
+      "title2": "حدث خطأ ما",
+      "title3": "لا يا إلهي!",
+      "title4": "هممم...",
+      "title5": "حسنًا إذن",
+      "title6": "غير متوقع!",
+      "title7": "مجددًا!",
+      "title8": "أوه لا",
+      "title9": "خطأ",
+      "title10": "يا إلهي",
+      "title11": "عذرًا"
+    }
+  },
+  "error_message": {
+    "grocery_not_found": "العنصر غير موجود",
+    "grocery_storage": "فشل حفظ البيانات",
+    "common": {
+      "unexpected": "حدث خطأ غير متوقع... نعمل على حله! 🚨"
+    },
+    "email": {
+      "failed_to_open_support": "عذرًا! تعذّر فتح تطبيق البريد... يمكنك التواصل معنا على {} 💌"
+    },
+    "preferences_unexpected": "حدثت مشكلة غير متوقعة"
+  },
+  "label": {
+    "oops": "آخ",
+    "whoops": "آخ!"
+  },
+  "snackbar": {
+    "badConnection": {
+      "title": "لا يوجد اتصال",
+      "description": "يرجى التحقق من اتصالك بالإنترنت"
+    }
+  },
+  "common": {
+    "cancel": "إلغاء",
+    "delete": "حذف",
+    "edit": "تعديل"
+  },
+  "account": {
+    "title": "الحساب",
+    "premium_status_premium": "مستخدم مميز",
+    "premium_status_upgrade": "مميز",
+    "premium_expiry": "الاشتراك المميز صالح حتى {date}. شكرًا لدعمك <3",
+    "premium_upgrade_cta": "اشترك بالمميز لإدارة غير محدودة!",
+    "notifications_enabled": "مفعّلة",
+    "notifications_disabled": "معطّلة",
+    "notifications_description": "تذكير سريع قبل الذهاب للتسوق",
+    "section_notifications": "الإشعارات",
+    "section_preferences": "التفضيلات",
+    "language_title": "اللغة",
+    "language_subtitle": "لغة الواجهة",
+    "haptics_title": "الاهتزاز",
+    "haptics_subtitle": "التغذية الراجعة بالاهتزاز",
+    "section_theme": "المظهر",
+    "theme_system": "تلقائي",
+    "theme_light": "فاتح",
+    "theme_dark": "داكن",
+    "section_colorations": "الألوان",
+    "section_more": "المزيد",
+    "about_app": "حول التطبيق",
+    "privacy_terms": "الخصوصية والشروط",
+    "contact_support": "التواصل مع الدعم"
+  },
+  "dialog": {
+    "delete_grocery": {
+      "title": "حذف العنصر؟",
+      "subtitle": "هل أنت متأكد من حذف \"{name}\"؟ لا يمكن التراجع عن هذا الإجراء ⛔️"
+    },
+    "notification_mode": {
+      "title": "جدول التذكيرات",
+      "auto_label": "تلقائي",
+      "auto_description": "يتنبأ بموعد التسوق القادم",
+      "custom_days_label": "أيام مخصصة",
+      "custom_days_description": "اختر أيامًا محددة"
+    },
+    "permission": {
+      "notifications_title": "الإذن",
+      "notifications_subtitle": "لتلقي الإشعارات، تأكد من منح الإذن لهذا التطبيق",
+      "notifications_subtitle_settings": "لتلقي الإشعارات، تأكد من منح الإذن في إعدادات النظام"
+    }
+  },
+  "edit_grocery": {
+    "title": "تعديل العنصر\n\"{name}\"",
+    "input_name_hint": "ما اسمه؟",
+    "input_period_hint": "كم مرة تشتريه (بالأيام)؟",
+    "input_period_default": {
+      "one": "كل {} يوم",
+      "two": "كل {} يوم",
+      "few": "كل {} أيام",
+      "many": "كل {} يومًا",
+      "other": "كل {} يوم"
+    },
+    "input_period_description": "أدخل فترة تقريبية. سيتعلم Listox من مشترياتك!",
+    "button_update": "تحديث"
+  },
+  "home": {
+    "header_title": "البقالة التي قد تحتاجها",
+    "tab_this_week": "هذا الأسبوع",
+    "tab_later": "لاحقًا",
+    "purchase_confirmed": "تم تأكيد الشراء!",
+    "purchase_confirmed_description": "سنتعلم من استخدامك ونتنبأ متى ستحتاج هذه العناصر مرة أخرى",
+    "due_overdue": {
+      "one": "متأخر {} يوم",
+      "two": "متأخر {} يوم",
+      "few": "متأخر {} أيام",
+      "many": "متأخر {} يومًا",
+      "other": "متأخر {} يوم"
+    },
+    "due_today": "مستحق اليوم",
+    "due_tomorrow": "مستحق غدًا",
+    "due_in_days": {
+      "one": "بعد {} يوم",
+      "two": "بعد {} يوم",
+      "few": "بعد {} أيام",
+      "many": "بعد {} يومًا",
+      "other": "بعد {} يوم"
+    },
+    "pre_list_this_week": "ربما تحتاجه هذا الأسبوع",
+    "pre_list_later": "ربما تحتاجه لاحقًا",
+    "checked_section_title": "العناصر المحددة",
+    "fully_stocked": "مخزونك كافٍ!",
+    "premium_lock_cta": "اشترك بالمميز لرؤية كل شيء",
+    "premium_upgrade_hint": "افتح جميع مشترياتك مع بريميوم"
+  },
+  "purchase_banner": {
+    "fully_stocked": "مخزونك كافٍ! اضغط \"شراء\" للتأكيد",
+    "items_checked": {
+      "one": "عنصر واحد محدد! اضغط \"شراء\" للتأكيد",
+      "two": "عنصران محددان! اضغط \"شراء\" للتأكيد",
+      "few": "{} عناصر محددة! اضغط \"شراء\" للتأكيد",
+      "many": "{} عنصرًا محددًا! اضغط \"شراء\" للتأكيد",
+      "other": "{} عنصر محدد! اضغط \"شراء\" للتأكيد"
+    },
+    "button_purchase": "شراء"
+  },
+  "tutorial": {
+    "schedule_heading": "جدول تسوقك",
+    "this_week_body": "ستجد هنا العناصر التي يتنبأ Listox أنك ستحتاجها في رحلة التسوق القادمة.",
+    "later_body": "ستجد هنا العناصر التي لا تزال لديك منها الكثير. ستنتقل إلى \"هذا الأسبوع\" عند حلول وقت إعادة التخزين.",
+    "skip": "تخطي"
+  },
+  "welcome": {
+    "title": "مرحبًا بك في Listox",
+    "onboarding_subtitle": "قائمة تسوقك الذكية التي تتعلم ما تشتريه وتذكرك بإعادة التخزين",
+    "bullet1_title": "تتبع ضرورياتك",
+    "bullet1_subtitle": "أضف ما تشتريه بانتظام واحتفظ به في مكان واحد",
+    "bullet2_title": "لا تنسَ أبدًا",
+    "bullet2_subtitle": "Listox يتعلم ويتنبأ بوقت إعادة التخزين",
+    "bullet3_title": "دائمًا مستعد للتسوق",
+    "bullet3_subtitle": "اعرف ما تحتاجه هذا الأسبوع قبل الخروج",
+    "cta": "متابعة"
+  },
+  "select_groceries": {
+    "heading": "اختر الضروريات",
+    "description": "اختر العناصر التي تشتريها كثيرًا. Listox سيتتبع متى تحتاجها",
+    "button_done": "تم",
+    "button_selected_suffix": "/{max} مختار",
+    "add": "إضافة",
+    "limit_reached": "يمكنك اختيار ما يصل إلى {max} عناصر الآن"
+  },
+  "search_groceries": {
+    "hint": "ابحث عن عناصر..."
+  },
+  "weekdays_m": {
+    "mon": "إثنين",
+    "tue": "ثلثاء",
+    "wed": "أربعاء",
+    "thu": "خميس",
+    "fri": "جمعة",
+    "sat": "سبت",
+    "sun": "أحد"
+  },
+  "weekdays_s": {
+    "mon": "إث",
+    "tue": "ثل",
+    "wed": "أر",
+    "thu": "خم",
+    "fri": "جم",
+    "sat": "سب",
+    "sun": "أح"
+  },
+  "notifications": {
+    "mode_auto": "تلقائي",
+    "prompts": {
+      "title_1": "ذاهب للسوق قريبًا؟ 🏪",
+      "body_1": "راجع قائمتك حتى لا تفوتك أي شيء",
+
+      "title_2": "ستتسوق قريبًا؟ 🛒",
+      "body_2": "تحقق من الضروريات التي تنفد",
+
+      "title_3": "رحلة التسوق القادمة 🛒",
+      "body_3": "ألقِ نظرة سريعة على ما قد تحتاجه",
+
+      "title_4": "تسوق قريبًا؟ 🛒",
+      "body_4": "تحقق مما يحتاج للتجديد",
+
+      "title_5": "ستذهب للسوق؟ 🏪",
+      "body_5": "قائمتك جاهزة! ألقِ نظرة سريعة",
+
+      "title_6": "لا تنسَ شيئًا 🛒",
+      "body_6": "قائمة التسوق جاهزة لك",
+
+      "title_7": "تخطط لزيارة السوق؟ 🏪",
+      "body_7": "راجع قائمتك واستثمر الرحلة",
+
+      "title_8": "قبل التسوق 🛍️",
+      "body_8": "مراجعة سريعة للقائمة توفر وقتك",
+
+      "title_9": "ستمر بالسوق قريبًا؟ 🛒",
+      "body_9": "الضروريات التي قد تحتاجها موجودة بالفعل في قائمتك",
+
+      "title_10": "ينفد شيء ما؟ ⏰",
+      "body_10": "قائمتك محدّثة، ألقِ نظرة"
+    }
+  },
+  "add_custom_grocery": {
+    "heading": "إنشاء عنصر\nمخصص",
+    "input_name_hint": "ما اسمه؟",
+    "input_period_hint": "كم مرة تشتريه (بالأيام)؟",
+    "input_period_description": "أدخل فترة تقريبية. سيتعلم Listox من مشترياتك!",
+    "button_create": "إنشاء"
+  },
+  "quick_add": {
+    "tile_label": "إضافة سريعة",
+    "dialog_title": "إضافة سريعة",
+    "dialog_subtitle": "سيُحذف العنصر بعد تأكيد الشراء.",
+    "hint": "أدخل الاسم",
+    "empty_state_hint": "تحتاج شيئًا لمرة واحدة؟ اضغط في أي مكان لإضافته"
+  },
+  "paywall": {
+    "bullet1": "تتبع ضروريات غير محدودة",
+    "bullet2": "أنشئ قائمة ضرورياتك الكاملة",
+    "bullet3": "اعرف دائمًا ما تحتاجه قبل التسوق"
+  },
+  "smart_engine_banner": {
+    "title": "الملف الذكي",
+    "description": "Listox يتعلم ما تشتريه ويقترح قوائم التسوق قبل أن ينفد مخزونك."
+  },
+  "categories": {
+    "food": "طعام",
+    "bathroom": "حمام",
+    "kitchen": "مطبخ",
+    "cleaning": "تنظيف",
+    "health": "صحة",
+    "other": "أخرى"
+  },
+  "groceries": {
+    "milk": "حليب",
+    "eggs": "بيض",
+    "bread": "خبز",
+    "cheese": "جبن",
+    "yogurt": "زبادي",
+    "rice": "أرز",
+    "pasta": "معكرونة",
+    "coffee": "قهوة",
+    "water": "ماء",
+    "chicken": "دجاج",
+    "bananas": "موز",
+    "apples": "تفاح",
+    "potatoes": "بطاطا",
+    "onions": "بصل",
+    "butter": "زبدة",
+    "pepper": "فلفل أسود",
+    "garlic": "ثوم",
+    "carrot": "جزر",
+    "toilet_paper": "ورق حمام",
+    "shampoo": "شامبو",
+    "toothpaste": "معجون أسنان",
+    "soap": "صابون",
+    "deodorant": "مزيل عرق",
+    "toothbrush": "فرشاة أسنان",
+    "shaving_cream": "كريم حلاقة",
+    "dish_soap": "سائل جلي",
+    "paper_towels": "مناديل مطبخ",
+    "salt": "ملح",
+    "olive_oil": "زيت زيتون",
+    "sugar": "سكر",
+    "flour": "دقيق",
+    "foil": "ورق ألومنيوم",
+    "baking_paper": "ورق الخبز",
+    "laundry_detergent": "مسحوق غسيل",
+    "trash_bags": "أكياس قمامة",
+    "toilet_cleaner": "منظف مرحاض",
+    "multi_surface_cleaner": "منظف متعدد الأسطح",
+    "glass_cleaner": "منظف زجاج",
+    "disinfectant_spray": "رذاذ مطهر",
+    "wipes": "مناديل مبللة",
+    "painkillers": "مسكنات ألم",
+    "vitamins": "فيتامينات",
+    "bandages": "ضمادات",
+    "cough_syrup": "شراب سعال",
+    "first_aid_kit": "حقيبة إسعافات أولية",
+    "batteries": "بطاريات",
+    "light_bulbs": "مصابيح",
+    "pet_food": "طعام الحيوانات الأليفة",
+    "printer_paper": "ورق طابعة"
+  }
+}

@@ -1,0 +1,294 @@
+{
+  "appTitle": "Listox",
+  "loading": {
+    "just_a_moment": "Ett ögonblick..."
+  },
+  "error": {
+    "generic_titles": {
+      "title1": "Hoppsan!",
+      "title2": "Något gick fel",
+      "title3": "Åh nej!",
+      "title4": "Hmm...",
+      "title5": "Okej då",
+      "title6": "Oväntat!",
+      "title7": "Igen!",
+      "title8": "Oj",
+      "title9": "Fel",
+      "title10": "Oj då",
+      "title11": "Hoppsan"
+    }
+  },
+  "error_message": {
+    "grocery_not_found": "Produkten hittades inte",
+    "grocery_storage": "Det gick inte att spara data",
+    "common": {
+      "unexpected": "Hoppsan! Ett oväntat fel inträffade... Vi jobbar på det! 🚨"
+    },
+    "email": {
+      "failed_to_open_support": "Hoppsan! Det gick inte att öppna e-postappen... Du kan nå oss på {} 💌"
+    },
+    "preferences_unexpected": "Ett oväntat problem inträffade"
+  },
+  "label": {
+    "oops": "Hoppsan",
+    "whoops": "Hoppsan!"
+  },
+  "snackbar": {
+    "badConnection": {
+      "title": "Ingen anslutning",
+      "description": "Kontrollera din internetanslutning"
+    }
+  },
+  "common": {
+    "cancel": "Avbryt",
+    "delete": "Ta bort",
+    "edit": "Redigera"
+  },
+  "account": {
+    "title": "Konto",
+    "premium_status_premium": "Premium-användare",
+    "premium_status_upgrade": "Premium",
+    "premium_expiry": "Premium aktivt till {date}. Tack för ditt stöd <3",
+    "premium_upgrade_cta": "Uppgradera till Premium för obegränsad hantering!",
+    "notifications_enabled": "På",
+    "notifications_disabled": "Av",
+    "notifications_description": "En snabb påminnelse innan du handlar",
+    "section_notifications": "Aviseringar",
+    "section_preferences": "Inställningar",
+    "language_title": "Språk",
+    "language_subtitle": "Gränssnittsspråk",
+    "haptics_title": "Haptics",
+    "haptics_subtitle": "Vibrationsfeedback",
+    "section_theme": "Tema",
+    "theme_system": "System",
+    "theme_light": "Ljust",
+    "theme_dark": "Mörkt",
+    "section_colorations": "Färger",
+    "section_more": "Mer",
+    "about_app": "Om appen",
+    "privacy_terms": "Integritet",
+    "contact_support": "Kontakta support"
+  },
+  "dialog": {
+    "delete_grocery": {
+      "title": "Ta bort produkt?",
+      "subtitle": "Är du säker på att du vill ta bort \"{name}\"? Den här åtgärden kan inte ångras ⛔️"
+    },
+    "notification_mode": {
+      "title": "Påminnelseschema",
+      "auto_label": "Automatisk",
+      "auto_description": "Förutspår nästa köp",
+      "custom_days_label": "Anpassade dagar",
+      "custom_days_description": "Välj specifika dagar"
+    },
+    "permission": {
+      "notifications_title": "Behörighet",
+      "notifications_subtitle": "Tillåt den här appen för att ta emot aviseringar",
+      "notifications_subtitle_settings": "Tillåt den här appen i systeminställningarna för att ta emot aviseringar"
+    }
+  },
+  "edit_grocery": {
+    "title": "Redigera produkt\n\"{name}\"",
+    "input_name_hint": "Vad heter den?",
+    "input_period_hint": "Var hur många dagar köper du den?",
+    "input_period_default": {
+      "one": "Var {} dag",
+      "other": "Var {} dag"
+    },
+    "input_period_description": "Ange en ungefärlig period. Listox lär sig från din inköpshistorik!",
+    "button_update": "Uppdatera"
+  },
+  "home": {
+    "header_title": "Produkter du kanske behöver köpa",
+    "tab_this_week": "Den här veckan",
+    "tab_later": "Senare",
+    "purchase_confirmed": "Köp bekräftat!",
+    "purchase_confirmed_description": "Vi lär oss din användning och förutsäger när du behöver dessa varor igen",
+    "due_overdue": {
+      "one": "{} dag försenad",
+      "other": "{} dagar försenad"
+    },
+    "due_today": "Förfaller idag",
+    "due_tomorrow": "Förfaller imorgon",
+    "due_in_days": {
+      "one": "Om {} dag",
+      "other": "Om {} dagar"
+    },
+    "pre_list_this_week": "Kanske behövs den här veckan",
+    "pre_list_later": "Kanske behövs senare",
+    "checked_section_title": "Ibockade produkter",
+    "fully_stocked": "Ditt lager räcker!",
+    "premium_lock_cta": "Uppgradera till Premium för att se allt",
+    "premium_upgrade_hint": "Lås upp alla dina varor med Premium"
+  },
+  "purchase_banner": {
+    "fully_stocked": "Allt klart! Tryck på \"Köp\" för att bekräfta",
+    "items_checked": {
+      "one": "1 produkt ibockad! Tryck på \"Köp\" för att bekräfta",
+      "other": "{} produkter ibockade! Tryck på \"Köp\" för att bekräfta"
+    },
+    "button_purchase": "Köp"
+  },
+  "tutorial": {
+    "schedule_heading": "DITT INKÖPSSCHEMA",
+    "this_week_body": "Här ser du produkterna som Listox förutspår att du behöver under nästa shoppingtur.",
+    "later_body": "Här ser du produkter du fortfarande har tillräckligt av. De flyttas till \"Den här veckan\" när det är dags att fylla på.",
+    "skip": "HOPPA ÖVER"
+  },
+  "welcome": {
+    "title": "Välkommen till Listox",
+    "onboarding_subtitle": "Din smarta inköpslista som lär sig vad du köper och påminner dig när du behöver fylla på",
+    "bullet1_title": "Håll koll på det viktiga",
+    "bullet1_subtitle": "Lägg till det du köper regelbundet och ha allt på ett ställe",
+    "bullet2_title": "Glöm aldrig mer",
+    "bullet2_subtitle": "Listox lär sig och förutspår när det är dags att fylla på",
+    "bullet3_title": "Alltid redo att handla",
+    "bullet3_subtitle": "Se vad du kanske behöver den här veckan innan du går ut",
+    "cta": "Fortsätt"
+  },
+  "select_groceries": {
+    "heading": "Välj det viktiga",
+    "description": "Välj produkter du köper ofta. Listox håller koll på när du behöver dem",
+    "button_done": "Klar",
+    "button_selected_suffix": "/{max} valda",
+    "add": "Lägg till",
+    "limit_reached": "Just nu kan du välja upp till {max} produkter"
+  },
+  "search_groceries": {
+    "hint": "Sök produkter..."
+  },
+  "weekdays_m": {
+    "mon": "Mån",
+    "tue": "Tis",
+    "wed": "Ons",
+    "thu": "Tor",
+    "fri": "Fre",
+    "sat": "Lör",
+    "sun": "Sön"
+  },
+  "weekdays_s": {
+    "mon": "M",
+    "tue": "T",
+    "wed": "O",
+    "thu": "T",
+    "fri": "F",
+    "sat": "L",
+    "sun": "S"
+  },
+  "notifications": {
+    "mode_auto": "Automatisk",
+    "prompts": {
+      "title_1": "Ska du snart till mataffären? 🏪",
+      "body_1": "Kolla listan så du inte missar något",
+
+      "title_2": "Ska du handla mat? 🛒",
+      "body_2": "Se vilka basprodukter som håller på att ta slut",
+
+      "title_3": "Nästa shoppingrunda 🛒",
+      "body_3": "Ta en snabb titt på vad du kanske behöver",
+
+      "title_4": "Snart dags att handla? 🛒",
+      "body_4": "Kolla vad som behöver fyllas på",
+
+      "title_5": "Ska du till butiken? 🏪",
+      "body_5": "Din lista är klar! Kolla snabbt",
+
+      "title_6": "Glöm ingenting 🛒",
+      "body_6": "Din inköpslista är klar",
+
+      "title_7": "Planerar du ett butiksbesök? 🏪",
+      "body_7": "Kolla listan och ta vara på resan",
+
+      "title_8": "Innan du handlar 🛍️",
+      "body_8": "En snabb titt på listan kan spara tid",
+
+      "title_9": "Ska du svänga förbi butiken? 🛒",
+      "body_9": "Basprodukterna du kanske behöver finns redan i din lista",
+
+      "title_10": "Håller något på att ta slut? ⏰",
+      "body_10": "Din inköpslista är uppdaterad, ta en titt"
+    }
+  },
+  "add_custom_grocery": {
+    "heading": "Skapa en egen\nprodukt",
+    "input_name_hint": "Vad heter den?",
+    "input_period_hint": "Var hur många dagar köper du den?",
+    "input_period_description": "Ange en ungefärlig period. Listox lär sig från din inköpshistorik!",
+    "button_create": "Skapa"
+  },
+  "quick_add": {
+    "tile_label": "Snabblägg till",
+    "dialog_title": "Snabblägg till",
+    "dialog_subtitle": "Produkten tas bort efter att köpet bekräftats.",
+    "hint": "Skriv in ett namn",
+    "empty_state_hint": "Behöver du något bara en gång? Tryck var som helst för att lägga till"
+  },
+  "paywall": {
+    "bullet1": "Håll koll på obegränsat antal produkter",
+    "bullet2": "Bygg din kompletta lista med basprodukter",
+    "bullet3": "Vet alltid vad du behöver innan du handlar"
+  },
+  "smart_engine_banner": {
+    "title": "Smart Profil",
+    "description": "Listox lär sig vad du köper och föreslår inköpslistor innan du tar slut på lager."
+  },
+  "categories": {
+    "food": "Mat",
+    "bathroom": "Badrum",
+    "kitchen": "Kök",
+    "cleaning": "Städning",
+    "health": "Hälsa",
+    "other": "Övrigt"
+  },
+  "groceries": {
+    "milk": "Mjölk",
+    "eggs": "Ägg",
+    "bread": "Bröd",
+    "cheese": "Ost",
+    "yogurt": "Yoghurt",
+    "rice": "Ris",
+    "pasta": "Pasta",
+    "coffee": "Kaffe",
+    "water": "Vatten",
+    "chicken": "Kyckling",
+    "bananas": "Bananer",
+    "apples": "Äpplen",
+    "potatoes": "Potatis",
+    "onions": "Lök",
+    "butter": "Smör",
+    "pepper": "Peppar",
+    "garlic": "Vitlök",
+    "carrot": "Morot",
+    "toilet_paper": "Toalettpapper",
+    "shampoo": "Schampo",
+    "toothpaste": "Tandkräm",
+    "soap": "Tvål",
+    "deodorant": "Deodorant",
+    "toothbrush": "Tandborste",
+    "shaving_cream": "Rakkräm",
+    "dish_soap": "Diskmedel",
+    "paper_towels": "Hushållspapper",
+    "salt": "Salt",
+    "olive_oil": "Olivolja",
+    "sugar": "Socker",
+    "flour": "Mjöl",
+    "foil": "Aluminiumfolie",
+    "baking_paper": "Bakplåtspapper",
+    "laundry_detergent": "Tvättmedel",
+    "trash_bags": "Soppåsar",
+    "toilet_cleaner": "Toalettrengöring",
+    "multi_surface_cleaner": "Allrengöringsmedel",
+    "glass_cleaner": "Fönsterputs",
+    "disinfectant_spray": "Desinfektionsspray",
+    "wipes": "Våtservetter",
+    "painkillers": "Smärtstillande",
+    "vitamins": "Vitaminer",
+    "bandages": "Plåster",
+    "cough_syrup": "Hostmedicin",
+    "first_aid_kit": "Första hjälpen-kit",
+    "batteries": "Batterier",
+    "light_bulbs": "Glödlampor",
+    "pet_food": "Djurmat",
+    "printer_paper": "Skrivarpapper"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "808593856460",
+    "project_id": "listox-dev",
+    "storage_bucket": "listox-dev.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:808593856460:android:0228daffa922eff29cef69",
+        "android_client_info": {
+          "package_name": "app.denwee.listox.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoFCeDL288OMb3rNCcuTA_Ivt9Idu5XpI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

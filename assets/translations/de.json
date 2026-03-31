@@ -1,0 +1,294 @@
+{
+  "appTitle": "Listox",
+  "loading": {
+    "just_a_moment": "Einen Moment..."
+  },
+  "error": {
+    "generic_titles": {
+      "title1": "Ups!",
+      "title2": "Etwas ist schiefgelaufen",
+      "title3": "Oh nein!",
+      "title4": "Hmm...",
+      "title5": "Na sowas",
+      "title6": "Unerwartet!",
+      "title7": "Schon wieder...",
+      "title8": "Oh je",
+      "title9": "Fehler",
+      "title10": "Mist",
+      "title11": "Autsch"
+    }
+  },
+  "error_message": {
+    "grocery_not_found": "Artikel nicht gefunden",
+    "grocery_storage": "Daten konnten nicht gespeichert werden",
+    "common": {
+      "unexpected": "Ein unerwarteter Fehler ist aufgetreten... Wir kümmern uns darum! 🚨"
+    },
+    "email": {
+      "failed_to_open_support": "Ups! E-Mail-App konnte nicht geöffnet werden... Du erreichst uns jederzeit unter {} 💌"
+    },
+    "preferences_unexpected": "Ein unerwarteter Fehler ist aufgetreten"
+  },
+  "label": {
+    "oops": "Ups",
+    "whoops": "Ups!"
+  },
+  "snackbar": {
+    "badConnection": {
+      "title": "Keine Verbindung",
+      "description": "Bitte überprüfe deine Internetverbindung"
+    }
+  },
+  "common": {
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten"
+  },
+  "account": {
+    "title": "Konto",
+    "premium_status_premium": "Premium",
+    "premium_status_upgrade": "Premium",
+    "premium_expiry": "Premium aktiv bis {date}. Vielen Dank für deine Unterstützung <3",
+    "premium_upgrade_cta": "Upgrade auf Premium für unbegrenzte Artikel!",
+    "notifications_enabled": "Aktiviert",
+    "notifications_disabled": "Deaktiviert",
+    "notifications_description": "Erinnerung vor dem Einkauf",
+    "section_notifications": "Benachrichtigungen",
+    "section_preferences": "Einstellungen",
+    "language_title": "Sprache",
+    "language_subtitle": "Oberflächensprache",
+    "haptics_title": "Haptik",
+    "haptics_subtitle": "Vibrations-Feedback",
+    "section_theme": "Design",
+    "theme_system": "System",
+    "theme_light": "Hell",
+    "theme_dark": "Dunkel",
+    "section_colorations": "Farben",
+    "section_more": "Mehr",
+    "about_app": "Über die App",
+    "privacy_terms": "Datenschutz",
+    "contact_support": "Support kontaktieren"
+  },
+  "dialog": {
+    "delete_grocery": {
+      "title": "Artikel löschen?",
+      "subtitle": "Möchtest du \"{name}\" wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden ⛔️"
+    },
+    "notification_mode": {
+      "title": "Erinnerungs-Plan",
+      "auto_label": "Auto",
+      "auto_description": "Sagt den nächsten Einkauf voraus",
+      "custom_days_label": "Eigene Tage",
+      "custom_days_description": "Wochentage auswählen"
+    },
+    "permission": {
+      "notifications_title": "Berechtigung",
+      "notifications_subtitle": "Erlaube Benachrichtigungen, um Erinnerungen zu erhalten",
+      "notifications_subtitle_settings": "Erlaube Benachrichtigungen für diese App in den Systemeinstellungen"
+    }
+  },
+  "edit_grocery": {
+    "title": "Artikel bearbeiten\n\"{name}\"",
+    "input_name_hint": "Wie soll es heißen?",
+    "input_period_hint": "Wie oft kaufst du es (Tage)?",
+    "input_period_default": {
+      "one": "Alle {} Tag",
+      "other": "Alle {} Tage"
+    },
+    "input_period_description": "Ungefähren Zeitraum eingeben. Listox lernt von deinen Einkäufen!",
+    "button_update": "Aktualisieren"
+  },
+  "home": {
+    "header_title": "Artikel, die du bald brauchst",
+    "tab_this_week": "Diese Woche",
+    "tab_later": "Später",
+    "purchase_confirmed": "Einkauf bestätigt!",
+    "purchase_confirmed_description": "Wir lernen Ihr Nutzungsverhalten und sagen voraus, wann Sie diese Artikel wieder benötigen",
+    "due_overdue": {
+      "one": "Vor {} Tag fällig",
+      "other": "Vor {} Tagen fällig"
+    },
+    "due_today": "Heute fällig",
+    "due_tomorrow": "Morgen fällig",
+    "due_in_days": {
+      "one": "In {} Tag",
+      "other": "In {} Tagen"
+    },
+    "pre_list_this_week": "Wahrscheinlich diese Woche nötig",
+    "pre_list_later": "Wahrscheinlich später nötig",
+    "checked_section_title": "Im Warenkorb",
+    "fully_stocked": "Du bist gut versorgt!",
+    "premium_lock_cta": "Upgrade auf Premium, um alles zu sehen",
+    "premium_upgrade_hint": "Schalte alle Einkäufe mit Premium frei"
+  },
+  "purchase_banner": {
+    "fully_stocked": "Alles da! Tippe auf \"Kaufen\" zum Bestätigen",
+    "items_checked": {
+      "one": "1 Artikel markiert! Tippe auf \"Kaufen\" zum Bestätigen",
+      "other": "{} Artikel markiert! Tippe auf \"Kaufen\" zum Bestätigen"
+    },
+    "button_purchase": "Kaufen"
+  },
+  "tutorial": {
+    "schedule_heading": "DEIN EINKAUFSPLAN",
+    "this_week_body": "Hier siehst du Artikel, die Listox für deinen nächsten Einkauf vorschlägt.",
+    "later_body": "Hier siehst du Artikel, von denen du noch genug hast. Sie wechseln zu \"Diese Woche\", wenn es Zeit ist, nachzufüllen.",
+    "skip": "ÜBERSPRINGEN"
+  },
+  "welcome": {
+    "title": "Willkommen bei Listox",
+    "onboarding_subtitle": "Deine smarte Einkaufsliste, die lernt, was du kaufst, und dich ans Nachfüllen erinnert",
+    "bullet1_title": "Wichtiges verfolgen",
+    "bullet1_subtitle": "Füge regelmäßig gekaufte Artikel hinzu und behalte alles im Blick",
+    "bullet2_title": "Nie wieder vergessen",
+    "bullet2_subtitle": "Listox lernt und sagt voraus, wann es Zeit zum Nachfüllen ist",
+    "bullet3_title": "Immer bereit für den Einkauf",
+    "bullet3_subtitle": "Sieh, was du diese Woche brauchst, bevor du losfährst",
+    "cta": "Weiter"
+  },
+  "select_groceries": {
+    "heading": "Artikel auswählen",
+    "description": "Wähle Artikel, die du regelmäßig kaufst. Listox verfolgt, wann du sie wieder brauchst",
+    "button_done": "Fertig",
+    "button_selected_suffix": "/{max} ausgewählt",
+    "add": "Hinzufügen",
+    "limit_reached": "Du kannst aktuell bis zu {max} Artikel auswählen"
+  },
+  "search_groceries": {
+    "hint": "Artikel suchen..."
+  },
+  "weekdays_m": {
+    "mon": "Mo",
+    "tue": "Di",
+    "wed": "Mi",
+    "thu": "Do",
+    "fri": "Fr",
+    "sat": "Sa",
+    "sun": "So"
+  },
+  "weekdays_s": {
+    "mon": "M",
+    "tue": "D",
+    "wed": "M",
+    "thu": "D",
+    "fri": "F",
+    "sat": "S",
+    "sun": "S"
+  },
+  "notifications": {
+    "mode_auto": "Auto",
+    "prompts": {
+      "title_1": "Bald im Laden? 🏪",
+      "body_1": "Schau auf deine Liste, damit du nichts vergisst",
+
+      "title_2": "Gehst du bald einkaufen? 🛒",
+      "body_2": "Sieh nach, was bald nachgefüllt werden sollte",
+
+      "title_3": "Dein nächster Einkauf 🛒",
+      "body_3": "Schau kurz auf die Liste, bevor du losfährst",
+
+      "title_4": "Bald einkaufen? 🛒",
+      "body_4": "Prüfe, was du nachkaufen solltest",
+
+      "title_5": "Gehst du in den Laden? 🏪",
+      "body_5": "Deine Liste ist bereit! Schau kurz rein",
+
+      "title_6": "Vergiss nichts 🛒",
+      "body_6": "Deine Einkaufsliste ist aktuell",
+
+      "title_7": "Planst du einen Einkauf? 🏪",
+      "body_7": "Überprüfe deine Liste und mach das Beste draus",
+
+      "title_8": "Vor dem Einkaufen 🛍️",
+      "body_8": "Ein kurzer Blick auf die Liste spart dir Zeit",
+
+      "title_9": "Kurzer Einkauf geplant? 🛒",
+      "body_9": "Benötigte Artikel sind schon auf deiner Liste",
+
+      "title_10": "Läuft dir etwas aus? ⏰",
+      "body_10": "Deine Einkaufsliste ist aktuell – schau mal rein"
+    }
+  },
+  "add_custom_grocery": {
+    "heading": "Eigenen\nArtikel erstellen",
+    "input_name_hint": "Wie soll es heißen?",
+    "input_period_hint": "Wie oft kaufst du es (Tage)?",
+    "input_period_description": "Ungefähren Zeitraum eingeben. Listox lernt von deinen Einkäufen!",
+    "button_create": "Erstellen"
+  },
+  "quick_add": {
+    "tile_label": "Schnell hinzufügen",
+    "dialog_title": "Schnell hinzufügen",
+    "dialog_subtitle": "Der Artikel wird nach dem Bestätigen des Einkaufs entfernt.",
+    "hint": "Name eingeben",
+    "empty_state_hint": "Etwas nur einmal brauchen? Tippe irgendwo, um es hinzuzufügen"
+  },
+  "paywall": {
+    "bullet1": "Unbegrenzt Artikel verwalten",
+    "bullet2": "Vollständige Einkaufsliste aufbauen",
+    "bullet3": "Nie wieder etwas im Laden vergessen"
+  },
+  "smart_engine_banner": {
+    "title": "Smartes Profil",
+    "description": "Listox merkt sich, was du kaufst, und schlägt Einkaufslisten vor, bevor dir etwas ausgeht."
+  },
+  "categories": {
+    "food": "Lebensmittel",
+    "bathroom": "Bad",
+    "kitchen": "Küche",
+    "cleaning": "Reinigung",
+    "health": "Gesundheit",
+    "other": "Sonstiges"
+  },
+  "groceries": {
+    "milk": "Milch",
+    "eggs": "Eier",
+    "bread": "Brot",
+    "cheese": "Käse",
+    "yogurt": "Joghurt",
+    "rice": "Reis",
+    "pasta": "Nudeln",
+    "coffee": "Kaffee",
+    "water": "Wasser",
+    "chicken": "Hähnchen",
+    "bananas": "Bananen",
+    "apples": "Äpfel",
+    "potatoes": "Kartoffeln",
+    "onions": "Zwiebeln",
+    "butter": "Butter",
+    "pepper": "Pfeffer",
+    "garlic": "Knoblauch",
+    "carrot": "Karotte",
+    "toilet_paper": "Toilettenpapier",
+    "shampoo": "Shampoo",
+    "toothpaste": "Zahnpasta",
+    "soap": "Seife",
+    "deodorant": "Deo",
+    "toothbrush": "Zahnbürste",
+    "shaving_cream": "Rasierschaum",
+    "dish_soap": "Spülmittel",
+    "paper_towels": "Küchentücher",
+    "salt": "Salz",
+    "olive_oil": "Olivenöl",
+    "sugar": "Zucker",
+    "flour": "Mehl",
+    "foil": "Alufolie",
+    "baking_paper": "Backpapier",
+    "laundry_detergent": "Waschmittel",
+    "trash_bags": "Müllbeutel",
+    "toilet_cleaner": "WC-Reiniger",
+    "multi_surface_cleaner": "Allzweckreiniger",
+    "glass_cleaner": "Glasreiniger",
+    "disinfectant_spray": "Desinfektionsspray",
+    "wipes": "Feuchttücher",
+    "painkillers": "Schmerzmittel",
+    "vitamins": "Vitamine",
+    "bandages": "Pflaster",
+    "cough_syrup": "Hustensaft",
+    "first_aid_kit": "Erste-Hilfe-Set",
+    "batteries": "Batterien",
+    "light_bulbs": "Glühbirnen",
+    "pet_food": "Tierfutter",
+    "printer_paper": "Druckerpapier"
+  }
+}

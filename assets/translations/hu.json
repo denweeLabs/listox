@@ -1,0 +1,294 @@
+{
+  "appTitle": "Listox",
+  "loading": {
+    "just_a_moment": "Egy pillanat..."
+  },
+  "error": {
+    "generic_titles": {
+      "title1": "Hoppá!",
+      "title2": "Valami nem stimmel",
+      "title3": "Ó, nem!",
+      "title4": "Hmm...",
+      "title5": "Nos",
+      "title6": "Váratlan!",
+      "title7": "Megint!",
+      "title8": "Jaj",
+      "title9": "Hiba",
+      "title10": "Ne már",
+      "title11": "Ups"
+    }
+  },
+  "error_message": {
+    "grocery_not_found": "A termék nem található",
+    "grocery_storage": "Az adatok mentése sikertelen",
+    "common": {
+      "unexpected": "Hoppá! Váratlan hiba történt... Dolgozunk rajta! 🚨"
+    },
+    "email": {
+      "failed_to_open_support": "Hoppá! Nem sikerült megnyitni az e-mail alkalmazást... Elérhet minket a {} címen 💌"
+    },
+    "preferences_unexpected": "Váratlan probléma merült fel"
+  },
+  "label": {
+    "oops": "Hoppá",
+    "whoops": "Hoppá!"
+  },
+  "snackbar": {
+    "badConnection": {
+      "title": "Nincs kapcsolat",
+      "description": "Ellenőrizze az internetkapcsolatot"
+    }
+  },
+  "common": {
+    "cancel": "Mégse",
+    "delete": "Törlés",
+    "edit": "Szerkesztés"
+  },
+  "account": {
+    "title": "Fiók",
+    "premium_status_premium": "Prémium felhasználó",
+    "premium_status_upgrade": "Prémium",
+    "premium_expiry": "Prémium aktív {date}-ig. Köszönjük a támogatást <3",
+    "premium_upgrade_cta": "Válts Prémiumra a korlátlan kezelésért!",
+    "notifications_enabled": "Bekapcsolva",
+    "notifications_disabled": "Kikapcsolva",
+    "notifications_description": "Gyors emlékeztető vásárlás előtt",
+    "section_notifications": "Értesítések",
+    "section_preferences": "Beállítások",
+    "language_title": "Nyelv",
+    "language_subtitle": "Felület nyelve",
+    "haptics_title": "Haptika",
+    "haptics_subtitle": "Rezgéses visszajelzés",
+    "section_theme": "Téma",
+    "theme_system": "Rendszer",
+    "theme_light": "Világos",
+    "theme_dark": "Sötét",
+    "section_colorations": "Színek",
+    "section_more": "Több",
+    "about_app": "Az alkalmazásról",
+    "privacy_terms": "Adatvédelem",
+    "contact_support": "Kapcsolat a támogatással"
+  },
+  "dialog": {
+    "delete_grocery": {
+      "title": "Törli a terméket?",
+      "subtitle": "Biztosan törölni akarod a \"{name}\" terméket? Ez a művelet nem vonható vissza ⛔️"
+    },
+    "notification_mode": {
+      "title": "Emlékeztető ütemezés",
+      "auto_label": "Automatikus",
+      "auto_description": "Előrejelzi a következő vásárlást",
+      "custom_days_label": "Egyéni napok",
+      "custom_days_description": "Válassz adott napokat"
+    },
+    "permission": {
+      "notifications_title": "Engedély",
+      "notifications_subtitle": "Az értesítések fogadásához engedélyezd ezt az alkalmazást",
+      "notifications_subtitle_settings": "Az értesítések fogadásához engedélyezd ezt az alkalmazást a rendszer beállításaiban"
+    }
+  },
+  "edit_grocery": {
+    "title": "Termék szerkesztése\n\"{name}\"",
+    "input_name_hint": "Mi a neve?",
+    "input_period_hint": "Hány naponta veszed?",
+    "input_period_default": {
+      "one": "Minden {} naponként",
+      "other": "Minden {} naponként"
+    },
+    "input_period_description": "Adj meg egy hozzávetőleges időszakot. A Listox megtanulja a vásárlási előzményeidből!",
+    "button_update": "Frissítés"
+  },
+  "home": {
+    "header_title": "Termékek, amelyeket esetleg meg kellene venni",
+    "tab_this_week": "Ezen a Héten",
+    "tab_later": "Később",
+    "purchase_confirmed": "Vásárlás megerősítve!",
+    "purchase_confirmed_description": "Megtanuljuk szokásait és megjósoljuk, mikor lesz szüksége ezekre a termékekre újra",
+    "due_overdue": {
+      "one": "{} napja lejárt",
+      "other": "{} napja lejárt"
+    },
+    "due_today": "Ma esedékes",
+    "due_tomorrow": "Holnap esedékes",
+    "due_in_days": {
+      "one": "{} nap múlva",
+      "other": "{} nap múlva"
+    },
+    "pre_list_this_week": "Ezen a héten szükséges lehet",
+    "pre_list_later": "Később szükséges lehet",
+    "checked_section_title": "Bejelölt termékek",
+    "fully_stocked": "A készleted elegendő!",
+    "premium_lock_cta": "Válts Prémiumra az összes megtekintéséhez",
+    "premium_upgrade_hint": "Oldj fel mindent a Premiummal"
+  },
+  "purchase_banner": {
+    "fully_stocked": "Minden készen van! Nyomd a \"Vásárlás\" gombot a megerősítéshez",
+    "items_checked": {
+      "one": "1 termék bejelölve! Nyomd a \"Vásárlás\" gombot a megerősítéshez",
+      "other": "{} termék bejelölve! Nyomd a \"Vásárlás\" gombot a megerősítéshez"
+    },
+    "button_purchase": "Vásárlás"
+  },
+  "tutorial": {
+    "schedule_heading": "VÁSÁRLÁSI TERVEID",
+    "this_week_body": "Itt láthatod azokat a termékeket, amelyeket a Listox előrejelez, hogy a következő bevásárláson szükséged lesz.",
+    "later_body": "Itt láthatod azokat a termékeket, amelyekből még elegendő van. Átkerülnek az \"Ezen a Héten\" lapra, amikor ideje lesz pótolni.",
+    "skip": "KIHAGYÁS"
+  },
+  "welcome": {
+    "title": "Üdvözöl a Listox",
+    "onboarding_subtitle": "Az okos bevásárlólista, amely megtanulja, mit veszel, és emlékeztet, mikor kell pótolni",
+    "bullet1_title": "Kövesd az alapvető dolgokat",
+    "bullet1_subtitle": "Add hozzá, amit rendszeresen vásárolsz, és tarts mindent egy helyen",
+    "bullet2_title": "Soha ne felejts el",
+    "bullet2_subtitle": "A Listox tanul és előrejelzi, mikor van ideje pótolni",
+    "bullet3_title": "Mindig készen a vásárlásra",
+    "bullet3_subtitle": "Nézd meg, mire lehet szükséged ezen a héten, mielőtt elmész",
+    "cta": "Folytatás"
+  },
+  "select_groceries": {
+    "heading": "Válaszd ki az alapvető dolgokat",
+    "description": "Válaszd ki a termékeket, amelyeket gyakran vásárolsz. A Listox nyomon követi, mikor lesz szükséged rájuk",
+    "button_done": "Kész",
+    "button_selected_suffix": "/{max} kiválasztva",
+    "add": "Hozzáadás",
+    "limit_reached": "Jelenleg maximum {max} terméket választhatsz"
+  },
+  "search_groceries": {
+    "hint": "Termékek keresése..."
+  },
+  "weekdays_m": {
+    "mon": "Hé",
+    "tue": "Ke",
+    "wed": "Sze",
+    "thu": "Cs",
+    "fri": "Pé",
+    "sat": "Szo",
+    "sun": "Va"
+  },
+  "weekdays_s": {
+    "mon": "H",
+    "tue": "K",
+    "wed": "Sze",
+    "thu": "Cs",
+    "fri": "P",
+    "sat": "Szo",
+    "sun": "V"
+  },
+  "notifications": {
+    "mode_auto": "Automatikus",
+    "prompts": {
+      "title_1": "Hamarosan a szupermarketbe? 🏪",
+      "body_1": "Ellenőrizd a listát, hogy semmit se hagyj ki",
+
+      "title_2": "Bevásárolsz? 🛒",
+      "body_2": "Nézd meg, melyik alapvető dolog fogy el",
+
+      "title_3": "Következő vásárlás 🛒",
+      "body_3": "Gyorsan nézd meg, mire lehet szükséged",
+
+      "title_4": "Hamarosan vásárolsz? 🛒",
+      "body_4": "Ellenőrizd, mi szorul pótlásra",
+
+      "title_5": "Bemész az üzletbe? 🏪",
+      "body_5": "A listád készen áll! Vetsd rá a pillantásodat",
+
+      "title_6": "Ne felejts el semmit 🛒",
+      "body_6": "A bevásárlólistád készen áll",
+
+      "title_7": "Tervezel üzletbe látogatást? 🏪",
+      "body_7": "Ellenőrizd a listát és hozd ki a maximumot az útból",
+
+      "title_8": "Vásárlás előtt 🛍️",
+      "body_8": "Egy gyors pillantás a listára időt takaríthat meg",
+
+      "title_9": "Betérsz a boltba? 🛒",
+      "body_9": "Az alapvető termékek, amelyekre szükséged lehet, már a listádon vannak",
+
+      "title_10": "Valami elfogy? ⏰",
+      "body_10": "A bevásárlólistád frissítve van, vetsd rá a pillantásodat"
+    }
+  },
+  "add_custom_grocery": {
+    "heading": "Egyéni termék\nlétrehozása",
+    "input_name_hint": "Mi a neve?",
+    "input_period_hint": "Hány naponta veszed?",
+    "input_period_description": "Adj meg egy hozzávetőleges időszakot. A Listox megtanulja a vásárlási előzményeidből!",
+    "button_create": "Létrehozás"
+  },
+  "quick_add": {
+    "tile_label": "Gyors hozzáadás",
+    "dialog_title": "Gyors hozzáadás",
+    "dialog_subtitle": "A termék eltávolításra kerül a vásárlás megerősítése után.",
+    "hint": "Írd be a nevet",
+    "empty_state_hint": "Csak egyszer kell valami? Érintsd meg bárhol a hozzáadáshoz"
+  },
+  "paywall": {
+    "bullet1": "Korlátlan számú termék nyomkövetése",
+    "bullet2": "Az összes alapvető dolog teljes listájának összeállítása",
+    "bullet3": "Mindig tudd, mire van szükséged vásárlás előtt"
+  },
+  "smart_engine_banner": {
+    "title": "Okos Profil",
+    "description": "A Listox megtanulja, mit vásárolsz, és bevásárlólistákat javasol, mielőtt elfogynak a készletek."
+  },
+  "categories": {
+    "food": "Élelmiszer",
+    "bathroom": "Fürdőszoba",
+    "kitchen": "Konyha",
+    "cleaning": "Takarítás",
+    "health": "Egészség",
+    "other": "Egyéb"
+  },
+  "groceries": {
+    "milk": "Tej",
+    "eggs": "Tojás",
+    "bread": "Kenyér",
+    "cheese": "Sajt",
+    "yogurt": "Joghurt",
+    "rice": "Rizs",
+    "pasta": "Tészta",
+    "coffee": "Kávé",
+    "water": "Víz",
+    "chicken": "Csirke",
+    "bananas": "Banán",
+    "apples": "Alma",
+    "potatoes": "Burgonya",
+    "onions": "Hagyma",
+    "butter": "Vaj",
+    "pepper": "Bors",
+    "garlic": "Fokhagyma",
+    "carrot": "Sárgarépa",
+    "toilet_paper": "WC-papír",
+    "shampoo": "Sampon",
+    "toothpaste": "Fogkrém",
+    "soap": "Szappan",
+    "deodorant": "Dezodor",
+    "toothbrush": "Fogkefe",
+    "shaving_cream": "Borotvakrém",
+    "dish_soap": "Mosogatószer",
+    "paper_towels": "Papírtörlő",
+    "salt": "Só",
+    "olive_oil": "Olívaolaj",
+    "sugar": "Cukor",
+    "flour": "Liszt",
+    "foil": "Alufólia",
+    "baking_paper": "Sütőpapír",
+    "laundry_detergent": "Mosószer",
+    "trash_bags": "Szemetes zsák",
+    "toilet_cleaner": "WC-tisztító",
+    "multi_surface_cleaner": "Általános tisztítószer",
+    "glass_cleaner": "Ablaktisztító",
+    "disinfectant_spray": "Fertőtlenítő spray",
+    "wipes": "Törlőkendő",
+    "painkillers": "Fájdalomcsillapító",
+    "vitamins": "Vitaminok",
+    "bandages": "Tapasz",
+    "cough_syrup": "Köhögés elleni szirup",
+    "first_aid_kit": "Elsősegélycsomag",
+    "batteries": "Elemek",
+    "light_bulbs": "Izzók",
+    "pet_food": "Állateledel",
+    "printer_paper": "Nyomtatópapír"
+  }
+}

@@ -1,0 +1,294 @@
+{
+  "appTitle": "Listox",
+  "loading": {
+    "just_a_moment": "少々お待ちください..."
+  },
+  "error": {
+    "generic_titles": {
+      "title1": "おっと！",
+      "title2": "問題が発生しました",
+      "title3": "まずい！",
+      "title4": "うーん...",
+      "title5": "なるほど",
+      "title6": "予想外！",
+      "title7": "またですか！",
+      "title8": "あれ",
+      "title9": "エラー",
+      "title10": "困った",
+      "title11": "しまった"
+    }
+  },
+  "error_message": {
+    "grocery_not_found": "商品が見つかりません",
+    "grocery_storage": "データの保存に失敗しました",
+    "common": {
+      "unexpected": "予期しないエラーが発生しました... 対応中です！🚨"
+    },
+    "email": {
+      "failed_to_open_support": "おっと！メールアプリを開けませんでした... {} までご連絡ください 💌"
+    },
+    "preferences_unexpected": "予期しない問題が発生しました"
+  },
+  "label": {
+    "oops": "おっと",
+    "whoops": "おっと！"
+  },
+  "snackbar": {
+    "badConnection": {
+      "title": "接続なし",
+      "description": "インターネット接続を確認してください"
+    }
+  },
+  "common": {
+    "cancel": "キャンセル",
+    "delete": "削除",
+    "edit": "編集"
+  },
+  "account": {
+    "title": "アカウント",
+    "premium_status_premium": "プレミアムユーザー",
+    "premium_status_upgrade": "プレミアム",
+    "premium_expiry": "プレミアムは{date}まで有効です。ご支援ありがとうございます <3",
+    "premium_upgrade_cta": "プレミアムで無制限に管理しよう！",
+    "notifications_enabled": "オン",
+    "notifications_disabled": "オフ",
+    "notifications_description": "買い物前にリマインダーをお届け",
+    "section_notifications": "通知",
+    "section_preferences": "設定",
+    "language_title": "言語",
+    "language_subtitle": "インターフェース言語",
+    "haptics_title": "ハプティクス",
+    "haptics_subtitle": "振動フィードバック",
+    "section_theme": "テーマ",
+    "theme_system": "システム",
+    "theme_light": "ライト",
+    "theme_dark": "ダーク",
+    "section_colorations": "カラー",
+    "section_more": "その他",
+    "about_app": "アプリについて",
+    "privacy_terms": "プライバシー",
+    "contact_support": "サポートに連絡"
+  },
+  "dialog": {
+    "delete_grocery": {
+      "title": "商品を削除しますか？",
+      "subtitle": "\"{name}\" を本当に削除しますか？この操作は取り消せません ⛔️"
+    },
+    "notification_mode": {
+      "title": "リマインダー設定",
+      "auto_label": "自動",
+      "auto_description": "次回の買い物を予測",
+      "custom_days_label": "カスタム曜日",
+      "custom_days_description": "曜日を選択"
+    },
+    "permission": {
+      "notifications_title": "許可",
+      "notifications_subtitle": "通知を受け取るには、このアプリの許可を有効にしてください",
+      "notifications_subtitle_settings": "通知を受け取るには、システム設定でこのアプリの許可を有効にしてください"
+    }
+  },
+  "edit_grocery": {
+    "title": "商品を編集\n\"{name}\"",
+    "input_name_hint": "名前は？",
+    "input_period_hint": "何日ごとに買いますか？",
+    "input_period_default": {
+      "one": "{}日ごと",
+      "other": "{}日ごと"
+    },
+    "input_period_description": "おおよその周期を入力してください。購入記録からListoxが学習します！",
+    "button_update": "更新"
+  },
+  "home": {
+    "header_title": "購入が必要かもしれない商品",
+    "tab_this_week": "今週",
+    "tab_later": "後で",
+    "purchase_confirmed": "購入を確認しました！",
+    "purchase_confirmed_description": "使用パターンを学習し、次にこれらのアイテムが必要になる時期を予測します",
+    "due_overdue": {
+      "one": "{}日遅れています",
+      "other": "{}日遅れています"
+    },
+    "due_today": "今日が期限",
+    "due_tomorrow": "明日が期限",
+    "due_in_days": {
+      "one": "あと{}日",
+      "other": "あと{}日"
+    },
+    "pre_list_this_week": "今週必要になりそう",
+    "pre_list_later": "後で必要になりそう",
+    "checked_section_title": "チェック済み",
+    "fully_stocked": "十分な在庫があります！",
+    "premium_lock_cta": "プレミアムですべて表示",
+    "premium_upgrade_hint": "プレミアムで全アイテムを解放"
+  },
+  "purchase_banner": {
+    "fully_stocked": "在庫十分！「購入」をタップして確認",
+    "items_checked": {
+      "one": "1件チェック！「購入」をタップして確認",
+      "other": "{}件チェック！「購入」をタップして確認"
+    },
+    "button_purchase": "購入"
+  },
+  "tutorial": {
+    "schedule_heading": "あなたの買い物スケジュール",
+    "this_week_body": "次回の買い物で必要になると予測されたアイテムが表示されます。",
+    "later_body": "まだ十分にあるアイテムが表示されます。補充の時期になると「今週」に移動します。",
+    "skip": "スキップ"
+  },
+  "welcome": {
+    "title": "Listoxへようこそ",
+    "onboarding_subtitle": "あなたの購買習慣を学習し、補充時期を教えてくれるスマートな買い物リスト",
+    "bullet1_title": "必需品を管理",
+    "bullet1_subtitle": "定期的に購入するものを追加して、一か所で管理",
+    "bullet2_title": "もう忘れない",
+    "bullet2_subtitle": "Listoxが購入頻度を学習し、補充時期を予測",
+    "bullet3_title": "いつでも買い物準備万端",
+    "bullet3_subtitle": "外出前に今週必要なものを確認",
+    "cta": "続ける"
+  },
+  "select_groceries": {
+    "heading": "必需品を選ぶ",
+    "description": "よく買うものを選択してください。Listoxが必要な時期を追跡します",
+    "button_done": "完了",
+    "button_selected_suffix": "/{max} 選択",
+    "add": "追加",
+    "limit_reached": "現在{max}件まで選択できます"
+  },
+  "search_groceries": {
+    "hint": "商品を検索..."
+  },
+  "weekdays_m": {
+    "mon": "月",
+    "tue": "火",
+    "wed": "水",
+    "thu": "木",
+    "fri": "金",
+    "sat": "土",
+    "sun": "日"
+  },
+  "weekdays_s": {
+    "mon": "月",
+    "tue": "火",
+    "wed": "水",
+    "thu": "木",
+    "fri": "金",
+    "sat": "土",
+    "sun": "日"
+  },
+  "notifications": {
+    "mode_auto": "自動",
+    "prompts": {
+      "title_1": "もうすぐ買い物？🏪",
+      "body_1": "リストを確認して忘れ物をなくしましょう",
+
+      "title_2": "そろそろ買い物に行きますか？🛒",
+      "body_2": "補充が必要な必需品を確認しましょう",
+
+      "title_3": "次回の買い物 🛒",
+      "body_3": "必要なものをさっと確認しましょう",
+
+      "title_4": "もうすぐ買い物？🛒",
+      "body_4": "補充が必要なものを確認",
+
+      "title_5": "お店に行きますか？🏪",
+      "body_5": "リストの準備ができています！確認しましょう",
+
+      "title_6": "忘れ物なく 🛒",
+      "body_6": "買い物リストが準備できています",
+
+      "title_7": "お店への外出を計画中？🏪",
+      "body_7": "リストを確認してお買い物を活用しましょう",
+
+      "title_8": "買い物前に 🛍️",
+      "body_8": "リストを確認すれば時間を節約できます",
+
+      "title_9": "ちょっとお買い物？🛒",
+      "body_9": "必要な商品はすでにリストにあります",
+
+      "title_10": "何か切れそう？⏰",
+      "body_10": "買い物リストが最新です、確認しましょう"
+    }
+  },
+  "add_custom_grocery": {
+    "heading": "カスタム\n必需品を作成",
+    "input_name_hint": "名前は？",
+    "input_period_hint": "何日ごとに買いますか？",
+    "input_period_description": "おおよその周期を入力してください。購入記録からListoxが学習します！",
+    "button_create": "作成"
+  },
+  "quick_add": {
+    "tile_label": "クイック追加",
+    "dialog_title": "クイック追加",
+    "dialog_subtitle": "購入確認後にこの商品は削除されます。",
+    "hint": "名前を入力",
+    "empty_state_hint": "一度だけ必要なもの？どこでもタップして追加"
+  },
+  "paywall": {
+    "bullet1": "必需品を無制限に管理",
+    "bullet2": "完全な必需品リストを作成",
+    "bullet3": "買い物前に必要なものを常に把握"
+  },
+  "smart_engine_banner": {
+    "title": "スマートプロフィール",
+    "description": "Listoxが購買習慣を記録し、在庫切れ前にリストを提案します。"
+  },
+  "categories": {
+    "food": "食品",
+    "bathroom": "バス・トイレ",
+    "kitchen": "キッチン",
+    "cleaning": "清掃",
+    "health": "健康",
+    "other": "その他"
+  },
+  "groceries": {
+    "milk": "牛乳",
+    "eggs": "卵",
+    "bread": "パン",
+    "cheese": "チーズ",
+    "yogurt": "ヨーグルト",
+    "rice": "お米",
+    "pasta": "パスタ",
+    "coffee": "コーヒー",
+    "water": "ミネラルウォーター",
+    "chicken": "鶏肉",
+    "bananas": "バナナ",
+    "apples": "りんご",
+    "potatoes": "じゃがいも",
+    "onions": "玉ねぎ",
+    "butter": "バター",
+    "pepper": "こしょう",
+    "garlic": "にんにく",
+    "carrot": "にんじん",
+    "toilet_paper": "トイレットペーパー",
+    "shampoo": "シャンプー",
+    "toothpaste": "歯磨き粉",
+    "soap": "石鹸",
+    "deodorant": "デオドラント",
+    "toothbrush": "歯ブラシ",
+    "shaving_cream": "シェービングクリーム",
+    "dish_soap": "食器用洗剤",
+    "paper_towels": "キッチンペーパー",
+    "salt": "塩",
+    "olive_oil": "オリーブオイル",
+    "sugar": "砂糖",
+    "flour": "小麦粉",
+    "foil": "アルミホイル",
+    "baking_paper": "クッキングシート",
+    "laundry_detergent": "洗濯洗剤",
+    "trash_bags": "ゴミ袋",
+    "toilet_cleaner": "トイレ洗剤",
+    "multi_surface_cleaner": "多目的クリーナー",
+    "glass_cleaner": "ガラスクリーナー",
+    "disinfectant_spray": "除菌スプレー",
+    "wipes": "ウェットティッシュ",
+    "painkillers": "痛み止め",
+    "vitamins": "ビタミン",
+    "bandages": "バンドエイド",
+    "cough_syrup": "咳止めシロップ",
+    "first_aid_kit": "救急箱",
+    "batteries": "乾電池",
+    "light_bulbs": "電球",
+    "pet_food": "ペットフード",
+    "printer_paper": "プリンター用紙"
+  }
+}

@@ -1,0 +1,32 @@
+name: app_core
+description: "Reusable Core package: utils, extensions, repos, permissions, etc."
+publish_to: 'none'
+version: 1.0.0
+
+environment:
+  sdk: ">=3.10.0 <4.0.0"
+  flutter: ">=3.38.1"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  shared_preferences: ^2.3.0
+  flutter_secure_storage: ^9.2.4
+  uuid: ^4.0.0
+  dartz: ^0.10.1
+  freezed_annotation: ^3.1.0
+  device_info_plus: ^12.2.0
+  package_info_plus: ^9.0.0
+  dio: ^5.9.0
+  json_annotation: ^4.9.0
+  connectivity_plus: ^7.0.0
+  collection: ^1.18.0
+  flutter_bloc: ^9.1.1
+  permission_handler: ^12.0.1
+  app_settings: ^6.1.1
+
+dev_dependencies:
+  flutter_lints: ^6.0.0
+  build_runner: ^2.10.3
+  freezed: ^3.2.3
+  json_serializable: ^6.11.1

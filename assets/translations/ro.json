@@ -1,0 +1,298 @@
+{
+  "appTitle": "Listox",
+  "loading": {
+    "just_a_moment": "Un moment..."
+  },
+  "error": {
+    "generic_titles": {
+      "title1": "Of!",
+      "title2": "Ceva n-a mers bine",
+      "title3": "O, nu!",
+      "title4": "Hmm...",
+      "title5": "Ei bine",
+      "title6": "Neașteptat!",
+      "title7": "Din nou!",
+      "title8": "Vai",
+      "title9": "Eroare",
+      "title10": "Uite ce e",
+      "title11": "Ups"
+    }
+  },
+  "error_message": {
+    "grocery_not_found": "Produsul nu a fost găsit",
+    "grocery_storage": "Salvarea datelor a eșuat",
+    "common": {
+      "unexpected": "Ups! A apărut o eroare neașteptată... Lucrăm la asta! 🚨"
+    },
+    "email": {
+      "failed_to_open_support": "Ups! Nu am putut deschide aplicația de email... Ne poți contacta la {} 💌"
+    },
+    "preferences_unexpected": "A apărut o problemă neașteptată"
+  },
+  "label": {
+    "oops": "Ups",
+    "whoops": "Ups!"
+  },
+  "snackbar": {
+    "badConnection": {
+      "title": "Fără conexiune",
+      "description": "Verificați conexiunea la internet"
+    }
+  },
+  "common": {
+    "cancel": "Anulare",
+    "delete": "Ștergere",
+    "edit": "Editare"
+  },
+  "account": {
+    "title": "Cont",
+    "premium_status_premium": "Utilizator Premium",
+    "premium_status_upgrade": "Premium",
+    "premium_expiry": "Premium activ până la {date}. Mulțumim pentru sprijin <3",
+    "premium_upgrade_cta": "Treci la Premium pentru gestionare nelimitată!",
+    "notifications_enabled": "Activat",
+    "notifications_disabled": "Dezactivat",
+    "notifications_description": "O scurtă reamintire înainte de cumpărături",
+    "section_notifications": "Notificări",
+    "section_preferences": "Preferințe",
+    "language_title": "Limbă",
+    "language_subtitle": "Limba interfeței",
+    "haptics_title": "Haptic",
+    "haptics_subtitle": "Feedback prin vibrații",
+    "section_theme": "Temă",
+    "theme_system": "Sistem",
+    "theme_light": "Luminoasă",
+    "theme_dark": "Întunecată",
+    "section_colorations": "Culori",
+    "section_more": "Mai mult",
+    "about_app": "Despre aplicație",
+    "privacy_terms": "Confidențialitate",
+    "contact_support": "Contactați suportul"
+  },
+  "dialog": {
+    "delete_grocery": {
+      "title": "Ștergeți produsul?",
+      "subtitle": "Sigur vrei să ștergi \"{name}\"? Această acțiune nu poate fi anulată ⛔️"
+    },
+    "notification_mode": {
+      "title": "Program de remindere",
+      "auto_label": "Automat",
+      "auto_description": "Prezice următoarea achiziție",
+      "custom_days_label": "Zile personalizate",
+      "custom_days_description": "Alege zile specifice"
+    },
+    "permission": {
+      "notifications_title": "Permisiune",
+      "notifications_subtitle": "Pentru a primi notificări, permite această aplicație",
+      "notifications_subtitle_settings": "Pentru a primi notificări, permite această aplicație în setările sistemului"
+    }
+  },
+  "edit_grocery": {
+    "title": "Editează produsul\n\"{name}\"",
+    "input_name_hint": "Cum se numește?",
+    "input_period_hint": "La câte zile cumperi?",
+    "input_period_default": {
+      "one": "La fiecare {} zi",
+      "few": "La fiecare {} zile",
+      "other": "La fiecare {} de zile"
+    },
+    "input_period_description": "Introduceți o perioadă aproximativă. Listox va învăța din istoricul achizițiilor!",
+    "button_update": "Actualizare"
+  },
+  "home": {
+    "header_title": "Produse pe care ar putea trebui să le cumperi",
+    "tab_this_week": "Săptămâna Asta",
+    "tab_later": "Mai târziu",
+    "purchase_confirmed": "Achiziție confirmată!",
+    "purchase_confirmed_description": "Vom învăța obiceiurile tale și vom prezice când vei avea din nou nevoie de aceste produse",
+    "due_overdue": {
+      "one": "{} zi întârziere",
+      "few": "{} zile întârziere",
+      "other": "{} de zile întârziere"
+    },
+    "due_today": "Scadent azi",
+    "due_tomorrow": "Scadent mâine",
+    "due_in_days": {
+      "one": "În {} zi",
+      "few": "În {} zile",
+      "other": "În {} de zile"
+    },
+    "pre_list_this_week": "Poate fi necesar săptămâna aceasta",
+    "pre_list_later": "Poate fi necesar mai târziu",
+    "checked_section_title": "Produse bifate",
+    "fully_stocked": "Stocul tău este suficient!",
+    "premium_lock_cta": "Treci la Premium pentru a vedea tot",
+    "premium_upgrade_hint": "Deblochează toate produsele cu Premium"
+  },
+  "purchase_banner": {
+    "fully_stocked": "Totul este complet! Apasă \"Cumpără\" pentru confirmare",
+    "items_checked": {
+      "one": "1 produs bifat! Apasă \"Cumpără\" pentru confirmare",
+      "few": "{} produse bifate! Apasă \"Cumpără\" pentru confirmare",
+      "other": "{} de produse bifate! Apasă \"Cumpără\" pentru confirmare"
+    },
+    "button_purchase": "Cumpără"
+  },
+  "tutorial": {
+    "schedule_heading": "PLANUL TĂU DE CUMPĂRĂTURI",
+    "this_week_body": "Aici vei vedea produsele pe care Listox le prevede că vei avea nevoie la următoarea sesiune de cumpărături.",
+    "later_body": "Aici vei vedea produsele pe care le ai în stoc suficient. Vor trece la \"Săptămâna Asta\" când va fi momentul să reaprovizionezi.",
+    "skip": "SARI"
+  },
+  "welcome": {
+    "title": "Bine ai venit la Listox",
+    "onboarding_subtitle": "Lista ta inteligentă de cumpărături care învață ce cumperi și îți amintește când să reaprovizionezi",
+    "bullet1_title": "Urmărește elementele esențiale",
+    "bullet1_subtitle": "Adaugă ce cumperi regulat și ține totul într-un singur loc",
+    "bullet2_title": "Nu uita niciodată",
+    "bullet2_subtitle": "Listox învață și prezice când e momentul să reaprovizionezi",
+    "bullet3_title": "Mereu pregătit pentru cumpărături",
+    "bullet3_subtitle": "Vezi ce ai putea nevoie săptămâna aceasta înainte să ieși",
+    "cta": "Continuare"
+  },
+  "select_groceries": {
+    "heading": "Alege elementele esențiale",
+    "description": "Selectează produsele pe care le cumperi des. Listox va urmări când vei avea nevoie de ele",
+    "button_done": "Gata",
+    "button_selected_suffix": "/{max} selectate",
+    "add": "Adaugă",
+    "limit_reached": "Deocamdată poți selecta maximum {max} produse"
+  },
+  "search_groceries": {
+    "hint": "Caută produse..."
+  },
+  "weekdays_m": {
+    "mon": "Lun",
+    "tue": "Mar",
+    "wed": "Mie",
+    "thu": "Joi",
+    "fri": "Vin",
+    "sat": "Sâm",
+    "sun": "Dum"
+  },
+  "weekdays_s": {
+    "mon": "L",
+    "tue": "Ma",
+    "wed": "Mi",
+    "thu": "J",
+    "fri": "V",
+    "sat": "S",
+    "sun": "D"
+  },
+  "notifications": {
+    "mode_auto": "Automat",
+    "prompts": {
+      "title_1": "Mergi curând la supermarket? 🏪",
+      "body_1": "Verifică lista să nu ratezi nimic",
+
+      "title_2": "Faci cumpărături? 🛒",
+      "body_2": "Uită-te ce articole esențiale sunt pe terminate",
+
+      "title_3": "Următoarele cumpărături 🛒",
+      "body_3": "Aruncă o privire rapidă la ce ai putea nevoie",
+
+      "title_4": "Cumpărături în curând? 🛒",
+      "body_4": "Verifică ce trebuie reaprovizionat",
+
+      "title_5": "Mergi la magazin? 🏪",
+      "body_5": "Lista ta e gata! Dă-i o privire",
+
+      "title_6": "Nu uita nimic 🛒",
+      "body_6": "Lista ta de cumpărături e gata",
+
+      "title_7": "Planifici o vizită la magazin? 🏪",
+      "body_7": "Verifică lista și profită de drum",
+
+      "title_8": "Înainte de cumpărături 🛍️",
+      "body_8": "O privire rapidă la listă poate economisi timp",
+
+      "title_9": "Treci pe la magazin? 🛒",
+      "body_9": "Produsele esențiale de care ai putea nevoie sunt deja în lista ta",
+
+      "title_10": "Se termină ceva? ⏰",
+      "body_10": "Lista ta de cumpărături e actualizată, dă-i o privire"
+    }
+  },
+  "add_custom_grocery": {
+    "heading": "Creează un produs\npersonalizat",
+    "input_name_hint": "Cum se numește?",
+    "input_period_hint": "La câte zile cumperi?",
+    "input_period_description": "Introduceți o perioadă aproximativă. Listox va învăța din istoricul achizițiilor!",
+    "button_create": "Creare"
+  },
+  "quick_add": {
+    "tile_label": "Adăugare rapidă",
+    "dialog_title": "Adăugare rapidă",
+    "dialog_subtitle": "Produsul va fi eliminat după confirmarea achiziției.",
+    "hint": "Introduceți un nume",
+    "empty_state_hint": "Ai nevoie de ceva doar o dată? Atinge oriunde pentru a adăuga"
+  },
+  "paywall": {
+    "bullet1": "Urmărește produse nelimitate",
+    "bullet2": "Construiește lista completă de esențiale",
+    "bullet3": "Știi mereu ce ai nevoie înainte de cumpărături"
+  },
+  "smart_engine_banner": {
+    "title": "Profil Inteligent",
+    "description": "Listox învață ce cumperi și sugerează liste de cumpărături înainte să rămâi fără stoc."
+  },
+  "categories": {
+    "food": "Alimente",
+    "bathroom": "Baie",
+    "kitchen": "Bucătărie",
+    "cleaning": "Curățenie",
+    "health": "Sănătate",
+    "other": "Altele"
+  },
+  "groceries": {
+    "milk": "Lapte",
+    "eggs": "Ouă",
+    "bread": "Pâine",
+    "cheese": "Brânză",
+    "yogurt": "Iaurt",
+    "rice": "Orez",
+    "pasta": "Paste",
+    "coffee": "Cafea",
+    "water": "Apă",
+    "chicken": "Pui",
+    "bananas": "Banane",
+    "apples": "Mere",
+    "potatoes": "Cartofi",
+    "onions": "Ceapă",
+    "butter": "Unt",
+    "pepper": "Piper",
+    "garlic": "Usturoi",
+    "carrot": "Morcov",
+    "toilet_paper": "Hârtie igienică",
+    "shampoo": "Șampon",
+    "toothpaste": "Pastă de dinți",
+    "soap": "Săpun",
+    "deodorant": "Deodorant",
+    "toothbrush": "Periuță de dinți",
+    "shaving_cream": "Cremă de ras",
+    "dish_soap": "Detergent de vase",
+    "paper_towels": "Prosoape de hârtie",
+    "salt": "Sare",
+    "olive_oil": "Ulei de măsline",
+    "sugar": "Zahăr",
+    "flour": "Făină",
+    "foil": "Folie de aluminiu",
+    "baking_paper": "Hârtie de copt",
+    "laundry_detergent": "Detergent de rufe",
+    "trash_bags": "Saci de gunoi",
+    "toilet_cleaner": "Soluție pentru toaletă",
+    "multi_surface_cleaner": "Curățitor multisuprafețe",
+    "glass_cleaner": "Soluție pentru geamuri",
+    "disinfectant_spray": "Spray dezinfectant",
+    "wipes": "Șervețele umede",
+    "painkillers": "Analgezice",
+    "vitamins": "Vitamine",
+    "bandages": "Plasturi",
+    "cough_syrup": "Sirop de tuse",
+    "first_aid_kit": "Trusă de prim ajutor",
+    "batteries": "Baterii",
+    "light_bulbs": "Becuri",
+    "pet_food": "Hrană pentru animale de companie",
+    "printer_paper": "Hârtie pentru imprimantă"
+  }
+}

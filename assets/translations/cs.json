@@ -1,0 +1,298 @@
+{
+  "appTitle": "Listox",
+  "loading": {
+    "just_a_moment": "Chvilku..."
+  },
+  "error": {
+    "generic_titles": {
+      "title1": "Jejda!",
+      "title2": "Něco se pokazilo",
+      "title3": "Ó ne!",
+      "title4": "Hmm...",
+      "title5": "No tak",
+      "title6": "Nečekané!",
+      "title7": "Zase!",
+      "title8": "Ach",
+      "title9": "Chyba",
+      "title10": "No ne...",
+      "title11": "Ups"
+    }
+  },
+  "error_message": {
+    "grocery_not_found": "Produkt nenalezen",
+    "grocery_storage": "Uložení dat se nezdařilo",
+    "common": {
+      "unexpected": "Ups! Došlo k neočekávané chybě... Pracujeme na tom! 🚨"
+    },
+    "email": {
+      "failed_to_open_support": "Ups! Nepodařilo se otevřít e-mailovou aplikaci... Kontaktujte nás na {} 💌"
+    },
+    "preferences_unexpected": "Došlo k neočekávanému problému"
+  },
+  "label": {
+    "oops": "Ups",
+    "whoops": "Ups!"
+  },
+  "snackbar": {
+    "badConnection": {
+      "title": "Žádné připojení",
+      "description": "Zkontrolujte své internetové připojení"
+    }
+  },
+  "common": {
+    "cancel": "Zrušit",
+    "delete": "Smazat",
+    "edit": "Upravit"
+  },
+  "account": {
+    "title": "Účet",
+    "premium_status_premium": "Prémiový uživatel",
+    "premium_status_upgrade": "Premium",
+    "premium_expiry": "Premium aktivní do {date}. Děkujeme za podporu <3",
+    "premium_upgrade_cta": "Přejdi na Premium pro neomezené správy!",
+    "notifications_enabled": "Zapnuto",
+    "notifications_disabled": "Vypnuto",
+    "notifications_description": "Rychlá připomínka před nákupem",
+    "section_notifications": "Oznámení",
+    "section_preferences": "Předvolby",
+    "language_title": "Jazyk",
+    "language_subtitle": "Jazyk rozhraní",
+    "haptics_title": "Haptika",
+    "haptics_subtitle": "Vibrační zpětná vazba",
+    "section_theme": "Motiv",
+    "theme_system": "Systém",
+    "theme_light": "Světlý",
+    "theme_dark": "Tmavý",
+    "section_colorations": "Barvy",
+    "section_more": "Více",
+    "about_app": "O aplikaci",
+    "privacy_terms": "Soukromí",
+    "contact_support": "Kontaktovat podporu"
+  },
+  "dialog": {
+    "delete_grocery": {
+      "title": "Smazat produkt?",
+      "subtitle": "Opravdu chceš smazat \"{name}\"? Tuto akci nelze vrátit ⛔️"
+    },
+    "notification_mode": {
+      "title": "Plán připomínek",
+      "auto_label": "Automaticky",
+      "auto_description": "Předpovídá další nákup",
+      "custom_days_label": "Vlastní dny",
+      "custom_days_description": "Vyber konkrétní dny"
+    },
+    "permission": {
+      "notifications_title": "Oprávnění",
+      "notifications_subtitle": "Pro příjem oznámení povol tuto aplikaci",
+      "notifications_subtitle_settings": "Pro příjem oznámení povol tuto aplikaci v nastavení systému"
+    }
+  },
+  "edit_grocery": {
+    "title": "Upravit produkt\n\"{name}\"",
+    "input_name_hint": "Jak se jmenuje?",
+    "input_period_hint": "Každých kolik dní kupuješ?",
+    "input_period_default": {
+      "one": "Každý {} den",
+      "few": "Každé {} dny",
+      "other": "Každých {} dní"
+    },
+    "input_period_description": "Zadej přibližnou periodu. Listox se naučí z tvé historie nákupů!",
+    "button_update": "Aktualizovat"
+  },
+  "home": {
+    "header_title": "Produkty, které možná budeš potřebovat koupit",
+    "tab_this_week": "Tento Týden",
+    "tab_later": "Později",
+    "purchase_confirmed": "Nákup potvrzen!",
+    "purchase_confirmed_description": "Naučíme se vaše zvyky a předpovíme, kdy tyto položky budete znovu potřebovat",
+    "due_overdue": {
+      "one": "{} den po termínu",
+      "few": "{} dny po termínu",
+      "other": "{} dní po termínu"
+    },
+    "due_today": "Splatnost dnes",
+    "due_tomorrow": "Splatnost zítra",
+    "due_in_days": {
+      "one": "Za {} den",
+      "few": "Za {} dny",
+      "other": "Za {} dní"
+    },
+    "pre_list_this_week": "Může být potřeba tento týden",
+    "pre_list_later": "Může být potřeba později",
+    "checked_section_title": "Označené produkty",
+    "fully_stocked": "Tvoje zásoby jsou dostatečné!",
+    "premium_lock_cta": "Přejdi na Premium a zobraz vše",
+    "premium_upgrade_hint": "Odemkněte všechny položky s Premium"
+  },
+  "purchase_banner": {
+    "fully_stocked": "Vše připraveno! Klepni na \"Koupit\" pro potvrzení",
+    "items_checked": {
+      "one": "1 produkt označen! Klepni na \"Koupit\" pro potvrzení",
+      "few": "{} produkty označeny! Klepni na \"Koupit\" pro potvrzení",
+      "other": "{} produktů označeno! Klepni na \"Koupit\" pro potvrzení"
+    },
+    "button_purchase": "Koupit"
+  },
+  "tutorial": {
+    "schedule_heading": "TVŮJ NÁKUPNÍ PLÁN",
+    "this_week_body": "Zde uvidíš produkty, které Listox předpovídá, že budeš potřebovat při příštím nákupu.",
+    "later_body": "Zde uvidíš produkty, kterých máš ještě dostatek. Přesunou se do \"Tento Týden\" až bude čas doplnit zásoby.",
+    "skip": "PŘESKOČIT"
+  },
+  "welcome": {
+    "title": "Vítej v Listox",
+    "onboarding_subtitle": "Tvůj chytrý nákupní seznam, který se učí co kupuješ a připomíná ti kdy doplnit zásoby",
+    "bullet1_title": "Sleduj základní zboží",
+    "bullet1_subtitle": "Přidej to, co pravidelně kupuješ a měj vše na jednom místě",
+    "bullet2_title": "Nikdy víc nezapomeneš",
+    "bullet2_subtitle": "Listox se učí a předpovídá, kdy je čas doplnit zásoby",
+    "bullet3_title": "Vždy připraven na nákup",
+    "bullet3_subtitle": "Zjisti, co možná budeš potřebovat tento týden před odchodem",
+    "cta": "Pokračovat"
+  },
+  "select_groceries": {
+    "heading": "Vyberte základní zboží",
+    "description": "Vyberte produkty, které často kupujete. Listox bude sledovat, kdy je budete potřebovat",
+    "button_done": "Hotovo",
+    "button_selected_suffix": "/{max} vybráno",
+    "add": "Přidat",
+    "limit_reached": "Nyní můžeš vybrat maximálně {max} produktů"
+  },
+  "search_groceries": {
+    "hint": "Hledat produkty..."
+  },
+  "weekdays_m": {
+    "mon": "Po",
+    "tue": "Út",
+    "wed": "St",
+    "thu": "Čt",
+    "fri": "Pá",
+    "sat": "So",
+    "sun": "Ne"
+  },
+  "weekdays_s": {
+    "mon": "Po",
+    "tue": "Út",
+    "wed": "St",
+    "thu": "Čt",
+    "fri": "Pá",
+    "sat": "So",
+    "sun": "Ne"
+  },
+  "notifications": {
+    "mode_auto": "Automaticky",
+    "prompts": {
+      "title_1": "Brzy do supermarketu? 🏪",
+      "body_1": "Zkontroluj seznam, ať ti nic neuteče",
+
+      "title_2": "Jdeš nakupovat? 🛒",
+      "body_2": "Podívej se, které základní věci docházejí",
+
+      "title_3": "Příští nákup 🛒",
+      "body_3": "Rychle se podívej, co možná budeš potřebovat",
+
+      "title_4": "Brzy nakupovat? 🛒",
+      "body_4": "Zkontroluj, co je potřeba doplnit",
+
+      "title_5": "Jdeš do obchodu? 🏪",
+      "body_5": "Tvůj seznam je připraven! Koukni na to",
+
+      "title_6": "Nezapomeň na nic 🛒",
+      "body_6": "Tvůj nákupní seznam je připraven",
+
+      "title_7": "Plánuješ výlet do obchodu? 🏪",
+      "body_7": "Zkontroluj seznam a vytěž maximum z výletu",
+
+      "title_8": "Před nákupem 🛍️",
+      "body_8": "Rychlý pohled na seznam může ušetřit čas",
+
+      "title_9": "Zastavíš se v obchodě? 🛒",
+      "body_9": "Základní věci, které možná potřebuješ, jsou již na tvém seznamu",
+
+      "title_10": "Něco docházelo? ⏰",
+      "body_10": "Tvůj nákupní seznam je aktualizován, koukni na to"
+    }
+  },
+  "add_custom_grocery": {
+    "heading": "Vytvořit vlastní\nprodukt",
+    "input_name_hint": "Jak se jmenuje?",
+    "input_period_hint": "Každých kolik dní kupuješ?",
+    "input_period_description": "Zadej přibližnou periodu. Listox se naučí z tvé historie nákupů!",
+    "button_create": "Vytvořit"
+  },
+  "quick_add": {
+    "tile_label": "Rychlé přidání",
+    "dialog_title": "Rychlé přidání",
+    "dialog_subtitle": "Produkt bude odstraněn po potvrzení nákupu.",
+    "hint": "Zadej název",
+    "empty_state_hint": "Potřebuješ něco jen jednou? Klepni kamkoliv pro přidání"
+  },
+  "paywall": {
+    "bullet1": "Sleduj neomezené množství produktů",
+    "bullet2": "Sestav kompletní seznam základního zboží",
+    "bullet3": "Vždy víš co potřebuješ před nákupem"
+  },
+  "smart_engine_banner": {
+    "title": "Chytrý Profil",
+    "description": "Listox se učí co kupuješ a navrhuje nákupní seznamy dřív než dojdou zásoby."
+  },
+  "categories": {
+    "food": "Potraviny",
+    "bathroom": "Koupelna",
+    "kitchen": "Kuchyně",
+    "cleaning": "Úklid",
+    "health": "Zdraví",
+    "other": "Ostatní"
+  },
+  "groceries": {
+    "milk": "Mléko",
+    "eggs": "Vejce",
+    "bread": "Chléb",
+    "cheese": "Sýr",
+    "yogurt": "Jogurt",
+    "rice": "Rýže",
+    "pasta": "Těstoviny",
+    "coffee": "Káva",
+    "water": "Voda",
+    "chicken": "Kuřecí maso",
+    "bananas": "Banány",
+    "apples": "Jablka",
+    "potatoes": "Brambory",
+    "onions": "Cibule",
+    "butter": "Máslo",
+    "pepper": "Pepř",
+    "garlic": "Česnek",
+    "carrot": "Mrkev",
+    "toilet_paper": "Toaletní papír",
+    "shampoo": "Šampon",
+    "toothpaste": "Zubní pasta",
+    "soap": "Mýdlo",
+    "deodorant": "Deodorant",
+    "toothbrush": "Zubní kartáček",
+    "shaving_cream": "Krém na holení",
+    "dish_soap": "Prostředek na nádobí",
+    "paper_towels": "Papírové utěrky",
+    "salt": "Sůl",
+    "olive_oil": "Olivový olej",
+    "sugar": "Cukr",
+    "flour": "Mouka",
+    "foil": "Alobal",
+    "baking_paper": "Pečicí papír",
+    "laundry_detergent": "Prací prášek",
+    "trash_bags": "Pytle na odpadky",
+    "toilet_cleaner": "Čistič toalety",
+    "multi_surface_cleaner": "Víceúčelový čistič",
+    "glass_cleaner": "Čistič oken",
+    "disinfectant_spray": "Dezinfekční sprej",
+    "wipes": "Vlhčené ubrousky",
+    "painkillers": "Léky proti bolesti",
+    "vitamins": "Vitamíny",
+    "bandages": "Náplasti",
+    "cough_syrup": "Sirup na kašel",
+    "first_aid_kit": "Lékárnička",
+    "batteries": "Baterie",
+    "light_bulbs": "Žárovky",
+    "pet_food": "Krmivo pro zvířata",
+    "printer_paper": "Papír do tiskárny"
+  }
+}

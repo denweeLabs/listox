@@ -1,0 +1,294 @@
+{
+  "appTitle": "Listox",
+  "loading": {
+    "just_a_moment": "Sebentar..."
+  },
+  "error": {
+    "generic_titles": {
+      "title1": "Aduh!",
+      "title2": "Ada yang salah",
+      "title3": "Oh tidak!",
+      "title4": "Hmm...",
+      "title5": "Baiklah",
+      "title6": "Tak terduga!",
+      "title7": "Lagi!",
+      "title8": "Astaga",
+      "title9": "Kesalahan",
+      "title10": "Waduh",
+      "title11": "Ups"
+    }
+  },
+  "error_message": {
+    "grocery_not_found": "Barang tidak ditemukan",
+    "grocery_storage": "Gagal menyimpan data",
+    "common": {
+      "unexpected": "Ups! Terjadi kesalahan tak terduga... Kami sedang menanganinya! 🚨"
+    },
+    "email": {
+      "failed_to_open_support": "Ups! Tidak bisa membuka aplikasi email... Tapi kamu bisa menghubungi kami di {} 💌"
+    },
+    "preferences_unexpected": "Terjadi masalah yang tidak terduga"
+  },
+  "label": {
+    "oops": "Aduh",
+    "whoops": "Aduh!"
+  },
+  "snackbar": {
+    "badConnection": {
+      "title": "Tidak ada koneksi",
+      "description": "Periksa koneksi internet kamu"
+    }
+  },
+  "common": {
+    "cancel": "Batal",
+    "delete": "Hapus",
+    "edit": "Edit"
+  },
+  "account": {
+    "title": "Akun",
+    "premium_status_premium": "Pengguna Premium",
+    "premium_status_upgrade": "Premium",
+    "premium_expiry": "Premium berlaku hingga {date}. Terima kasih atas dukunganmu <3",
+    "premium_upgrade_cta": "Upgrade ke Premium untuk pengelolaan tanpa batas!",
+    "notifications_enabled": "Aktif",
+    "notifications_disabled": "Nonaktif",
+    "notifications_description": "Pengingat cepat sebelum belanja",
+    "section_notifications": "Notifikasi",
+    "section_preferences": "Preferensi",
+    "language_title": "Bahasa",
+    "language_subtitle": "Bahasa antarmuka",
+    "haptics_title": "Haptic",
+    "haptics_subtitle": "Umpan balik getar",
+    "section_theme": "Tema",
+    "theme_system": "Sistem",
+    "theme_light": "Terang",
+    "theme_dark": "Gelap",
+    "section_colorations": "Warna",
+    "section_more": "Lainnya",
+    "about_app": "Tentang aplikasi",
+    "privacy_terms": "Privasi",
+    "contact_support": "Hubungi dukungan"
+  },
+  "dialog": {
+    "delete_grocery": {
+      "title": "Hapus barang?",
+      "subtitle": "Yakin mau hapus \"{name}\"? Tindakan ini tidak bisa dibatalkan ⛔️"
+    },
+    "notification_mode": {
+      "title": "Jadwal Pengingat",
+      "auto_label": "Otomatis",
+      "auto_description": "Memprediksi belanja berikutnya",
+      "custom_days_label": "Hari khusus",
+      "custom_days_description": "Pilih hari tertentu"
+    },
+    "permission": {
+      "notifications_title": "Izin",
+      "notifications_subtitle": "Untuk menerima notifikasi, pastikan izinkan aplikasi ini",
+      "notifications_subtitle_settings": "Untuk menerima notifikasi, izinkan aplikasi ini di pengaturan sistem"
+    }
+  },
+  "edit_grocery": {
+    "title": "Edit barang\n\"{name}\"",
+    "input_name_hint": "Namanya apa?",
+    "input_period_hint": "Berapa hari sekali kamu beli?",
+    "input_period_default": {
+      "one": "Setiap {} hari",
+      "other": "Setiap {} hari"
+    },
+    "input_period_description": "Masukkan perkiraan periode. Listox akan belajar dari riwayat pembelianmu!",
+    "button_update": "Perbarui"
+  },
+  "home": {
+    "header_title": "Barang yang mungkin perlu kamu beli",
+    "tab_this_week": "Minggu Ini",
+    "tab_later": "Nanti",
+    "purchase_confirmed": "Pembelian dikonfirmasi!",
+    "purchase_confirmed_description": "Kami akan mempelajari penggunaan Anda dan memprediksi kapan Anda akan membutuhkan barang-barang ini lagi",
+    "due_overdue": {
+      "one": "Terlambat {} hari",
+      "other": "Terlambat {} hari"
+    },
+    "due_today": "Jatuh tempo hari ini",
+    "due_tomorrow": "Jatuh tempo besok",
+    "due_in_days": {
+      "one": "Dalam {} hari",
+      "other": "Dalam {} hari"
+    },
+    "pre_list_this_week": "Mungkin dibutuhkan minggu ini",
+    "pre_list_later": "Mungkin dibutuhkan nanti",
+    "checked_section_title": "Barang dicentang",
+    "fully_stocked": "Stokmu sudah cukup!",
+    "premium_lock_cta": "Upgrade Premium untuk lihat semua",
+    "premium_upgrade_hint": "Buka semua belanjaan Anda dengan Premium"
+  },
+  "purchase_banner": {
+    "fully_stocked": "Semua lengkap! Ketuk \"Beli\" untuk konfirmasi",
+    "items_checked": {
+      "one": "1 barang dicentang! Ketuk \"Beli\" untuk konfirmasi",
+      "other": "{} barang dicentang! Ketuk \"Beli\" untuk konfirmasi"
+    },
+    "button_purchase": "Beli"
+  },
+  "tutorial": {
+    "schedule_heading": "JADWAL BELANJA KAMU",
+    "this_week_body": "Di sini kamu akan melihat barang yang Listox prediksi kamu butuhkan di perjalanan belanja berikutnya.",
+    "later_body": "Di sini kamu akan melihat barang yang stoknya masih cukup. Akan pindah ke \"Minggu Ini\" saat waktunya mengisi ulang.",
+    "skip": "LEWATI"
+  },
+  "welcome": {
+    "title": "Selamat datang di Listox",
+    "onboarding_subtitle": "Daftar belanja cerdasmu yang belajar apa yang kamu beli dan mengingatkan kapan harus mengisi ulang",
+    "bullet1_title": "Lacak kebutuhanmu",
+    "bullet1_subtitle": "Tambahkan yang sering kamu beli dan simpan semuanya di satu tempat",
+    "bullet2_title": "Jangan pernah lupa lagi",
+    "bullet2_subtitle": "Listox belajar dan memprediksi kapan waktunya mengisi ulang",
+    "bullet3_title": "Selalu siap belanja",
+    "bullet3_subtitle": "Lihat apa yang mungkin kamu butuhkan minggu ini sebelum keluar",
+    "cta": "Lanjutkan"
+  },
+  "select_groceries": {
+    "heading": "Pilih Kebutuhan",
+    "description": "Pilih barang yang sering kamu beli. Listox akan melacak kapan kamu membutuhkannya",
+    "button_done": "Selesai",
+    "button_selected_suffix": "/{max} dipilih",
+    "add": "Tambah",
+    "limit_reached": "Untuk sekarang kamu bisa pilih hingga {max} barang"
+  },
+  "search_groceries": {
+    "hint": "Cari barang..."
+  },
+  "weekdays_m": {
+    "mon": "Sen",
+    "tue": "Sel",
+    "wed": "Rab",
+    "thu": "Kam",
+    "fri": "Jum",
+    "sat": "Sab",
+    "sun": "Min"
+  },
+  "weekdays_s": {
+    "mon": "Sn",
+    "tue": "Sl",
+    "wed": "Rb",
+    "thu": "Km",
+    "fri": "Jm",
+    "sat": "Sb",
+    "sun": "Mg"
+  },
+  "notifications": {
+    "mode_auto": "Otomatis",
+    "prompts": {
+      "title_1": "Mau ke supermarket? 🏪",
+      "body_1": "Periksa daftarmu agar tidak ketinggalan apa pun",
+
+      "title_2": "Mau belanja? 🛒",
+      "body_2": "Lihat kebutuhan apa yang hampir habis",
+
+      "title_3": "Belanja berikutnya 🛒",
+      "body_3": "Sekilas lihat apa yang mungkin kamu butuhkan",
+
+      "title_4": "Mau belanja segera? 🛒",
+      "body_4": "Periksa apa yang perlu diisi ulang",
+
+      "title_5": "Mau ke toko? 🏪",
+      "body_5": "Daftar belanjaanmu sudah siap! Cek dulu",
+
+      "title_6": "Jangan lupa apa pun 🛒",
+      "body_6": "Daftar belanjaanmu sudah siap",
+
+      "title_7": "Merencanakan ke toko? 🏪",
+      "body_7": "Cek daftarmu dan manfaatkan perjalanan",
+
+      "title_8": "Sebelum belanja 🛍️",
+      "body_8": "Sekilas cek daftar bisa menghemat waktumu",
+
+      "title_9": "Mampir ke toko sebentar? 🛒",
+      "body_9": "Kebutuhan yang mungkin diperlukan sudah ada di daftarmu",
+
+      "title_10": "Ada yang hampir habis? ⏰",
+      "body_10": "Daftar belanjaanmu sudah diperbarui, cek yuk"
+    }
+  },
+  "add_custom_grocery": {
+    "heading": "Buat kebutuhan\nkhusus",
+    "input_name_hint": "Namanya apa?",
+    "input_period_hint": "Berapa hari sekali kamu beli?",
+    "input_period_description": "Masukkan perkiraan periode. Listox akan belajar dari riwayat pembelianmu!",
+    "button_create": "Buat"
+  },
+  "quick_add": {
+    "tile_label": "Tambah cepat",
+    "dialog_title": "Tambah cepat",
+    "dialog_subtitle": "Barang akan dihapus setelah pembelian dikonfirmasi.",
+    "hint": "Masukkan nama",
+    "empty_state_hint": "Butuh sesuatu sekali saja? Ketuk di mana saja untuk menambahkannya"
+  },
+  "paywall": {
+    "bullet1": "Lacak kebutuhan tanpa batas",
+    "bullet2": "Bangun daftar kebutuhanmu yang lengkap",
+    "bullet3": "Selalu tahu apa yang dibutuhkan sebelum belanja"
+  },
+  "smart_engine_banner": {
+    "title": "Profil Cerdas",
+    "description": "Listox mempelajari apa yang kamu beli dan menyarankan daftar belanja sebelum stok habis."
+  },
+  "categories": {
+    "food": "Makanan",
+    "bathroom": "Kamar Mandi",
+    "kitchen": "Dapur",
+    "cleaning": "Kebersihan",
+    "health": "Kesehatan",
+    "other": "Lainnya"
+  },
+  "groceries": {
+    "milk": "Susu",
+    "eggs": "Telur",
+    "bread": "Roti",
+    "cheese": "Keju",
+    "yogurt": "Yogurt",
+    "rice": "Beras",
+    "pasta": "Pasta",
+    "coffee": "Kopi",
+    "water": "Air mineral",
+    "chicken": "Ayam",
+    "bananas": "Pisang",
+    "apples": "Apel",
+    "potatoes": "Kentang",
+    "onions": "Bawang",
+    "butter": "Mentega",
+    "pepper": "Lada",
+    "garlic": "Bawang putih",
+    "carrot": "Wortel",
+    "toilet_paper": "Tisu toilet",
+    "shampoo": "Sampo",
+    "toothpaste": "Pasta gigi",
+    "soap": "Sabun",
+    "deodorant": "Deodoran",
+    "toothbrush": "Sikat gigi",
+    "shaving_cream": "Krim cukur",
+    "dish_soap": "Sabun cuci piring",
+    "paper_towels": "Tisu dapur",
+    "salt": "Garam",
+    "olive_oil": "Minyak zaitun",
+    "sugar": "Gula",
+    "flour": "Tepung",
+    "foil": "Aluminium foil",
+    "baking_paper": "Kertas roti",
+    "laundry_detergent": "Deterjen pakaian",
+    "trash_bags": "Kantong sampah",
+    "toilet_cleaner": "Pembersih toilet",
+    "multi_surface_cleaner": "Pembersih serbaguna",
+    "glass_cleaner": "Pembersih kaca",
+    "disinfectant_spray": "Semprotan disinfektan",
+    "wipes": "Tisu basah",
+    "painkillers": "Obat pereda nyeri",
+    "vitamins": "Vitamin",
+    "bandages": "Plester",
+    "cough_syrup": "Sirup batuk",
+    "first_aid_kit": "Kotak P3K",
+    "batteries": "Baterai",
+    "light_bulbs": "Lampu",
+    "pet_food": "Makanan hewan peliharaan",
+    "printer_paper": "Kertas printer"
+  }
+}
