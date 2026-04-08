@@ -24,7 +24,7 @@ class AccountSection extends StatelessWidget {
   final String? suffixText;
   final VoidCallback? onTap;
 
-  static final defaultPadding = EdgeInsets.symmetric(horizontal: 24.w);
+  static final defaultPadding = EdgeInsets.symmetric(horizontal: 6.w);
 
   @override
   Widget build(BuildContext context) {

@@ -24,6 +24,8 @@ class SubscriptionCubit extends Cubit<SubscriptionState> {
        super(const SubscriptionState());
 
   Future<void> init() async {
+    if (state.isInitializing) return;
+    
     final cached = await _subscriptionRepo.getCachedSubscription();
 
     emit(state.copyWith(

@@ -64,7 +64,6 @@ class OnboardingLanding extends StatelessWidget {
             ],
           ),
         ),
-        18.verticalSpace,
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 48.w),
           child: AppSolidButton(
@@ -74,7 +73,7 @@ class OnboardingLanding extends StatelessWidget {
             onTap: onCta,
           ),
         ),
-        SizedBox(height: context.bottomPadding + 24.h),
+        SizedBox(height: context.bottomPadding + 28.h),
       ],
     );
   }

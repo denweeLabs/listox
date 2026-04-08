@@ -6,8 +6,8 @@ class FadeSlideupPageRouteBuilder<T> extends PageRouteBuilder<T> {
   FadeSlideupPageRouteBuilder({
     super.settings,
     required this.builder,
-    Duration duration = const Duration(milliseconds: 600),
-    Duration reverseDuration = const Duration(milliseconds: 400),
+    Duration duration = const Duration(milliseconds: 350),
+    Duration reverseDuration = const Duration(milliseconds: 300),
     double slideBegin = 0.06,
     Curve fadeCurve = const Interval(0.0, 0.6, curve: Curves.ease),
     Curve fadeReverseCurve = Curves.easeInOutQuart,

@@ -91,6 +91,7 @@ class SurfaceContainer extends StatelessWidget {
     return BounceTapWithBuilderAnimation(
       onTap: onTap,
       onLongTap: onLongTap,
+      minScale: 0.9,
       builder: (context, animation) => _buildSurface(
         context: context,
         animation: animation,
@@ -110,7 +111,7 @@ class SurfaceContainer extends StatelessWidget {
     required ShapeBorder shape,
     required Color shadowColor,
   }) {
-    final clipBehavior = (isShimmering || isBubbles)
+    final clipBehavior = (isShimmering || isBubbles) || stackChild != null
         ? Clip.hardEdge
         : Clip.none;
 

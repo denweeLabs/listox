@@ -16,7 +16,7 @@ enum _AccountHorizontalTileType {
 }
 
 class AccountHorizontalTile extends StatelessWidget {
-  static const defaultIconSize = 18.0;
+  static const defaultIconSize = 20.0;
 
   const AccountHorizontalTile._({
     super.key,

@@ -1,5 +1,8 @@
+import 'dart:async';
+
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:internet_connection_checker_plus/internet_connection_checker_plus.dart';
 
 import '../../data/repo/subscription_repo_impl.dart';
 import '../../data/source/subscription_local_source_impl.dart';
@@ -29,6 +32,8 @@ class SubscriptionScope extends StatefulWidget {
 
 class _SubscriptionScopeState extends State<SubscriptionScope> {
   late final SubscriptionCubit _cubit;
+  
+  StreamSubscription<InternetStatus>? _connectionSubscription;
 
   @override
   void initState() {
@@ -36,10 +41,20 @@ class _SubscriptionScopeState extends State<SubscriptionScope> {
     debugPrint('Subscriptions injected! entitlementId:${widget.config.entitlementId}; isDebug:${widget.config.isDebug}; envPrefix:${widget.config.envPrefix}');
     _cubit = _buildCubit();
     _cubit.init();
+    _connectionSubscription = InternetConnection()
+        .onStatusChange
+        .listen(_onConnectionStatusChanged);
+  }
+
+  void _onConnectionStatusChanged(InternetStatus status) {
+    if (status == InternetStatus.connected && !_cubit.state.isInitializing) {
+      _cubit.init();
+    }
   }
 
   @override
   void dispose() {
+    _connectionSubscription?.cancel();
     _cubit.close();
     super.dispose();
   }

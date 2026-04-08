@@ -4,7 +4,7 @@ import 'package:ui_kit/ui_kit.dart';
 
 class AppConstants {
   /// Default allowed max items
-  static const maxItemsSelectionCount = 8;
+  static const maxItemsSelectionCount = 5;
 
   /// Item quantity constraints
   static const itemMinQuantity = 1;

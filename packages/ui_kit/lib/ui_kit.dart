@@ -10,6 +10,7 @@ export 'src/app/core_material_app.dart';
 
 // Constants
 export 'src/constants/ui_kit_constants.dart';
+export 'src/constants/ui_kit_icons.dart';
 
 // Theme
 export 'src/theme/theme_coloration.dart';
@@ -79,3 +80,5 @@ export 'src/extensions/build_context_extensions.dart';
 
 // Router
 export 'src/router/fade_slideup_page_route_builder.dart';
+export 'src/router/cross_fade_page_route_builder.dart';
+export 'src/router/circular_reveal_page_route_builder.dart';

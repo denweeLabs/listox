@@ -18,4 +18,6 @@ abstract class SubscriptionState with _$SubscriptionState {
   DateTime? get expiry => subscription?.expiresAt;
 
   bool get isBusy => isInitializing || isPurchasing || isRestoring;
+
+  bool get plansReady => plans != null;
 }

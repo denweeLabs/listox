@@ -18,6 +18,7 @@ dependencies:
   flutter_inappwebview: ^6.1.5
   url_launcher: ^6.3.2
   shared_preferences: ^2.3.0
+  circular_reveal_animation: ^2.0.2
   animate_do_plus:
     path: ../animate_do_plus/
 
@@ -27,4 +28,5 @@ dev_dependencies:
 flutter:
   assets:
     - assets/icons/
+    - assets/icon_pack/
     - assets/animations/

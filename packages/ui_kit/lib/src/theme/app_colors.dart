@@ -91,7 +91,7 @@ class AppColors {
           context.theme.colorScheme.secondary,
           context.theme.colorScheme.primary,
         ],
-        begin: Alignment.centerLeft,
-        end: Alignment.centerRight,
+        begin: Alignment.centerRight,
+        end: Alignment.centerLeft,
       );
 }

@@ -52,4 +52,6 @@ extension ThemeX on BuildContext {
   Color get inversePrimaryContainer => AppColors.primaryContainer[isLightTheme ? ThemeType.dark : ThemeType.light]!;
   Color get lightSecondaryContainer => AppColors.secondaryContainer[ThemeType.light]!;
   Color get darkSecondaryContainer => AppColors.secondaryContainer[ThemeType.dark]!;
+
+  Color get darkBackgroundColor => AppColors.primaryBackground[ThemeType.dark]!;
 }

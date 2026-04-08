@@ -15,7 +15,7 @@ class ColorationOverviewSelector extends StatefulWidget {
   final String selectedColorationId;
   final ValueChanged<String> onChanged;
 
-  static final height = 130.h;
+  static final height = 120.h;
 
   @override
   State<ColorationOverviewSelector> createState() =>

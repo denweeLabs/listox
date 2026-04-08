@@ -9,6 +9,7 @@ Future<void> showSubscriptionPaywallBottomSheet(
   required PaywallTheme theme,
   required MediaQueryData mediaQuery,
   String? locale,
+  Duration closeButtonDelay = Duration.zero,
 }) {
   final cubit = context.read<SubscriptionCubit>();
 
@@ -27,6 +28,7 @@ Future<void> showSubscriptionPaywallBottomSheet(
         theme: theme,
         locale: locale,
         mediaQuery: mediaQuery,
+        closeButtonDelay: closeButtonDelay,
       ),
     ),
   );

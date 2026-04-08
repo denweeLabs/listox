@@ -5,16 +5,23 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ToastMessageSnackbar extends StatelessWidget {
-  const ToastMessageSnackbar(this.message, {super.key});
+  const ToastMessageSnackbar(
+    this.message, {
+    super.key,
+    this.backgroundColor,
+    this.textColor,
+  });
 
   final String message;
+  final Color? backgroundColor;
+  final Color? textColor;
 
   @override
   Widget build(BuildContext context) {
     return UnconstrainedBox(
       child: PhysicalModel(
         borderRadius: UiKitConstants.commonBorderRadius,
-        color: context.primaryContainer,
+        color: backgroundColor ?? context.primaryContainer,
         shadowColor: Colors.black54,
         elevation: 6.0,
         child: Center(
@@ -27,7 +34,7 @@ class ToastMessageSnackbar extends StatelessWidget {
                   type: MaterialType.transparency,
                   child: Text(
                     message,
-                    style: h6.copyWith(color: context.textColor),
+                    style: h6.copyWith(color: textColor ?? context.textColor),
                     overflow: TextOverflow.ellipsis,
                     maxLines: 1,
                   ),

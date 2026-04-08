@@ -1,4 +1,3 @@
-import 'package:animate_do_plus/animate_do_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ui_kit/ui_kit.dart';
@@ -15,7 +14,7 @@ Future<T?> showOnboardingSheet<T>(
     isScrollControlled: true,
     backgroundColor: Colors.transparent,
     sheetAnimationStyle: const AnimationStyle(
-      duration: CustomAnimationDurations.ultraLow,
+      duration: Duration(milliseconds: 300),
     ),
     builder: (_) => Padding(
       padding: EdgeInsets.only(top: context.topPadding + 12.h),

@@ -36,7 +36,7 @@ class _WeeklyPlanTile extends StatelessWidget {
         child: Text(
           strings.freeTrialBadgeText,
           style: TextStyle(
-            fontSize: 16,
+            fontSize: 17,
             fontWeight: FontWeight.bold,
             letterSpacing: -0.4,
             color: theme.textColor,

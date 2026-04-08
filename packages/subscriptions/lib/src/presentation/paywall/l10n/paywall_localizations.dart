@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:subscriptions/src/domain/entity/subscription_failure.dart';
+import 'package:subscriptions/src/presentation/paywall/constants/paywall_constants.dart';
 import 'package:subscriptions/src/presentation/paywall/settings/paywall_strings.dart';
 
 /// Built-in paywall localizations for 16 languages.
@@ -1035,14 +1036,18 @@ class _LD {
       TextSpan(
         style: style,
         children: [
-          TextSpan(
-            text: original,
-            style: const TextStyle(
-              decoration: TextDecoration.lineThrough,
-              decorationStyle: TextDecorationStyle.solid,
+          if (PaywallConstants.showYearlyCrossedOutPrice) ...[
+            TextSpan(
+              text: original,
+              style: const TextStyle(
+                decoration: TextDecoration.lineThrough,
+                decorationStyle: TextDecorationStyle.solid,
+              ),
             ),
-          ),
-          TextSpan(text: ' $actual $perYear'),
+            TextSpan(text: ' $actual $perYear'),
+          ] else ...[
+            TextSpan(text: '$actual $perYear'),
+          ],
         ],
       ),
     ),

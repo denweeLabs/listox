@@ -37,9 +37,18 @@ class CoreDialogsUtil {
     _showSnackbar(InternetConnectionSnackbar(title: title, description: description));
   }
 
-  static void showToastMessage(String message, {EdgeInsets? padding}) {
+  static void showToastMessage(
+    String message, {
+    EdgeInsets? padding,
+    Color? backgroundColor,
+    Color? textColor,
+  }) {
     _showSnackbar(
-      ToastMessageSnackbar(message),
+      ToastMessageSnackbar(
+        message,
+        backgroundColor: backgroundColor,
+        textColor: textColor,
+      ),
       displayDuration: toastMessageDisplayDuration,
       padding: padding,
     );

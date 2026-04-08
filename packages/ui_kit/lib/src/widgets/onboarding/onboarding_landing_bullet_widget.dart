@@ -13,6 +13,7 @@ class OnboardingLandingBullet extends StatelessWidget {
     this.scaleAnimation = 1.0,
     this.loopAnimation = false,
     this.padding,
+    this.animationOffset = Offset.zero,
   });
 
   final String animationPath;
@@ -21,6 +22,7 @@ class OnboardingLandingBullet extends StatelessWidget {
   final double scaleAnimation;
   final bool loopAnimation;
   final EdgeInsets? padding;
+  final Offset animationOffset;
 
   static final animationSize = 80.w;
 
@@ -34,13 +36,16 @@ class OnboardingLandingBullet extends StatelessWidget {
           SizedBox(
             width: animationSize,
             height: animationSize,
-            child: Transform.scale(
-              scale: scaleAnimation,
-              child: Align(
-                alignment: Alignment.centerLeft,
-                child: LottieAnimation(
-                  path: animationPath,
-                  repeat: loopAnimation,
+            child: Transform.translate(
+              offset: animationOffset,
+              child: Transform.scale(
+                scale: scaleAnimation,
+                child: Align(
+                  alignment: Alignment.centerRight,
+                  child: LottieAnimation(
+                    path: animationPath,
+                    repeat: loopAnimation,
+                  ),
                 ),
               ),
             ),
@@ -63,7 +68,7 @@ class OnboardingLandingBullet extends StatelessWidget {
                 4.verticalSpace,
                 Text(
                   subtitle,
-                  style: bodyM.copyWith(
+                  style: bodyL.copyWith(
                     color: context.textColorSecondary,
                     letterSpacing: -0.25,
                     height: 0.0,

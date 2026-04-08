@@ -80,10 +80,14 @@ class AppIconButton extends StatelessWidget {
       );
     }
 
-    return backgroundContainer(
-      context: context,
-      brightness: brightness,
+    return SurfaceContainer.ellipse(
       onTap: onTap ?? Navigator.of(context).pop,
+      borderRadius: UiKitConstants.commonBorderRadius,
+      color: brightness.backgroundContainerColor(context),
+      hoverColor: brightness.backgroundContainerColor(context),
+      elevation: brightness == AppIconButtonBrightness.solid ? 3.0 : 0.0,
+      size: containerSize,
+      showBorder: false,
       child: Center(
         child: CommonAppIcon(
           size: size,

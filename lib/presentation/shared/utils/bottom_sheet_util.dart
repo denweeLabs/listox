@@ -82,15 +82,15 @@ class AppBottomSheets {
       ),
       bulletPoints: [
         PaywallBulletPoint(
-          icon: AppAssets.checkmarkLinear,
+          icon: UiKitIcons.check,
           text: context.tr(LocaleKeys.paywall_bullet1),
         ),
         PaywallBulletPoint(
-          icon: AppAssets.checkmarkLinear,
+          icon: UiKitIcons.clipboard,
           text: context.tr(LocaleKeys.paywall_bullet2),
         ),
         PaywallBulletPoint(
-          icon: AppAssets.checkmarkLinear,
+          icon: UiKitIcons.shoppingCart,
           text: context.tr(LocaleKeys.paywall_bullet3),
         ),
       ],

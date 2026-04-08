@@ -115,6 +115,15 @@ TextStyle get bodyS {
   );
 }
 
+TextStyle get bodyXS {
+  return TextStyle(
+    fontSize: 10.sp,
+    letterSpacing: -0.1,
+    fontFamily: commonFontFamily,
+    fontWeight: FontWeight.w600,
+  );
+}
+
 TextStyle get solidButton {
   return TextStyle(
     height: 0.0,

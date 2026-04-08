@@ -30,6 +30,7 @@ part 'widgets/error_snackbar_widget.dart';
 part 'widgets/loading_indicator_widget.dart';
 part 'widgets/bubbles_animation_widget.dart';
 part 'widgets/shimmer_animation_widget.dart';
+part 'widgets/overlay_restyle_widget.dart';
 
 const _hPadding = 30.0;
 
@@ -42,6 +43,7 @@ class PaywallPage extends StatefulWidget {
     required this.mediaQuery,
     this.strings,
     this.locale,
+    this.closeButtonDelay = Duration.zero,
   });
 
   final Widget topAnimation;
@@ -50,16 +52,34 @@ class PaywallPage extends StatefulWidget {
   final PaywallStrings? strings;
   final String? locale;
   final MediaQueryData mediaQuery;
+  final Duration closeButtonDelay;
 
   @override
   State<PaywallPage> createState() => _PaywallPageState();
 }
 
-class _PaywallPageState extends State<PaywallPage> {
+class _PaywallPageState extends State<PaywallPage>
+    with SingleTickerProviderStateMixin {
   late PaywallStrings _strings;
 
   var _selectedPlan = SubscriptionPlanType.weekly;
   var _isRestoreOperation = false;
+
+  AnimationController? _closeDelayController;
+  bool _canClose = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _initBackButton();
+    _checkPlansReady();
+  }
+
+  @override
+  void dispose() {
+    _closeDelayController?.dispose();
+    super.dispose();
+  }
 
   @override
   void didChangeDependencies() {
@@ -69,6 +89,28 @@ class _PaywallPageState extends State<PaywallPage> {
     } else {
       final deviceLocale = Localizations.localeOf(context).languageCode;
       _strings = PaywallLocalizations.of(widget.locale ?? deviceLocale);
+    }
+  }
+
+  void _checkPlansReady() {
+    final cubit = context.read<SubscriptionCubit>();
+    if (!cubit.state.plansReady) {
+      cubit.init();
+    }
+  }
+
+  void _initBackButton() {
+    if (widget.closeButtonDelay == Duration.zero) {
+      _canClose = true;
+    } else {
+      _closeDelayController =
+          AnimationController(vsync: this, duration: widget.closeButtonDelay)
+            ..addStatusListener((status) {
+              if (status == AnimationStatus.completed && mounted) {
+                setState(() => _canClose = true);
+              }
+            })
+            ..forward();
     }
   }
 
@@ -110,73 +152,75 @@ class _PaywallPageState extends State<PaywallPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      color: widget.theme.backgroundColor,
-      child: Stack(
-        children: [
-          BlocConsumer<SubscriptionCubit, SubscriptionState>(
-            listenWhen: (prev, curr) =>
-                (prev.isPurchasing && !curr.isPurchasing) ||
-                (prev.isRestoring && !curr.isRestoring),
-            listener: (context, state) {
-              if (state.failure != null &&
-                  state.failure != SubscriptionFailure.purchaseCancelled) {
-                _showErrorSnackbar(
-                  _isRestoreOperation
-                      ? _strings.restoreErrorTitle
-                      : _strings.purchaseErrorTitle,
-                  state.failure!,
-                );
-              } else if (state.failure == null &&
-                  state.isPremium &&
-                  state.subscription != null) {
-                _showSuccessDialog(state.subscription!);
-              }
-            },
-            builder: (context, state) {
-              final yearlyActive =
-                  state.subscription?.planType == SubscriptionPlanType.yearly &&
-                  (state.subscription?.isActive ?? false);
-              final weeklyActive =
-                  state.subscription?.planType == SubscriptionPlanType.weekly &&
-                  (state.subscription?.isActive ?? false);
-
-              return Column(
-                children: [
-                  Expanded(
-                    child: ListView(
-                      physics: const ClampingScrollPhysics(),
-                      padding: EdgeInsets.fromLTRB(
-                        _hPadding,
-                        0.0,
-                        _hPadding,
-                        12.0,
+    return _OverlayRestyle(
+      child: Material(
+        color: widget.theme.backgroundColor,
+        child: Stack(
+          children: [
+            BlocConsumer<SubscriptionCubit, SubscriptionState>(
+              listenWhen: (prev, curr) =>
+                  (prev.isPurchasing && !curr.isPurchasing) ||
+                  (prev.isRestoring && !curr.isRestoring),
+              listener: (context, state) {
+                if (state.failure != null &&
+                    state.failure != SubscriptionFailure.purchaseCancelled) {
+                  _showErrorSnackbar(
+                    _isRestoreOperation
+                        ? _strings.restoreErrorTitle
+                        : _strings.purchaseErrorTitle,
+                    state.failure!,
+                  );
+                } else if (state.failure == null &&
+                    state.isPremium &&
+                    state.subscription != null) {
+                  _showSuccessDialog(state.subscription!);
+                }
+              },
+              builder: (context, state) {
+                final yearlyActive =
+                    state.subscription?.planType == SubscriptionPlanType.yearly &&
+                    (state.subscription?.isActive ?? false);
+                final weeklyActive =
+                    state.subscription?.planType == SubscriptionPlanType.weekly &&
+                    (state.subscription?.isActive ?? false);
+      
+                return Column(
+                  children: [
+                    Expanded(
+                      child: ListView(
+                        physics: const ClampingScrollPhysics(),
+                        padding: EdgeInsets.fromLTRB(
+                          _hPadding,
+                          0.0,
+                          _hPadding,
+                          12.0,
+                        ),
+                        children: [
+                          widget.topAnimation,
+                          const SizedBox(height: 12),
+                          _buildTitle(),
+                          SizedBox(height: widget.mediaQuery.size.height * 0.05),
+                          _buildBulletPoints(),
+                        ],
                       ),
-                      children: [
-                        widget.topAnimation,
-                        const SizedBox(height: 12),
-                        _buildTitle(),
-                        SizedBox(height: widget.mediaQuery.size.height * 0.05),
-                        _buildBulletPoints(),
-                      ],
                     ),
-                  ),
-                  _buildFooter(
-                    state: state,
-                    mq: widget.mediaQuery,
-                    yearlyActive: yearlyActive,
-                    weeklyActive: weeklyActive,
-                  ),
-                ],
-              );
-            },
-          ),
-          Positioned(
-            right: 24,
-            top: widget.mediaQuery.padding.top + 12,
-            child: _buildCloseButton(),
-          ),
-        ],
+                    _buildFooter(
+                      state: state,
+                      mq: widget.mediaQuery,
+                      yearlyActive: yearlyActive,
+                      weeklyActive: weeklyActive,
+                    ),
+                  ],
+                );
+              },
+            ),
+            Positioned(
+              right: 24,
+              top: widget.mediaQuery.padding.top + 12,
+              child: _buildCloseButton(),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -222,16 +266,16 @@ class _PaywallPageState extends State<PaywallPage> {
                       widget.theme.primaryAccentColor,
                       BlendMode.srcIn,
                     ),
-                    width: 18,
+                    width: 20,
                   ),
                 ),
               ),
-              const SizedBox(width: 8),
+              const SizedBox(width: 10),
               Expanded(
                 child: Text(
                   bp.text,
                   style: TextStyle(
-                    fontSize: 18,
+                    fontSize: 19,
                     color: widget.theme.textColor,
                     fontWeight: FontWeight.w500,
                     letterSpacing: -0.4,
@@ -308,34 +352,47 @@ class _PaywallPageState extends State<PaywallPage> {
             termsUrl: context.read<SubscriptionCubit>().config.termsUrl,
             privacyUrl: context.read<SubscriptionCubit>().config.privacyUrl,
           ),
-          SizedBox(height: mq.padding.bottom + 12),
+          SizedBox(height: MediaQuery.of(context).padding.bottom + 8),
         ],
       ),
     );
   }
 
   Widget _buildCloseButton() {
-    return _TapFade(
-      onTap: Navigator.of(context).pop,
-      child: SizedBox.square(
-        dimension: 32,
-        child: PhysicalModel(
-          color: widget.theme.backgroundColor,
-          shape: BoxShape.circle,
-          child: Center(
-            child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: SvgPicture.asset(
-                PaywallAssets.cross,
-                colorFilter: ColorFilter.mode(
-                  widget.theme.iconColor,
-                  BlendMode.srcIn,
+    return AnimatedSwitcher(
+      duration: const Duration(milliseconds: 300),
+      child: _canClose
+          ? KeyedSubtree(
+              key: const ValueKey('close_btn'),
+              child: _TapFade(
+              onTap: Navigator.of(context).pop,
+              child: SizedBox.square(
+                dimension: 20,
+                child: Center(
+                  child: SvgPicture.asset(
+                    PaywallAssets.cross,
+                    colorFilter: ColorFilter.mode(
+                      widget.theme.iconColor,
+                      BlendMode.srcIn,
+                    ),
+                  ),
                 ),
               ),
             ),
-          ),
-        ),
-      ),
+          )
+          : SizedBox.square(
+              key: const ValueKey('progress_ring'),
+              dimension: 20,
+              child: AnimatedBuilder(
+                animation: _closeDelayController!,
+                builder: (context, _) => CircularProgressIndicator(
+                  value: _closeDelayController!.value,
+                  color: widget.theme.primaryAccentColor.withValues(alpha: 0.6),
+                  backgroundColor: widget.theme.textColor.withValues(alpha: 0.05),
+                  strokeWidth: 2.0,
+                ),
+              ),
+            ),
     );
   }
 
