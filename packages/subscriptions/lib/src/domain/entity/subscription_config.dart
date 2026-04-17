@@ -1,3 +1,5 @@
+enum SubscriptionVariant { weekly, monthly }
+
 class SubscriptionApiKeys {
   final String apple;
   final String google;
@@ -11,10 +13,26 @@ class SubscriptionApiKeys {
 }
 
 class SubscriptionProductIds {
-  final String weekly;
-  final String yearly;
+  const SubscriptionProductIds.weekly({
+    required this.weekly,
+    required this.yearly,
+    required this.trialPeriodDays,
+  }) : monthly = '', variant = SubscriptionVariant.weekly;
 
-  const SubscriptionProductIds({required this.weekly, required this.yearly});
+  const SubscriptionProductIds.monthly({
+    required this.monthly,
+    required this.yearly,
+    required this.trialPeriodDays,
+  }) : weekly = '', variant = SubscriptionVariant.monthly;
+
+  final String weekly;
+  final String monthly;
+  final String yearly;
+  final SubscriptionVariant variant;
+
+  /// Number of trial days for the short plan (weekly or monthly).
+  /// `null` means no trial period.
+  final int? trialPeriodDays;
 }
 
 class SubscriptionConfig {

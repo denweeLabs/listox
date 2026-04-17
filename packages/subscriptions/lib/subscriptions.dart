@@ -13,7 +13,7 @@ library;
 ///     google: '', // TBD
 ///     test: 'test_wnJuVXZzvgQRRSSGkwjCEMGHPUk',
 ///   ),
-///   productIds: const SubscriptionProductIds(
+///   productIds: const SubscriptionProductIds.weekly(
 ///     weekly: 'denwee_listox_premium_week',
 ///     yearly: 'denwee_listox_premium_year',
 ///   ),

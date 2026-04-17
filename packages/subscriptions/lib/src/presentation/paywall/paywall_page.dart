@@ -6,6 +6,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl/intl.dart';
 import 'package:lottie/lottie.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
+import 'package:subscriptions/src/domain/entity/subscription_config.dart';
 import 'package:subscriptions/src/domain/entity/subscription_failure.dart';
 import 'package:subscriptions/src/domain/entity/subscription_plans.dart';
 import 'package:subscriptions/src/domain/entity/user_subscription.dart';
@@ -22,6 +23,7 @@ part 'widgets/tap_fade_widget.dart';
 part 'widgets/checkbox_widget.dart';
 part 'widgets/core_plan_tile_widget.dart';
 part 'widgets/weekly_plan_tile_widget.dart';
+part 'widgets/monthly_plan_tile_widget.dart';
 part 'widgets/yearly_plan_tile_widget.dart';
 part 'widgets/purchase_button_widget.dart';
 part 'widgets/footer_links_widget.dart';
@@ -62,7 +64,7 @@ class _PaywallPageState extends State<PaywallPage>
     with SingleTickerProviderStateMixin {
   late PaywallStrings _strings;
 
-  var _selectedPlan = SubscriptionPlanType.weekly;
+  late SubscriptionPlanType _selectedPlan;
   var _isRestoreOperation = false;
 
   AnimationController? _closeDelayController;
@@ -71,6 +73,10 @@ class _PaywallPageState extends State<PaywallPage>
   @override
   void initState() {
     super.initState();
+    final variant = context.read<SubscriptionCubit>().config.productIds.variant;
+    _selectedPlan = variant == SubscriptionVariant.monthly
+        ? SubscriptionPlanType.monthly
+        : SubscriptionPlanType.weekly;
     _initBackButton();
     _checkPlansReady();
   }
@@ -88,7 +94,15 @@ class _PaywallPageState extends State<PaywallPage>
       _strings = widget.strings!;
     } else {
       final deviceLocale = Localizations.localeOf(context).languageCode;
-      _strings = PaywallLocalizations.of(widget.locale ?? deviceLocale);
+      final trialPeriodDays = context
+          .read<SubscriptionCubit>()
+          .config
+          .productIds
+          .trialPeriodDays;
+      _strings = PaywallLocalizations.of(
+        widget.locale ?? deviceLocale,
+        trialPeriodDays: trialPeriodDays,
+      );
     }
   }
 
@@ -183,7 +197,10 @@ class _PaywallPageState extends State<PaywallPage>
                 final weeklyActive =
                     state.subscription?.planType == SubscriptionPlanType.weekly &&
                     (state.subscription?.isActive ?? false);
-      
+                final monthlyActive =
+                    state.subscription?.planType == SubscriptionPlanType.monthly &&
+                    (state.subscription?.isActive ?? false);
+
                 return Column(
                   children: [
                     Expanded(
@@ -209,6 +226,7 @@ class _PaywallPageState extends State<PaywallPage>
                       mq: widget.mediaQuery,
                       yearlyActive: yearlyActive,
                       weeklyActive: weeklyActive,
+                      monthlyActive: monthlyActive,
                     ),
                   ],
                 );
@@ -294,7 +312,11 @@ class _PaywallPageState extends State<PaywallPage>
     required MediaQueryData mq,
     required bool yearlyActive,
     required bool weeklyActive,
+    required bool monthlyActive,
   }) {
+    final productIds = context.read<SubscriptionCubit>().config.productIds;
+    final variant = productIds.variant;
+    final trialPeriodDays = productIds.trialPeriodDays;
     final expirySubtitle = state.subscription != null
         ? _strings.activePlanSubtitleBuilder(
             DateFormat('yMMMd').format(state.subscription!.expiresAt),
@@ -303,7 +325,8 @@ class _PaywallPageState extends State<PaywallPage>
 
     final selectedPlanIsActive =
         (_selectedPlan == SubscriptionPlanType.yearly && yearlyActive) ||
-        (_selectedPlan == SubscriptionPlanType.weekly && weeklyActive);
+        (_selectedPlan == SubscriptionPlanType.weekly && weeklyActive) ||
+        (_selectedPlan == SubscriptionPlanType.monthly && monthlyActive);
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -319,20 +342,32 @@ class _PaywallPageState extends State<PaywallPage>
             activeExpirySubtitle: yearlyActive ? expirySubtitle : null,
             actualPrice: _yearlyActualPrice(state),
             originalPrice: _yearlyOriginalPrice(state),
-            discountPercent:
-                state.plans?.yearlyDiscountPercentVersusWeekly ?? 0,
+            discountPercent: state.plans?.yearlyDiscountPercent ?? 0,
             onTap: () => _selectPlan(SubscriptionPlanType.yearly),
           ),
           const SizedBox(height: 10),
-          _WeeklyPlanTile(
-            theme: widget.theme,
-            strings: _strings,
-            isSelected: _selectedPlan == SubscriptionPlanType.weekly,
-            isActiveSubscription: weeklyActive,
-            activeExpirySubtitle: weeklyActive ? expirySubtitle : null,
-            price: _weeklyPrice(state),
-            onTap: () => _selectPlan(SubscriptionPlanType.weekly),
-          ),
+          if (variant == SubscriptionVariant.weekly)
+            _WeeklyPlanTile(
+              theme: widget.theme,
+              strings: _strings,
+              isSelected: _selectedPlan == SubscriptionPlanType.weekly,
+              isActiveSubscription: weeklyActive,
+              activeExpirySubtitle: weeklyActive ? expirySubtitle : null,
+              price: _weeklyPrice(state),
+              trialPeriodDays: trialPeriodDays,
+              onTap: () => _selectPlan(SubscriptionPlanType.weekly),
+            )
+          else
+            _MonthlyPlanTile(
+              theme: widget.theme,
+              strings: _strings,
+              isSelected: _selectedPlan == SubscriptionPlanType.monthly,
+              isActiveSubscription: monthlyActive,
+              activeExpirySubtitle: monthlyActive ? expirySubtitle : null,
+              price: _monthlyPrice(state),
+              trialPeriodDays: trialPeriodDays,
+              onTap: () => _selectPlan(SubscriptionPlanType.monthly),
+            ),
           const SizedBox(height: 18),
           _PurchaseButton(
             strings: _strings,
@@ -340,6 +375,7 @@ class _PaywallPageState extends State<PaywallPage>
             selectedPlan: _selectedPlan,
             isActivePlan: selectedPlanIsActive,
             isBusy: state.isBusy,
+            hasTrial: trialPeriodDays != null,
             onTap: selectedPlanIsActive
                 ? Navigator.of(context).pop
                 : () => _onPurchase(state),
@@ -402,8 +438,13 @@ class _PaywallPageState extends State<PaywallPage>
       '-';
 
   String _weeklyPrice(SubscriptionState state) =>
-      state.plans?.weekly.formattedPriceString ??
-      state.plans?.weekly.package.storeProduct.priceString ??
+      state.plans?.weekly?.formattedPriceString ??
+      state.plans?.weekly?.package.storeProduct.priceString ??
+      '-';
+
+  String _monthlyPrice(SubscriptionState state) =>
+      state.plans?.monthly?.formattedPriceString ??
+      state.plans?.monthly?.package.storeProduct.priceString ??
       '-';
 
   void _selectPlan(SubscriptionPlanType plan) {
@@ -415,9 +456,9 @@ class _PaywallPageState extends State<PaywallPage>
     final plans = state.plans;
     if (plans == null) return;
     _isRestoreOperation = false;
-    final plan = _selectedPlan == SubscriptionPlanType.weekly
-        ? plans.weekly
-        : plans.yearly;
+    final plan = _selectedPlan == SubscriptionPlanType.yearly
+        ? plans.yearly
+        : plans.shortPlan;
     context.read<SubscriptionCubit>().purchase(plan);
     HapticFeedback.mediumImpact();
   }
@@ -431,10 +472,12 @@ class _PaywallPageState extends State<PaywallPage>
   String _yearlyOriginalPrice(SubscriptionState state) {
     final plans = state.plans;
     if (plans == null) return '-';
-    final weeklyProduct = plans.weekly.package.storeProduct;
-    final fullYear = weeklyProduct.price * 52;
+    final short = plans.shortPlan;
+    final shortProduct = short.package.storeProduct;
+    final multiplier = short.type == SubscriptionPlanType.weekly ? 52 : 12;
+    final fullYear = shortProduct.price * multiplier;
     final fmt = NumberFormat.simpleCurrency(
-      name: weeklyProduct.currencyCode,
+      name: shortProduct.currencyCode,
       decimalDigits: fullYear.truncateToDouble() == fullYear ? 0 : 2,
       locale: 'en',
     );

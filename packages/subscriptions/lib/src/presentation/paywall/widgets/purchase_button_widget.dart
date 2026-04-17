@@ -8,6 +8,7 @@ class _PurchaseButton extends StatelessWidget {
     required this.isActivePlan,
     required this.isBusy,
     required this.onTap,
+    required this.hasTrial,
   });
 
   final PaywallStrings strings;
@@ -16,6 +17,7 @@ class _PurchaseButton extends StatelessWidget {
   final bool isActivePlan;
   final bool isBusy;
   final VoidCallback onTap;
+  final bool hasTrial;
 
   @override
   Widget build(BuildContext context) {
@@ -53,7 +55,7 @@ class _PurchaseButton extends StatelessWidget {
     if (isActivePlan) {
       label = strings.activePlanLabel;
     } else {
-      label = selectedPlan == SubscriptionPlanType.weekly
+      label = selectedPlan != SubscriptionPlanType.yearly && hasTrial
           ? strings.tryForFreeLabel
           : strings.unlockLabel;
     }

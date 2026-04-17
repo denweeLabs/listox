@@ -3,11 +3,11 @@ import 'package:subscriptions/src/domain/entity/subscription_failure.dart';
 import 'package:subscriptions/src/presentation/paywall/constants/paywall_constants.dart';
 import 'package:subscriptions/src/presentation/paywall/settings/paywall_strings.dart';
 
-/// Built-in paywall localizations for 16 languages.
+/// Built-in paywall localizations for 26 languages.
 ///
 /// Usage:
 /// ```dart
-/// final strings = PaywallLocalizations.of('fr');
+/// final strings = PaywallLocalizations.of('fr', trialPeriodDays: 3);
 /// ```
 ///
 /// Supported language codes: en, es, fr, de, pt, it, ja, ko, zh, ru, ar, nl, pl, tr, uk, sv, hi, id, vi, th, cs, fi, el, hu, nb, ro.
@@ -15,23 +15,28 @@ import 'package:subscriptions/src/presentation/paywall/settings/paywall_strings.
 class PaywallLocalizations {
   PaywallLocalizations._();
 
-  static PaywallStrings of(String? languageCode) {
+  static PaywallStrings of(String? languageCode, {int? trialPeriodDays}) {
     final ld = _table[languageCode] ?? _table['en']!;
-    return ld.toStrings();
+    return ld.toStrings(trialPeriodDays);
   }
 
   static const _table = <String, _LD>{
     'en': _LD(
       title: 'Unlock Premium',
       yearlyPlanTitle: 'Yearly Plan',
-      weeklyPlanTitle: '3-Day Trial',
+      weeklyPlanTitle: '{0}-Day Trial',
+      weeklyPlanTitleNoTrial: 'Weekly Plan',
+      monthlyPlanTitleNoTrial: 'Monthly Plan',
       perYear: 'per year',
       thenPerWeek: 'then {0} per week',
+      perWeek: '{0} per week',
+      thenPerMonth: 'then {0} per month',
+      perMonth: '{0} per month',
       activeUntil: 'Active until {0}',
       discountBadge: 'SAVE {0}%',
       freeTrialLabel: 'Free Trial Enabled',
       freeTrialBadgeText: 'FREE TRIAL',
-      tryForFreeLabel: 'Start 3-Day Trial',
+      tryForFreeLabel: 'Start {0}-Day Trial',
       unlockLabel: 'Unlock Now',
       activePlanLabel: 'Active Plan',
       restoreLabel: 'Restore',
@@ -59,9 +64,14 @@ class PaywallLocalizations {
     'es': _LD(
       title: 'Desbloquear Premium',
       yearlyPlanTitle: 'Plan Anual',
-      weeklyPlanTitle: 'Prueba 3 Días',
+      weeklyPlanTitle: 'Prueba {0} Días',
+      weeklyPlanTitleNoTrial: 'Plan Semanal',
+      monthlyPlanTitleNoTrial: 'Plan Mensual',
       perYear: 'por año',
       thenPerWeek: 'luego {0} por semana',
+      perWeek: '{0} por semana',
+      thenPerMonth: 'luego {0} por mes',
+      perMonth: '{0} por mes',
       activeUntil: 'Activo hasta {0}',
       discountBadge: 'AHORRA {0}%',
       freeTrialLabel: 'Prueba Gratuita Activada',
@@ -94,9 +104,14 @@ class PaywallLocalizations {
     'fr': _LD(
       title: 'Débloquer Premium',
       yearlyPlanTitle: 'Abonnement Annuel',
-      weeklyPlanTitle: 'Essai 3 Jours',
+      weeklyPlanTitle: 'Essai {0} Jours',
+      weeklyPlanTitleNoTrial: 'Abonnement Hebdomadaire',
+      monthlyPlanTitleNoTrial: 'Abonnement Mensuel',
       perYear: 'par an',
       thenPerWeek: 'puis {0} par semaine',
+      perWeek: '{0} par semaine',
+      thenPerMonth: 'puis {0} par mois',
+      perMonth: '{0} par mois',
       activeUntil: 'Actif jusqu\'au {0}',
       discountBadge: '-{0}%',
       freeTrialLabel: 'Essai Gratuit Activé',
@@ -129,9 +144,14 @@ class PaywallLocalizations {
     'de': _LD(
       title: 'Premium freischalten',
       yearlyPlanTitle: 'Jahresplan',
-      weeklyPlanTitle: '3-Tage-Test',
+      weeklyPlanTitle: '{0}-Tage-Test',
+      weeklyPlanTitleNoTrial: 'Wochenplan',
+      monthlyPlanTitleNoTrial: 'Monatsplan',
       perYear: 'pro Jahr',
       thenPerWeek: 'dann {0} pro Woche',
+      perWeek: '{0} pro Woche',
+      thenPerMonth: 'dann {0} pro Monat',
+      perMonth: '{0} pro Monat',
       activeUntil: 'Aktiv bis {0}',
       discountBadge: '{0}% SPAREN',
       freeTrialLabel: 'Kostenlose Testversion',
@@ -164,9 +184,14 @@ class PaywallLocalizations {
     'pt': _LD(
       title: 'Desbloquear Premium',
       yearlyPlanTitle: 'Plano Anual',
-      weeklyPlanTitle: 'Teste 3 Dias',
+      weeklyPlanTitle: 'Teste {0} Dias',
+      weeklyPlanTitleNoTrial: 'Plano Semanal',
+      monthlyPlanTitleNoTrial: 'Plano Mensal',
       perYear: 'por ano',
       thenPerWeek: 'depois {0} por semana',
+      perWeek: '{0} por semana',
+      thenPerMonth: 'depois {0} por mês',
+      perMonth: '{0} por mês',
       activeUntil: 'Ativo até {0}',
       discountBadge: 'ECONOMIZE {0}%',
       freeTrialLabel: 'Teste Gratuito Ativado',
@@ -199,9 +224,14 @@ class PaywallLocalizations {
     'it': _LD(
       title: 'Sblocca Premium',
       yearlyPlanTitle: 'Piano Annuale',
-      weeklyPlanTitle: 'Prova 3 Giorni',
+      weeklyPlanTitle: 'Prova {0} Giorni',
+      weeklyPlanTitleNoTrial: 'Piano Settimanale',
+      monthlyPlanTitleNoTrial: 'Piano Mensile',
       perYear: 'all\'anno',
       thenPerWeek: 'poi {0} a settimana',
+      perWeek: '{0} a settimana',
+      thenPerMonth: 'poi {0} al mese',
+      perMonth: '{0} al mese',
       activeUntil: 'Attivo fino al {0}',
       discountBadge: 'RISPARMIA {0}%',
       freeTrialLabel: 'Prova Gratuita Attivata',
@@ -234,9 +264,14 @@ class PaywallLocalizations {
     'ja': _LD(
       title: 'プレミアムを解除',
       yearlyPlanTitle: '年間プラン',
-      weeklyPlanTitle: '3日間お試し',
+      weeklyPlanTitle: '{0}日間お試し',
+      weeklyPlanTitleNoTrial: '週間プラン',
+      monthlyPlanTitleNoTrial: '月間プラン',
       perYear: '/年',
       thenPerWeek: 'その後{0}/週',
+      perWeek: '{0}/週',
+      thenPerMonth: 'その後{0}/月',
+      perMonth: '{0}/月',
       activeUntil: '{0}まで有効',
       discountBadge: '{0}%お得',
       freeTrialLabel: '無料トライアル有効',
@@ -269,9 +304,14 @@ class PaywallLocalizations {
     'ko': _LD(
       title: '프리미엄 해제',
       yearlyPlanTitle: '연간 플랜',
-      weeklyPlanTitle: '3일 체험',
+      weeklyPlanTitle: '{0}일 체험',
+      weeklyPlanTitleNoTrial: '주간 플랜',
+      monthlyPlanTitleNoTrial: '월간 플랜',
       perYear: '/년',
       thenPerWeek: '이후 {0}/주',
+      perWeek: '{0}/주',
+      thenPerMonth: '이후 {0}/월',
+      perMonth: '{0}/월',
       activeUntil: '{0}까지 활성',
       discountBadge: '{0}% 절약',
       freeTrialLabel: '무료 체험 활성화',
@@ -304,9 +344,14 @@ class PaywallLocalizations {
     'zh': _LD(
       title: '解锁高级版',
       yearlyPlanTitle: '年度计划',
-      weeklyPlanTitle: '3天体验',
+      weeklyPlanTitle: '{0}天体验',
+      weeklyPlanTitleNoTrial: '周计划',
+      monthlyPlanTitleNoTrial: '月度计划',
       perYear: '/年',
       thenPerWeek: '之后{0}/周',
+      perWeek: '{0}/周',
+      thenPerMonth: '之后{0}/月',
+      perMonth: '{0}/月',
       activeUntil: '有效至{0}',
       discountBadge: '省{0}%',
       freeTrialLabel: '免费试用已激活',
@@ -339,9 +384,14 @@ class PaywallLocalizations {
     'ru': _LD(
       title: 'Открыть Premium',
       yearlyPlanTitle: 'Годовой план',
-      weeklyPlanTitle: 'Пробный период 3 дня',
+      weeklyPlanTitle: 'Пробный период {0} дня',
+      weeklyPlanTitleNoTrial: 'Недельный план',
+      monthlyPlanTitleNoTrial: 'Месячный план',
       perYear: 'в год',
       thenPerWeek: 'затем {0} в неделю',
+      perWeek: '{0} в неделю',
+      thenPerMonth: 'затем {0} в месяц',
+      perMonth: '{0} в месяц',
       activeUntil: 'Активен до {0}',
       discountBadge: 'ЭКОНОМИЯ {0}%',
       freeTrialLabel: 'Бесплатный период активен',
@@ -374,9 +424,14 @@ class PaywallLocalizations {
     'ar': _LD(
       title: 'فتح النسخة المميزة',
       yearlyPlanTitle: 'الخطة السنوية',
-      weeklyPlanTitle: 'تجربة 3 أيام',
+      weeklyPlanTitle: 'تجربة {0} أيام',
+      weeklyPlanTitleNoTrial: 'الخطة الأسبوعية',
+      monthlyPlanTitleNoTrial: 'الخطة الشهرية',
       perYear: 'سنوياً',
       thenPerWeek: 'ثم {0} أسبوعياً',
+      perWeek: '{0} أسبوعياً',
+      thenPerMonth: 'ثم {0} شهرياً',
+      perMonth: '{0} شهرياً',
       activeUntil: 'نشط حتى {0}',
       discountBadge: 'وفّر {0}%',
       freeTrialLabel: 'التجربة المجانية مفعّلة',
@@ -409,9 +464,14 @@ class PaywallLocalizations {
     'nl': _LD(
       title: 'Premium Ontgrendelen',
       yearlyPlanTitle: 'Jaarabonnement',
-      weeklyPlanTitle: '3 Dagen Proberen',
+      weeklyPlanTitle: '{0} Dagen Proberen',
+      weeklyPlanTitleNoTrial: 'Weekabonnement',
+      monthlyPlanTitleNoTrial: 'Maandabonnement',
       perYear: 'per jaar',
       thenPerWeek: 'dan {0} per week',
+      perWeek: '{0} per week',
+      thenPerMonth: 'dan {0} per maand',
+      perMonth: '{0} per maand',
       activeUntil: 'Actief tot {0}',
       discountBadge: '{0}% BESPAREN',
       freeTrialLabel: 'Gratis Proefperiode Actief',
@@ -444,9 +504,14 @@ class PaywallLocalizations {
     'pl': _LD(
       title: 'Odblokuj Premium',
       yearlyPlanTitle: 'Plan Roczny',
-      weeklyPlanTitle: 'Próba 3 dni',
+      weeklyPlanTitle: 'Próba {0} dni',
+      weeklyPlanTitleNoTrial: 'Plan Tygodniowy',
+      monthlyPlanTitleNoTrial: 'Plan Miesięczny',
       perYear: 'rocznie',
       thenPerWeek: 'potem {0} tygodniowo',
+      perWeek: '{0} tygodniowo',
+      thenPerMonth: 'potem {0} miesięcznie',
+      perMonth: '{0} miesięcznie',
       activeUntil: 'Aktywny do {0}',
       discountBadge: 'OSZCZĘDŹ {0}%',
       freeTrialLabel: 'Bezpłatny Okres Próbny',
@@ -479,9 +544,14 @@ class PaywallLocalizations {
     'tr': _LD(
       title: 'Premium\'u Aç',
       yearlyPlanTitle: 'Yıllık Plan',
-      weeklyPlanTitle: '3 Günlük Deneme',
+      weeklyPlanTitle: '{0} Günlük Deneme',
+      weeklyPlanTitleNoTrial: 'Haftalık Plan',
+      monthlyPlanTitleNoTrial: 'Aylık Plan',
       perYear: 'yıllık',
       thenPerWeek: 'sonra {0} haftalık',
+      perWeek: '{0} haftalık',
+      thenPerMonth: 'sonra {0} aylık',
+      perMonth: '{0} aylık',
       activeUntil: '{0} tarihine kadar aktif',
       discountBadge: '%{0} TASARRUF',
       freeTrialLabel: 'Ücretsiz Deneme Aktif',
@@ -514,9 +584,14 @@ class PaywallLocalizations {
     'uk': _LD(
       title: 'Відкрити Premium',
       yearlyPlanTitle: 'Річний план',
-      weeklyPlanTitle: 'Пробний 3 дні',
+      weeklyPlanTitle: 'Пробний {0} дні',
+      weeklyPlanTitleNoTrial: 'Тижневий план',
+      monthlyPlanTitleNoTrial: 'Місячний план',
       perYear: 'на рік',
       thenPerWeek: 'потім {0} на тиждень',
+      perWeek: '{0} на тиждень',
+      thenPerMonth: 'потім {0} на місяць',
+      perMonth: '{0} на місяць',
       activeUntil: 'Активний до {0}',
       discountBadge: 'ЕКОНОМІЯ {0}%',
       freeTrialLabel: 'Безкоштовний пробний час активований',
@@ -549,9 +624,14 @@ class PaywallLocalizations {
     'sv': _LD(
       title: 'Lås upp Premium',
       yearlyPlanTitle: 'Årsabonnemang',
-      weeklyPlanTitle: '3 dagars provperiod',
+      weeklyPlanTitle: '{0} dagars provperiod',
+      weeklyPlanTitleNoTrial: 'Veckoprenumeration',
+      monthlyPlanTitleNoTrial: 'Månadsprenumeration',
       perYear: 'per år',
       thenPerWeek: 'sedan {0} per vecka',
+      perWeek: '{0} per vecka',
+      thenPerMonth: 'sedan {0} per månad',
+      perMonth: '{0} per månad',
       activeUntil: 'Aktivt till {0}',
       discountBadge: 'SPARA {0}%',
       freeTrialLabel: 'Gratis provperiod aktiverad',
@@ -584,9 +664,14 @@ class PaywallLocalizations {
     'hi': _LD(
       title: 'प्रीमियम अनलॉक करें',
       yearlyPlanTitle: 'वार्षिक प्लान',
-      weeklyPlanTitle: '3 दिन की ट्रायल',
+      weeklyPlanTitle: '{0} दिन की ट्रायल',
+      weeklyPlanTitleNoTrial: 'साप्ताहिक प्लान',
+      monthlyPlanTitleNoTrial: 'मासिक प्लान',
       perYear: 'प्रति वर्ष',
       thenPerWeek: 'फिर {0} प्रति सप्ताह',
+      perWeek: '{0} प्रति सप्ताह',
+      thenPerMonth: 'फिर {0} प्रति माह',
+      perMonth: '{0} प्रति माह',
       activeUntil: '{0} तक सक्रिय',
       discountBadge: '{0}% बचाएं',
       freeTrialLabel: 'निःशुल्क ट्रायल सक्रिय',
@@ -619,9 +704,14 @@ class PaywallLocalizations {
     'id': _LD(
       title: 'Buka Premium',
       yearlyPlanTitle: 'Paket Tahunan',
-      weeklyPlanTitle: 'Coba 3 Hari',
+      weeklyPlanTitle: 'Coba {0} Hari',
+      weeklyPlanTitleNoTrial: 'Paket Mingguan',
+      monthlyPlanTitleNoTrial: 'Paket Bulanan',
       perYear: 'per tahun',
       thenPerWeek: 'lalu {0} per minggu',
+      perWeek: '{0} per minggu',
+      thenPerMonth: 'lalu {0} per bulan',
+      perMonth: '{0} per bulan',
       activeUntil: 'Aktif hingga {0}',
       discountBadge: 'HEMAT {0}%',
       freeTrialLabel: 'Uji Coba Gratis Aktif',
@@ -654,9 +744,14 @@ class PaywallLocalizations {
     'vi': _LD(
       title: 'Mở khóa Premium',
       yearlyPlanTitle: 'Gói Hàng Năm',
-      weeklyPlanTitle: 'Dùng thử 3 Ngày',
+      weeklyPlanTitle: 'Dùng thử {0} Ngày',
+      weeklyPlanTitleNoTrial: 'Gói Hàng Tuần',
+      monthlyPlanTitleNoTrial: 'Gói Hàng Tháng',
       perYear: 'mỗi năm',
       thenPerWeek: 'sau đó {0} mỗi tuần',
+      perWeek: '{0} mỗi tuần',
+      thenPerMonth: 'sau đó {0} mỗi tháng',
+      perMonth: '{0} mỗi tháng',
       activeUntil: 'Hoạt động đến {0}',
       discountBadge: 'TIẾT KIỆM {0}%',
       freeTrialLabel: 'Dùng Thử Miễn Phí Đã Kích Hoạt',
@@ -689,9 +784,14 @@ class PaywallLocalizations {
     'th': _LD(
       title: 'ปลดล็อก Premium',
       yearlyPlanTitle: 'แผนรายปี',
-      weeklyPlanTitle: 'ทดลองใช้ 3 วัน',
+      weeklyPlanTitle: 'ทดลองใช้ {0} วัน',
+      weeklyPlanTitleNoTrial: 'แผนรายสัปดาห์',
+      monthlyPlanTitleNoTrial: 'แผนรายเดือน',
       perYear: 'ต่อปี',
       thenPerWeek: 'จากนั้น {0} ต่อสัปดาห์',
+      perWeek: '{0} ต่อสัปดาห์',
+      thenPerMonth: 'จากนั้น {0} ต่อเดือน',
+      perMonth: '{0} ต่อเดือน',
       activeUntil: 'ใช้งานได้ถึง {0}',
       discountBadge: 'ประหยัด {0}%',
       freeTrialLabel: 'เปิดใช้ทดลองฟรีแล้ว',
@@ -724,9 +824,14 @@ class PaywallLocalizations {
     'cs': _LD(
       title: 'Odemknout Premium',
       yearlyPlanTitle: 'Roční plán',
-      weeklyPlanTitle: '3denní zkušební verze',
+      weeklyPlanTitle: '{0}denní zkušební verze',
+      weeklyPlanTitleNoTrial: 'Týdenní plán',
+      monthlyPlanTitleNoTrial: 'Měsíční plán',
       perYear: 'ročně',
       thenPerWeek: 'poté {0} týdně',
+      perWeek: '{0} týdně',
+      thenPerMonth: 'poté {0} měsíčně',
+      perMonth: '{0} měsíčně',
       activeUntil: 'Aktivní do {0}',
       discountBadge: 'UŠETŘTE {0}%',
       freeTrialLabel: 'Bezplatná zkušební verze aktivována',
@@ -759,9 +864,14 @@ class PaywallLocalizations {
     'fi': _LD(
       title: 'Avaa Premium',
       yearlyPlanTitle: 'Vuosisuunnitelma',
-      weeklyPlanTitle: '3 päivän kokeilu',
+      weeklyPlanTitle: '{0} päivän kokeilu',
+      weeklyPlanTitleNoTrial: 'Viikkosuunnitelma',
+      monthlyPlanTitleNoTrial: 'Kuukausisuunnitelma',
       perYear: 'vuodessa',
       thenPerWeek: 'sitten {0} viikossa',
+      perWeek: '{0} viikossa',
+      thenPerMonth: 'sitten {0} kuukaudessa',
+      perMonth: '{0} kuukaudessa',
       activeUntil: 'Voimassa {0} asti',
       discountBadge: 'SÄÄSTÄ {0}%',
       freeTrialLabel: 'Ilmainen kokeilu aktivoitu',
@@ -794,9 +904,14 @@ class PaywallLocalizations {
     'el': _LD(
       title: 'Ξεκλείδωσε το Premium',
       yearlyPlanTitle: 'Ετήσιο Πλάνο',
-      weeklyPlanTitle: 'Δοκιμή 3 Ημερών',
+      weeklyPlanTitle: 'Δοκιμή {0} Ημερών',
+      weeklyPlanTitleNoTrial: 'Εβδομαδιαίο Πλάνο',
+      monthlyPlanTitleNoTrial: 'Μηνιαίο Πλάνο',
       perYear: 'ανά έτος',
       thenPerWeek: 'μετά {0} ανά εβδομάδα',
+      perWeek: '{0} ανά εβδομάδα',
+      thenPerMonth: 'μετά {0} ανά μήνα',
+      perMonth: '{0} ανά μήνα',
       activeUntil: 'Ενεργό έως {0}',
       discountBadge: 'ΕΞΟΙΚΟΝΌΜΗΣΗ {0}%',
       freeTrialLabel: 'Δωρεάν Δοκιμή Ενεργή',
@@ -829,9 +944,14 @@ class PaywallLocalizations {
     'hu': _LD(
       title: 'Prémium megnyitása',
       yearlyPlanTitle: 'Éves terv',
-      weeklyPlanTitle: '3 napos próba',
+      weeklyPlanTitle: '{0} napos próba',
+      weeklyPlanTitleNoTrial: 'Heti terv',
+      monthlyPlanTitleNoTrial: 'Havi terv',
       perYear: 'évente',
       thenPerWeek: 'majd {0} hetente',
+      perWeek: '{0} hetente',
+      thenPerMonth: 'majd {0} havonta',
+      perMonth: '{0} havonta',
       activeUntil: 'Aktív {0}-ig',
       discountBadge: '{0}% MEGTAKARÍTÁS',
       freeTrialLabel: 'Ingyenes próbaidőszak aktív',
@@ -864,9 +984,14 @@ class PaywallLocalizations {
     'nb': _LD(
       title: 'Lås opp Premium',
       yearlyPlanTitle: 'Årsplan',
-      weeklyPlanTitle: '3-dagers prøveperiode',
+      weeklyPlanTitle: '{0}-dagers prøveperiode',
+      weeklyPlanTitleNoTrial: 'Ukentlig plan',
+      monthlyPlanTitleNoTrial: 'Månedlig plan',
       perYear: 'per år',
       thenPerWeek: 'deretter {0} per uke',
+      perWeek: '{0} per uke',
+      thenPerMonth: 'deretter {0} per måned',
+      perMonth: '{0} per måned',
       activeUntil: 'Aktivt til {0}',
       discountBadge: 'SPAR {0}%',
       freeTrialLabel: 'Gratis prøveperiode aktivert',
@@ -899,9 +1024,14 @@ class PaywallLocalizations {
     'ro': _LD(
       title: 'Deblochează Premium',
       yearlyPlanTitle: 'Plan Anual',
-      weeklyPlanTitle: 'Probă 3 Zile',
+      weeklyPlanTitle: 'Probă {0} Zile',
+      weeklyPlanTitleNoTrial: 'Plan Săptămânal',
+      monthlyPlanTitleNoTrial: 'Plan Lunar',
       perYear: 'pe an',
       thenPerWeek: 'apoi {0} pe săptămână',
+      perWeek: '{0} pe săptămână',
+      thenPerMonth: 'apoi {0} pe lună',
+      perMonth: '{0} pe lună',
       activeUntil: 'Activ până la {0}',
       discountBadge: 'ECONOMISEȘTI {0}%',
       freeTrialLabel: 'Perioadă de probă gratuită activată',
@@ -986,8 +1116,14 @@ class _LD {
     required this.title,
     required this.yearlyPlanTitle,
     required this.weeklyPlanTitle,
+    required this.weeklyPlanTitleNoTrial,
+    required this.monthlyPlanTitleNoTrial,
+    String? monthlyPlanTitle,
     required this.perYear,
     required this.thenPerWeek,
+    required this.perWeek,
+    required this.thenPerMonth,
+    required this.perMonth,
     required this.activeUntil,
     required this.discountBadge,
     required this.freeTrialLabel,
@@ -1004,17 +1140,31 @@ class _LD {
     required this.successSubtitle,
     required this.successDialogButtonLabel,
     required this.errors,
-  });
+  }) : monthlyPlanTitle = monthlyPlanTitle ?? weeklyPlanTitle;
 
   final String title;
   final String yearlyPlanTitle;
+  /// Trial plan tile title template. Use `{0}` as placeholder for the number of trial days.
   final String weeklyPlanTitle;
+  /// Plan tile title shown when there is no trial period.
+  final String weeklyPlanTitleNoTrial;
+  /// Monthly plan tile title shown when there is no trial period.
+  final String monthlyPlanTitleNoTrial;
+  final String monthlyPlanTitle;
   final String perYear;
+  /// Price subtitle shown when a trial period is active (e.g. "then $4.99 per week").
   final String thenPerWeek;
+  /// Price subtitle shown when there is no trial period (e.g. "$4.99 per week").
+  final String perWeek;
+  /// Price subtitle shown when a trial period is active (e.g. "then $9.99 per month").
+  final String thenPerMonth;
+  /// Price subtitle shown when there is no trial period (e.g. "$9.99 per month").
+  final String perMonth;
   final String activeUntil;
   final String discountBadge;
   final String freeTrialLabel;
   final String freeTrialBadgeText;
+  /// Purchase button label template. Use `{0}` as placeholder for the number of trial days.
   final String tryForFreeLabel;
   final String unlockLabel;
   final String activePlanLabel;
@@ -1028,10 +1178,15 @@ class _LD {
   final String successDialogButtonLabel;
   final _ErrorMessages errors;
 
-  PaywallStrings toStrings() => PaywallStrings(
+  PaywallStrings toStrings(int? trialPeriodDays) => PaywallStrings(
     title: title,
     yearlyPlanTitle: yearlyPlanTitle,
-    weeklyPlanTitle: weeklyPlanTitle,
+    weeklyPlanTitle: trialPeriodDays != null
+        ? weeklyPlanTitle.replaceFirst('{0}', '$trialPeriodDays')
+        : weeklyPlanTitleNoTrial,
+    monthlyPlanTitle: trialPeriodDays != null
+        ? monthlyPlanTitle.replaceFirst('{0}', '$trialPeriodDays')
+        : monthlyPlanTitleNoTrial,
     yearlyPriceSubtitleBuilder: (actual, original, style) => Text.rich(
       TextSpan(
         style: style,
@@ -1051,13 +1206,17 @@ class _LD {
         ],
       ),
     ),
-    weeklyPriceSubtitleBuilder: (price) =>
-        thenPerWeek.replaceFirst('{0}', price),
+    weeklyPriceSubtitleBuilder: (price) => trialPeriodDays != null
+        ? thenPerWeek.replaceFirst('{0}', price)
+        : perWeek.replaceFirst('{0}', price),
+    monthlyPriceSubtitleBuilder: (price) => trialPeriodDays != null
+        ? thenPerMonth.replaceFirst('{0}', price)
+        : perMonth.replaceFirst('{0}', price),
     activePlanSubtitleBuilder: (date) => activeUntil.replaceFirst('{0}', date),
     discountBadgeBuilder: (pct) => discountBadge.replaceFirst('{0}', '$pct'),
     freeTrialLabel: freeTrialLabel,
     freeTrialBadgeText: freeTrialBadgeText,
-    tryForFreeLabel: tryForFreeLabel,
+    tryForFreeLabel: tryForFreeLabel.replaceFirst('{0}', '${trialPeriodDays ?? 3}'),
     unlockLabel: unlockLabel,
     activePlanLabel: activePlanLabel,
     restoreLabel: restoreLabel,

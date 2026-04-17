@@ -5,10 +5,12 @@ import 'package:subscriptions/subscriptions.dart';
 
 enum SubscriptionPlanType {
   weekly,
+  monthly,
   yearly;
-  
+
   static SubscriptionPlanType fromProductId(String id, SubscriptionProductIds ids) {
     if (id == ids.weekly) return SubscriptionPlanType.weekly;
+    if (id == ids.monthly) return SubscriptionPlanType.monthly;
     if (id == ids.yearly) return SubscriptionPlanType.yearly;
     throw UnsupportedError('Plan type not supported');
   }
@@ -18,41 +20,57 @@ extension SubscriptionPlanTypeX on SubscriptionPlanType {
   String productId(SubscriptionProductIds ids) {
     switch (this) {
       case SubscriptionPlanType.weekly: return ids.weekly;
+      case SubscriptionPlanType.monthly: return ids.monthly;
       case SubscriptionPlanType.yearly: return ids.yearly;
     }
   }
 }
 
 class SubscriptionPlans {
-  final SubscriptionPlan weekly;
+  final SubscriptionPlan? weekly;
+  final SubscriptionPlan? monthly;
   final SubscriptionPlan yearly;
 
-  const SubscriptionPlans({required this.weekly, required this.yearly});
+  const SubscriptionPlans({this.weekly, this.monthly, required this.yearly});
 
-  factory SubscriptionPlans.fromOfferings(Offerings offerings) {
-    final weekly = offerings.current?.weekly;
+  SubscriptionPlan get shortPlan => weekly ?? monthly!;
+
+  factory SubscriptionPlans.fromOfferings(Offerings offerings, SubscriptionVariant variant) {
     final yearly = offerings.current?.annual;
 
-    if (weekly == null || yearly == null) {
-      throw 'Packages missing';
-    }
+    if (yearly == null) throw 'Yarly package missing';
 
-    return SubscriptionPlans(
-      weekly: SubscriptionPlan(type: SubscriptionPlanType.weekly, package: weekly),
-      yearly: SubscriptionPlan(type: SubscriptionPlanType.yearly, package: yearly),
-    );
+    if (variant == SubscriptionVariant.weekly) {
+      final weekly = offerings.current?.weekly;
+      if (weekly == null) throw 'Packages missing';
+      return SubscriptionPlans(
+        weekly: SubscriptionPlan(type: SubscriptionPlanType.weekly, package: weekly),
+        yearly: SubscriptionPlan(type: SubscriptionPlanType.yearly, package: yearly),
+      );
+    }
+    
+    else {
+      final monthly = offerings.current?.monthly;
+      if (monthly == null) throw 'Packages missing';
+      return SubscriptionPlans(
+        monthly: SubscriptionPlan(type: SubscriptionPlanType.monthly, package: monthly),
+        yearly: SubscriptionPlan(type: SubscriptionPlanType.yearly, package: yearly),
+      );
+    }
   }
 
   @override
-  String toString() => 'WEEKLY(${weekly.package.storeProduct.priceString}) | YEARLY(${yearly.package.storeProduct.priceString})';
+  String toString() => 'SHORT(${shortPlan.package.storeProduct.priceString}) | YEARLY(${yearly.package.storeProduct.priceString})';
 
-  int get yearlyDiscountPercentVersusWeekly {
-    final weeklyPrice = weekly.package.storeProduct.price;
+  int get yearlyDiscountPercent {
+    final short = shortPlan;
+    final shortPrice = short.package.storeProduct.price;
     final yearlyPrice = yearly.package.storeProduct.price;
 
-    if (weeklyPrice <= 0 || yearlyPrice <= 0) return 0;
+    if (shortPrice <= 0 || yearlyPrice <= 0) return 0;
 
-    final fullYearPrice = weeklyPrice * 52;
+    final multiplier = short.type == SubscriptionPlanType.weekly ? 52 : 12;
+    final fullYearPrice = shortPrice * multiplier;
     final discount = 1 - (yearlyPrice / fullYearPrice);
 
     final percent = (discount * 100).clamp(0, 100);
@@ -65,7 +83,7 @@ class SubscriptionPlan {
   final Package package;
 
   const SubscriptionPlan({required this.type, required this.package});
-  
+
   String get formattedPriceString {
     final product = package.storeProduct;
     final price = product.price;

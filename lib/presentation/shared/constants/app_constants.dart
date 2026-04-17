@@ -4,7 +4,7 @@ import 'package:ui_kit/ui_kit.dart';
 
 class AppConstants {
   /// Default allowed max items
-  static const maxItemsSelectionCount = 5;
+  static const maxItemsSelectionCount = 10;
 
   /// Item quantity constraints
   static const itemMinQuantity = 1;
@@ -39,16 +39,16 @@ class AppConstants {
   static const notificationsPredictionMinPurchases = 2;
 
   /// Request notification permission on every 'n'th app enter
-  static const promptNotificationPermissionEachEnter = 5;
+  static const promptNotificationPermissionEachEnter = 2;
 
   /// Show paywall on every 'n'th app enter without active subscription
-  static const promptPaywallEachFreemiumEnter = 3;
+  static const promptPaywallEachFreemiumEnter = 5;
 
   /// Theme mode used by default
   static const defaultThemeMode = ThemeMode.light;
 
   /// Default theme coloration preset
-  static final defaultThemeColorationId = '2';
+  static final defaultThemeColorationId = '6';
 
   /// Available coloration presets for theme customization
   static final themeColorations = <ThemeColoration>[

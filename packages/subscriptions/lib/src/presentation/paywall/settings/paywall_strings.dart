@@ -7,8 +7,10 @@ class PaywallStrings {
     required this.title,
     required this.yearlyPlanTitle,
     required this.weeklyPlanTitle,
+    required this.monthlyPlanTitle,
     required this.yearlyPriceSubtitleBuilder,
     required this.weeklyPriceSubtitleBuilder,
+    required this.monthlyPriceSubtitleBuilder,
     required this.activePlanSubtitleBuilder,
     required this.discountBadgeBuilder,
     required this.freeTrialLabel,
@@ -30,8 +32,10 @@ class PaywallStrings {
   final String title;
   final String yearlyPlanTitle;
   final String weeklyPlanTitle;
+  final String monthlyPlanTitle;
   final Widget Function(String actualPrice, String originalPrice, TextStyle style) yearlyPriceSubtitleBuilder;
   final String Function(String price) weeklyPriceSubtitleBuilder;
+  final String Function(String price) monthlyPriceSubtitleBuilder;
   final String Function(String expiryDate) activePlanSubtitleBuilder;
   final String Function(int percent) discountBadgeBuilder;
   final String freeTrialLabel;

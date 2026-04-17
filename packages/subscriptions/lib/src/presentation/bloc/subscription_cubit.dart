@@ -57,6 +57,8 @@ class SubscriptionCubit extends Cubit<SubscriptionState> {
     
     final result = await _subscriptionRepo.purchase(plan);
 
+    debugPrint('purchase: $result');
+
     emit(result.fold(
       (failure) => state.copyWith(isPurchasing: false, failure: failure),
       (subscription) => state.copyWith(

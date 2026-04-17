@@ -102,11 +102,10 @@ class _GroceryTileState extends State<GroceryTile>
       child: SurfaceContainer.ellipse(
         onTap: widget.isSelected ? null : () => widget.onTap(widget.item.id),
         onLongTap: controller.openEndActionPane,
-        showBorder: false,
+        showBorder: context.isLightTheme,
         color: context.primaryContainer,
         hoverColor: context.secondaryContainer,
         borderRadius: GroceryTile.borderRadius,
-        elevation: 3.0,
         child: Padding(
           padding: EdgeInsets.all(18.w),
           child: Row(

@@ -29,9 +29,10 @@ class MyApp extends StatelessWidget {
       google: '', // TBD
       test: 'test_wnJuVXZzvgQRRSSGkwjCEMGHPUk',
     ),
-    productIds: const SubscriptionProductIds(
-      weekly: 'denwee_listox_premium_week',
+    productIds: const SubscriptionProductIds.monthly(
+      monthly: 'denwee_listox_premium_month',
       yearly: 'denwee_listox_premium_year',
+      trialPeriodDays: 3,
     ),
     entitlementId: 'premium',
     envPrefix: getIt<String>(instanceName: 'ENV_PREFIX'),

@@ -40,7 +40,7 @@ class SubscriptionRepoImpl implements SubscriptionRepo {
 
       final offerings = await Purchases.getOfferings();
       try {
-        _plans = SubscriptionPlans.fromOfferings(offerings);
+        _plans = SubscriptionPlans.fromOfferings(offerings, _config.productIds.variant);
         final failureOrSuccess = await getSubscription();
         return failureOrSuccess.fold(
           (failure) => left(failure),

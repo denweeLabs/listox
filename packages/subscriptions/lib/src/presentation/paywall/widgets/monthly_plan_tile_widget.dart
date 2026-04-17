@@ -1,7 +1,7 @@
 part of 'package:subscriptions/src/presentation/paywall/paywall_page.dart';
 
-class _WeeklyPlanTile extends StatelessWidget {
-  const _WeeklyPlanTile({
+class _MonthlyPlanTile extends StatelessWidget {
+  const _MonthlyPlanTile({
     required this.theme,
     required this.strings,
     required this.isSelected,
@@ -25,10 +25,10 @@ class _WeeklyPlanTile extends StatelessWidget {
   Widget build(BuildContext context) {
     final subtitle = isActiveSubscription && activeExpirySubtitle != null
         ? activeExpirySubtitle!
-        : strings.weeklyPriceSubtitleBuilder(price);
+        : strings.monthlyPriceSubtitleBuilder(price);
 
     return CorePlanTile(
-      title: strings.weeklyPlanTitle,
+      title: strings.monthlyPlanTitle,
       subtitle: subtitle,
       isSelected: isSelected,
       borderRadius: theme.borderRadius,
