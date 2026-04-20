@@ -118,6 +118,7 @@ class UiKitIcons {
   // ── Content / data ─────────────────────────────────────────────────────────
   static const bookmark = '${_base}bookmark.svg';
   static const heart = '${_base}heart.svg';
+  static const heartFilled = '${_base}heart-filled.svg';
   static const star = '${_base}star.svg';
   static const tag = '${_base}tag.svg';
   static const paperclip = '${_base}paperclip.svg';

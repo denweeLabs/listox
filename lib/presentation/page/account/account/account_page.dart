@@ -148,22 +148,26 @@ class _AccountHome extends StatelessWidget {
       childrenPadding: EdgeInsets.symmetric(horizontal: 6.w),
       title: context.tr(LocaleKeys.account_section_preferences),
       children: [
-        AccountHorizontalTile.valueMore(
+        AccountHorizontalTileV2.valueMore(
           iconPath: AppAssets.globeLinear,
           title: context.tr(LocaleKeys.account_language_title),
           subtitle: context.tr(LocaleKeys.account_language_subtitle),
           value: selectedLanguageName ?? context.locale.toString(),
           onTap: () => _onLanguage(context),
+          gradient: TileIconGradient.blue,
+          horizontalPadding: 0,
         ),
         const AccountItemsDivider(),
         BlocSelector<UserPreferencesCubit, UserPreferencesState, bool>(
           selector: (state) => state.preferences.misc.isHapticsEnabled,
-          builder: (context, isHapticsEnabled) => AccountHorizontalTile.sSwitch(
+          builder: (context, isHapticsEnabled) => AccountHorizontalTileV2.sSwitch(
             iconPath: AppAssets.cdLinear,
             title: context.tr(LocaleKeys.account_haptics_title),
             subtitle: context.tr(LocaleKeys.account_haptics_subtitle),
             switchValue: isHapticsEnabled,
             onTap: () => _onHaptics(context),
+            gradient: TileIconGradient.slate,
+            horizontalPadding: 0,
           ),
         ),
       ],
@@ -217,22 +221,28 @@ class _AccountHome extends StatelessWidget {
       childrenPadding: EdgeInsets.symmetric(horizontal: 6.w),
       title: context.tr(LocaleKeys.account_section_more),
       children: [
-        AccountHorizontalTile.more(
+        AccountHorizontalTileV2.more(
           onTap: () => _onAboutAppTap(context),
           iconPath: AppAssets.mobileLinear,
           title: context.tr(LocaleKeys.account_about_app),
+          gradient: TileIconGradient.indigo,
+          horizontalPadding: 0,
         ),
         const AccountItemsDivider(),
-        AccountHorizontalTile.more(
+        AccountHorizontalTileV2.more(
           onTap: () => LauncherUtil.launchLanding(context),
           iconPath: AppAssets.noteLinear,
           title: context.tr(LocaleKeys.account_privacy_terms),
+          gradient: TileIconGradient.orange,
+          horizontalPadding: 0,
         ),
         const AccountItemsDivider(),
-        AccountHorizontalTile.more(
+        AccountHorizontalTileV2.more(
           onTap: () => LauncherUtil.launchSupportEmail(context),
           iconPath: AppAssets.messageQuestionLinear,
           title: context.tr(LocaleKeys.account_contact_support),
+          gradient: TileIconGradient.teal,
+          horizontalPadding: 0,
         ),
       ],
     );

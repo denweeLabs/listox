@@ -73,10 +73,11 @@ class _QuickAddDialogState extends State<QuickAddDialog> {
                   textAlign: TextAlign.center,
                 ),
                 16.verticalSpace,
-                AppInput(
+                AppInput.containerField(
                   controller: _controller,
                   focusNode: _focusNode,
                   elevation: 0.0,
+                  padding: EdgeInsets.symmetric(horizontal: 18.w, vertical: 8.h),
                   hint: LocaleKeys.quick_add_hint.tr(),
                   backgroundColor: context.isLightTheme
                       ? Colors.grey.withValues(alpha: 0.1)

@@ -29,6 +29,7 @@ class AppSolidButton extends StatelessWidget {
     this.ignoreTapScale = false,
     this.isUpperCaseText = true,
     this.textStyle,
+    this.borderRadius,
   });
 
   final String text;
@@ -50,6 +51,7 @@ class AppSolidButton extends StatelessWidget {
   final bool ignoreTapScale;
   final bool isUpperCaseText;
   final TextStyle? textStyle;
+  final BorderRadius? borderRadius;
 
   static final defaultHeight = 58.h;
 
@@ -72,7 +74,7 @@ class AppSolidButton extends StatelessWidget {
             alpha: isDisabled ? disabledOpacity : 1.0,
           ),
           shadowColor: effectiveShadowColor,
-          borderRadius: UiKitConstants.commonBorderRadius,
+          borderRadius: borderRadius ?? UiKitConstants.commonBorderRadius,
           child: Stack(
             children: [
               Center(

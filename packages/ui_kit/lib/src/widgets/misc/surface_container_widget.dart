@@ -11,6 +11,7 @@ enum SurfaceContainerType {
 
 class SurfaceContainer extends StatelessWidget {
   static const _defaultElevation = 0.0;
+  static const _defaultMinScale = 0.9;
 
   const SurfaceContainer.circle({
     super.key,
@@ -26,6 +27,7 @@ class SurfaceContainer extends StatelessWidget {
     this.showBorder = true,
     this.shadowColor,
     this.stackChild,
+    this.minTapScale = _defaultMinScale,
     required this.child,
   }) : borderRadius = null,
        type = SurfaceContainerType.circle;
@@ -45,6 +47,7 @@ class SurfaceContainer extends StatelessWidget {
     this.showBorder = true,
     this.shadowColor,
     this.stackChild,
+    this.minTapScale = _defaultMinScale,
     required this.child,
   }) : type = SurfaceContainerType.ellipse;
 
@@ -63,6 +66,7 @@ class SurfaceContainer extends StatelessWidget {
   final bool showBorder;
   final Color? shadowColor;
   final Widget? stackChild;
+  final double minTapScale;
 
   ShapeBorder _effectiveShapeBorder(Color borderColor) {
     final borderSide = showBorder
@@ -91,7 +95,7 @@ class SurfaceContainer extends StatelessWidget {
     return BounceTapWithBuilderAnimation(
       onTap: onTap,
       onLongTap: onLongTap,
-      minScale: 0.9,
+      minScale: minTapScale,
       builder: (context, animation) => _buildSurface(
         context: context,
         animation: animation,
@@ -139,10 +143,10 @@ class SurfaceContainer extends StatelessWidget {
               child,
               ?stackChild,
               if (isBubbles) const Positioned.fill(
-                child: BubblesAnimation(),
+                child: IgnorePointer(child: BubblesAnimation()),
               ),
               if (isShimmering) const Positioned.fill(
-                child: ShimmerAnimation(),
+                child: IgnorePointer(child: ShimmerAnimation()),
               ),
             ],
           ),

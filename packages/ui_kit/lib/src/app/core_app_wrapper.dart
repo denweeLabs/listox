@@ -51,7 +51,7 @@ class _CoreAppWrapperState extends State<CoreAppWrapper> {
     final count = await _storage!.increaseLaunchCount();
 
     if (count == 1) {
-      final systemLocale = Locale(PlatformDispatcher.instance.locale.languageCode);
+      final systemLocale = PlatformDispatcher.instance.locale;
       widget.onInitialLocale?.call(systemLocale);
     }
 

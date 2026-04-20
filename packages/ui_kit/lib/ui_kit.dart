@@ -11,6 +11,7 @@ export 'src/app/core_material_app.dart';
 // Constants
 export 'src/constants/ui_kit_constants.dart';
 export 'src/constants/ui_kit_icons.dart';
+export 'src/constants/ui_kit_assets.dart';
 
 // Theme
 export 'src/theme/theme_coloration.dart';
@@ -35,11 +36,13 @@ export 'src/widgets/buttons/app_solid_button_widget.dart';
 export 'src/widgets/buttons/action_button_widget.dart';
 
 // Widgets — Common
+export 'src/widgets/common/common_appbar_widget.dart';
 export 'src/widgets/common/common_dismiss_ontap_widget.dart';
 export 'src/widgets/common/common_pop_scope_widget.dart';
 export 'src/widgets/common/common_subpages_navigator.dart';
 export 'src/widgets/common/common_scaffold_widget.dart';
 export 'src/widgets/common/common_webview_widget.dart';
+export 'src/widgets/common/common_wheel_listview_widget.dart';
 
 // Widgets — Dialogs
 export 'src/widgets/dialogs/core/core_dialog_container_widget.dart';
@@ -55,14 +58,21 @@ export 'src/widgets/inputs/app_switch_widget.dart';
 export 'src/widgets/misc/surface_container_widget.dart';
 export 'src/widgets/misc/system_overlay_restyle_widget.dart';
 export 'src/widgets/misc/solid_fading_edge_widget.dart';
+export 'src/widgets/misc/wheel_time_selector_widget.dart';
 
-// Widgets — Account
+// Widgets — Account (v1)
 export 'src/widgets/account/account_horizontal_tile_widget.dart';
 export 'src/widgets/account/account_items_divider_widget.dart';
 export 'src/widgets/account/account_section_widget.dart';
 export 'src/widgets/account/coloration_item_bubble_widget.dart';
 export 'src/widgets/account/coloration_overview_selector_widget.dart';
 export 'src/widgets/account/theme_overview_selector_widget.dart';
+
+// Widgets — Account (v2)
+export 'src/widgets/account/account_tile_gradient.dart';
+export 'src/widgets/account/account_section_v2_widget.dart';
+export 'src/widgets/account/account_horizontal_tile_v2_widget.dart';
+export 'src/widgets/account/account_items_divider_v2_widget.dart';
 
 // Widgets — Onboarding
 export 'src/widgets/onboarding/onboarding_sheet_widget.dart';

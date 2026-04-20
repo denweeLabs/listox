@@ -48,7 +48,7 @@ class AppBackButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppIconButton(
-      onTap: onTap,
+      onTap: onTap ?? Navigator.of(context).pop,
       iconPath: type.iconPath,
       size: size ?? type.defaultSize,
       color: color ?? context.iconColorSecondary,

@@ -29,46 +29,34 @@ class AppIconButton extends StatelessWidget {
     this.onTap,
     this.size = 18,
     this.color,
+    this.backgroundColor,
+    this.backgroundHoverColor,
     this.padding,
     this.ignoreIconColor = false,
     this.useBackgroundContainer = true,
     this.brightness = AppIconButtonBrightness.adaptive,
+    this.elevation = 3,
   });
 
   final String iconPath;
   final VoidCallback? onTap;
   final double size;
   final Color? color;
+  final Color? backgroundColor;
+  final Color? backgroundHoverColor;
   final EdgeInsets? padding;
   final bool ignoreIconColor;
   final bool useBackgroundContainer;
   final AppIconButtonBrightness brightness;
+  final double elevation;
 
   static const containerSize = Size.square(48);
-
-  static Widget backgroundContainer({
-    required BuildContext context,
-    required Widget child,
-    AppIconButtonBrightness brightness = AppIconButtonBrightness.adaptive,
-    VoidCallback? onTap,
-  }) {
-    return SurfaceContainer.ellipse(
-      onTap: onTap ?? Navigator.of(context).pop,
-      borderRadius: UiKitConstants.commonBorderRadius,
-      color: brightness.backgroundContainerColor(context),
-      hoverColor: brightness.backgroundContainerColor(context),
-      elevation: brightness == AppIconButtonBrightness.solid ? 3.0 : 0.0,
-      size: containerSize,
-      showBorder: false,
-      child: Center(child: child),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
     if (!useBackgroundContainer) {
       return BounceTapAnimation(
-        onTap: onTap ?? Navigator.of(context).pop,
+        onTap: onTap,
         child: SizedBox.fromSize(
           size: containerSize,
           child: CommonAppIcon(
@@ -81,11 +69,11 @@ class AppIconButton extends StatelessWidget {
     }
 
     return SurfaceContainer.ellipse(
-      onTap: onTap ?? Navigator.of(context).pop,
+      onTap: onTap,
       borderRadius: UiKitConstants.commonBorderRadius,
-      color: brightness.backgroundContainerColor(context),
-      hoverColor: brightness.backgroundContainerColor(context),
-      elevation: brightness == AppIconButtonBrightness.solid ? 3.0 : 0.0,
+      color: backgroundColor ?? brightness.backgroundContainerColor(context),
+      hoverColor: backgroundHoverColor ?? brightness.backgroundContainerColor(context),
+      elevation: brightness == AppIconButtonBrightness.solid ? elevation : 0.0,
       size: containerSize,
       showBorder: false,
       child: Center(

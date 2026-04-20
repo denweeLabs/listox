@@ -60,12 +60,12 @@ class _SearchGroceriesPageState extends State<SearchGroceriesPage> {
       dismiss: FocusScope.of(context).unfocus,
       child: Column(
         children: [
-          AppInput(
+          AppInput.containerField(
             controller: _controller,
             focusNode: _focusNode,
-            borderRadius: BorderRadius.zero,
             padding: padding,
             backgroundColor: context.theme.colorScheme.surface,
+            elevation: 8,
             hint: context.tr(LocaleKeys.search_groceries_hint),
             textCapitalization: TextCapitalization.words,
             onChanged: context.read<SearchGroceriesCubit>().search,

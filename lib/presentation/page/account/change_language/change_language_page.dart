@@ -45,7 +45,9 @@ class _ChangeLanguagePageState extends State<ChangeLanguagePage> {
 
   void _startSearch() {
     setState(() => _isSearching = true);
-    WidgetsBinding.instance.addPostFrameCallback((_) => _searchFocus.requestFocus());
+    WidgetsBinding.instance.addPostFrameCallback(
+      (_) => _searchFocus.requestFocus(),
+    );
   }
 
   void _stopSearch() {
@@ -90,18 +92,15 @@ class _ChangeLanguagePageState extends State<ChangeLanguagePage> {
                         28.w,
                         context.bottomPadding + 32.h,
                       ),
-                      keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
+                      keyboardDismissBehavior:
+                          ScrollViewKeyboardDismissBehavior.onDrag,
                       itemCount: _filteredLanguages.length,
                       separatorBuilder: (_, _) => const Divider(height: 0.0),
                       itemBuilder: (_, index) {
                         final language = _filteredLanguages[index];
                         final isSelected = language.locale == context.locale;
 
-                        return _buildItem(
-                          context: context,
-                          language: language,
-                          isSelected: isSelected,
-                        );
+                        return _buildItem(context, language, isSelected);
                       },
                     ),
             ),
@@ -144,7 +143,7 @@ class _ChangeLanguagePageState extends State<ChangeLanguagePage> {
         ),
         SizedBox(width: 12.w),
         Expanded(
-          child: AppInput(
+          child: AppInput.containerField(
             controller: _searchController,
             focusNode: _searchFocus,
             hint: context.tr(LocaleKeys.search_groceries_hint),
@@ -164,34 +163,35 @@ class _ChangeLanguagePageState extends State<ChangeLanguagePage> {
   Widget _buildEmptyState(BuildContext context) {
     return Center(
       key: const ValueKey('empty'),
-      child: Text(
-        '🔍',
-        style: TextStyle(fontSize: 40.sp),
-      ),
+      child: Text('🔍', style: TextStyle(fontSize: 40.sp)),
     );
   }
 
-  Widget _buildItem({
-    required BuildContext context,
-    required AppLanguage language,
-    required bool isSelected,
-  }) {
+  Widget _buildItem(
+    BuildContext context,
+    AppLanguage language,
+    bool isSelected,
+  ) {
     return BounceTapAnimation(
       minScale: 0.96,
-      onTap: () => getIt<UserPreferencesCubit>().changeLanguage(language.locale),
+      onTap: () =>
+          getIt<UserPreferencesCubit>().changeLanguage(language.locale),
       child: Padding(
         padding: EdgeInsets.symmetric(vertical: 16.h),
         child: Row(
           children: [
+            Text(
+              _flagEmoji(language.locale.languageCode),
+              style: const TextStyle(fontSize: 28),
+            ),
+            20.horizontalSpace,
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     language.nativeName,
-                    style: h3.copyWith(
-                      color: context.textColor,
-                    ),
+                    style: h3.copyWith(color: context.textColor),
                   ),
                   2.verticalSpace,
                   Text(
@@ -206,13 +206,13 @@ class _ChangeLanguagePageState extends State<ChangeLanguagePage> {
                   ? CrossFadeState.showFirst
                   : CrossFadeState.showSecond,
               firstChild: SurfaceContainer.circle(
-                color: context.primaryContainer,
-                child: Padding(
-                  padding: const EdgeInsets.all(6.0),
+                color: context.theme.colorScheme.secondary,
+                child: const Padding(
+                  padding: EdgeInsets.all(3),
                   child: CommonAppIcon(
-                    path: AppAssets.checkmarkLinear,
-                    color: context.theme.colorScheme.secondary,
-                    size: 18,
+                    path: UiKitIcons.check,
+                    color: Colors.white,
+                    size: 16,
                   ),
                 ),
               ),
@@ -222,5 +222,43 @@ class _ChangeLanguagePageState extends State<ChangeLanguagePage> {
         ),
       ),
     );
+  }
+
+  static const _langToCountry = <String, String>{
+    'ar': 'SA',
+    'zh': 'CN',
+    'cs': 'CZ',
+    'nl': 'NL',
+    'en': 'GB',
+    'fi': 'FI',
+    'fr': 'FR',
+    'de': 'DE',
+    'el': 'GR',
+    'hi': 'IN',
+    'hu': 'HU',
+    'id': 'ID',
+    'it': 'IT',
+    'ja': 'JP',
+    'ko': 'KR',
+    'nb': 'NO',
+    'pl': 'PL',
+    'pt': 'BR',
+    'ro': 'RO',
+    'ru': 'RU',
+    'es': 'ES',
+    'sv': 'SE',
+    'th': 'TH',
+    'tr': 'TR',
+    'uk': 'UA',
+    'vi': 'VN',
+  };
+
+  static String _flagEmoji(String languageCode) {
+    final country = _langToCountry[languageCode] ?? languageCode.toUpperCase();
+    return country
+        .toUpperCase()
+        .codeUnits
+        .map((c) => String.fromCharCode(0x1F1E6 + c - 0x41))
+        .join();
   }
 }

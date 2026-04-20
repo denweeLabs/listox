@@ -13,7 +13,7 @@ abstract class SelectGroceriesState with _$SelectGroceriesState {
     @Default(None()) Option<GroceryFailure> failure,
   }) = _SelectGroceriesState;
 
-  bool get canComplete => selectedGroceryIds.isNotEmpty;
+  bool get canComplete => /*selectedGroceryIds.isNotEmpty*/ true;
   bool get canSelectMore => selectedGroceryIds.length < AppConstants.maxItemsSelectionCount;
 
   List<GroceryTemplate> groceriesForCategory(UniqueId id) =>

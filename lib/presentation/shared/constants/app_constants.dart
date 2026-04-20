@@ -42,7 +42,7 @@ class AppConstants {
   static const promptNotificationPermissionEachEnter = 2;
 
   /// Show paywall on every 'n'th app enter without active subscription
-  static const promptPaywallEachFreemiumEnter = 5;
+  static const promptPaywallEachFreemiumEnter = 3;
 
   /// Theme mode used by default
   static const defaultThemeMode = ThemeMode.light;

@@ -1,0 +1,69 @@
+import 'dart:async';
+
+import 'package:flutter/material.dart';
+import 'package:ui_kit/src/utils/core_haptic_util.dart';
+
+class CommonWheelListView<T> extends StatefulWidget {
+  const CommonWheelListView({
+    super.key,
+    required this.items,
+    required this.builder,
+    required this.onChanged,
+    required this.controller,
+    required this.itemExtent,
+    this.isLooping = false,
+  });
+
+  final List<T> items;
+  final Widget Function(BuildContext, T) builder;
+  final void Function(T) onChanged;
+  final FixedExtentScrollController controller;
+  final bool isLooping;
+  final double itemExtent;
+
+  @override
+  State<CommonWheelListView<T>> createState() => _CommonWheelListViewState<T>();
+}
+
+class _CommonWheelListViewState<T> extends State<CommonWheelListView<T>> {
+  static const hapticsThreshold = Duration(milliseconds: 35);
+
+  Timer? hapticThresholdTimer;
+
+  @override
+  void dispose() {
+    hapticThresholdTimer?.cancel();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return ListWheelScrollView.useDelegate(
+      controller: widget.controller,
+      itemExtent: widget.itemExtent,
+      perspective: 0.0001,
+      diameterRatio: 1.2,
+      squeeze: 1.2,
+      overAndUnderCenterOpacity: 0.3,
+      physics: const FixedExtentScrollPhysics(),
+      childDelegate: widget.isLooping
+          ? ListWheelChildLoopingListDelegate(
+              children: widget.items
+                  .map((item) => widget.builder(context, item))
+                  .toList(),
+            )
+          : ListWheelChildBuilderDelegate(
+              childCount: widget.items.length,
+              builder: (context, index) {
+                final item = widget.items[index];
+                return widget.builder(context, item);
+              },
+            ),
+      onSelectedItemChanged: (item) {
+        hapticThresholdTimer?.cancel();
+        hapticThresholdTimer = Timer(hapticsThreshold, CoreHapticUtil.light);
+        widget.onChanged(widget.items[item]);
+      },
+    );
+  }
+}

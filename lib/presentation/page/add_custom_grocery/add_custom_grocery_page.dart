@@ -102,7 +102,8 @@ class _AddCustomGroceryPageState extends State<AddCustomGroceryPage> {
                       32.verticalSpace,
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: 26.w),
-                        child: AppInput(
+                        child: AppInput.containerField(
+                          elevation: 5,
                           hint: context.tr(LocaleKeys.add_custom_grocery_input_name_hint),
                           controller: _nameController,
                           prefixIcon: AppAssets.editBoxLinear,
@@ -116,7 +117,8 @@ class _AddCustomGroceryPageState extends State<AddCustomGroceryPage> {
                       18.verticalSpace,
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: 26.w),
-                        child: AppInput(
+                        child: AppInput.containerField(
+                          elevation: 5,
                           hint: context.tr(LocaleKeys.add_custom_grocery_input_period_hint),
                           controller: _periodController,
                           prefixIcon: AppAssets.refresh2Linear,

@@ -158,7 +158,7 @@ TextStyle get textField {
   return TextStyle(
     fontSize: 16.sp,
     letterSpacing: 0.0,
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.w600,
     fontFamily: commonFontFamily,
   );
 }
