@@ -59,6 +59,7 @@ class UiKitIcons {
   static const camera = '${_base}camera.svg';
   static const cameraOff = '${_base}camera-off.svg';
   static const photo = '${_base}photo.svg';
+  static const droplet = '${_base}droplet.svg';
   static const video = '${_base}video.svg';
   static const videoOff = '${_base}video-off.svg';
   static const playerPlay = '${_base}player-play.svg';

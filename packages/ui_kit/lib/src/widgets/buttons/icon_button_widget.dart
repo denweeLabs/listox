@@ -5,7 +5,7 @@ import 'package:ui_kit/src/widgets/buttons/icon_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:ui_kit/src/widgets/misc/surface_container_widget.dart';
 
-enum AppIconButtonBrightness { adaptive, light, dark, solid }
+enum AppIconButtonBrightness { adaptive, light, dark, solid, transparent }
 
 extension AppIconButtonBrightnessX on AppIconButtonBrightness {
   Color backgroundContainerColor(BuildContext context) {
@@ -18,6 +18,23 @@ extension AppIconButtonBrightnessX on AppIconButtonBrightness {
         return context.darkIconColor.withValues(alpha: .05);
       case AppIconButtonBrightness.solid:
         return context.primaryContainer;
+      case AppIconButtonBrightness.transparent:
+        return Colors.transparent;
+    }
+  }
+
+  Color backgroundContainerHoverColor(BuildContext context) {
+    switch (this) {
+      case AppIconButtonBrightness.adaptive:
+        return context.iconColor.withValues(alpha: .04);
+      case AppIconButtonBrightness.light:
+        return context.lightIconColor.withValues(alpha: .12);
+      case AppIconButtonBrightness.dark:
+        return context.darkIconColor.withValues(alpha: .05);
+      case AppIconButtonBrightness.solid:
+        return context.primaryContainer;
+      case AppIconButtonBrightness.transparent:
+        return context.iconColor.withValues(alpha: .04);
     }
   }
 }
@@ -57,13 +74,10 @@ class AppIconButton extends StatelessWidget {
     if (!useBackgroundContainer) {
       return BounceTapAnimation(
         onTap: onTap,
-        child: SizedBox.fromSize(
-          size: containerSize,
-          child: CommonAppIcon(
-            size: size,
-            color: color ?? context.iconColorSecondary,
-            path: iconPath,
-          ),
+        child: CommonAppIcon(
+          size: size,
+          color: color ?? context.iconColorSecondary,
+          path: iconPath,
         ),
       );
     }
@@ -72,7 +86,7 @@ class AppIconButton extends StatelessWidget {
       onTap: onTap,
       borderRadius: UiKitConstants.commonBorderRadius,
       color: backgroundColor ?? brightness.backgroundContainerColor(context),
-      hoverColor: backgroundHoverColor ?? brightness.backgroundContainerColor(context),
+      hoverColor: backgroundHoverColor ?? brightness.backgroundContainerHoverColor(context),
       elevation: brightness == AppIconButtonBrightness.solid ? elevation : 0.0,
       size: containerSize,
       showBorder: false,

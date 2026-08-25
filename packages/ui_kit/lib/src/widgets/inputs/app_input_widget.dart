@@ -43,6 +43,7 @@ class AppInput extends StatefulWidget {
     this.onTap,
     this.errorPadding,
     this.prefixTextSize = 12,
+    this.customHeight,
   });
 
   /// Standard elevated input with optional prefix (icon or text) and suffix.
@@ -71,6 +72,7 @@ class AppInput extends StatefulWidget {
     double elevation = defaultElevation,
     EdgeInsets? errorPadding,
     int prefixTextSize = 12,
+    double? customHeight,
   }) {
     return AppInput._(
       key: key,
@@ -97,6 +99,7 @@ class AppInput extends StatefulWidget {
       elevation: elevation,
       errorPadding: errorPadding,
       prefixTextSize: prefixTextSize,
+      customHeight: customHeight,
     );
   }
 
@@ -225,6 +228,7 @@ class AppInput extends StatefulWidget {
   final VoidCallback? onTap;
   final EdgeInsets? errorPadding;
   final int prefixTextSize;
+  final double? customHeight;
 
   static Widget buildErrorMessage(
     BuildContext context,
@@ -306,19 +310,22 @@ class _AppInputState extends State<AppInput> {
       children: [
         BounceTapAnimation(
           onTap: widget.focusNode?.requestFocus,
-          child: PhysicalModel(
-            elevation: widget.elevation,
-            borderRadius: UiKitConstants.commonBorderRadius,
-            shadowColor: Colors.black26,
-            color: backgroundColor,
-            child: Padding(
-              padding: widget.padding ?? EdgeInsets.symmetric(horizontal: 8.w, vertical: 10.h),
-              child: Row(
-                children: [
-                  ?_buildPrefixWidget(context),
-                  Expanded(child: _buildTextField()),
-                  ?_buildSuffixWidget(context),
-                ],
+          child: SizedBox(
+            height: widget.customHeight,
+            child: PhysicalModel(
+              elevation: widget.elevation,
+              borderRadius: UiKitConstants.commonBorderRadius,
+              shadowColor: Colors.black26,
+              color: backgroundColor,
+              child: Padding(
+                padding: widget.padding ?? EdgeInsets.symmetric(horizontal: 8.w, vertical: 10.h),
+                child: Row(
+                  children: [
+                    ?_buildPrefixWidget(context),
+                    Expanded(child: _buildTextField()),
+                    ?_buildSuffixWidget(context),
+                  ],
+                ),
               ),
             ),
           ),

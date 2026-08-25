@@ -25,6 +25,7 @@ part 'widgets/core_plan_tile_widget.dart';
 part 'widgets/weekly_plan_tile_widget.dart';
 part 'widgets/monthly_plan_tile_widget.dart';
 part 'widgets/yearly_plan_tile_widget.dart';
+part 'widgets/lifetime_plan_tile_widget.dart';
 part 'widgets/purchase_button_widget.dart';
 part 'widgets/footer_links_widget.dart';
 part 'widgets/success_dialog_widget.dart';
@@ -44,17 +45,24 @@ class PaywallPage extends StatefulWidget {
     required this.theme,
     required this.mediaQuery,
     this.strings,
+    this.title,
     this.locale,
     this.closeButtonDelay = Duration.zero,
+    this.showCloseButton = true,
   });
 
   final Widget topAnimation;
   final List<PaywallBulletPoint> bulletPoints;
   final PaywallTheme theme;
   final PaywallStrings? strings;
+  final String? title;
   final String? locale;
   final MediaQueryData mediaQuery;
   final Duration closeButtonDelay;
+
+  /// When false the close button is never rendered.
+  /// Use this for hard (non-dismissible) paywalls.
+  final bool showCloseButton;
 
   @override
   State<PaywallPage> createState() => _PaywallPageState();
@@ -73,10 +81,17 @@ class _PaywallPageState extends State<PaywallPage>
   @override
   void initState() {
     super.initState();
-    final variant = context.read<SubscriptionCubit>().config.productIds.variant;
-    _selectedPlan = variant == SubscriptionVariant.monthly
-        ? SubscriptionPlanType.monthly
-        : SubscriptionPlanType.weekly;
+    final config = context.read<SubscriptionCubit>().config;
+    final variant = config.productIds.variant;
+    if (config.defaultSelectedPlan == PaywallDefaultSelection.longPlan) {
+      _selectedPlan = variant.hasLifetime
+          ? SubscriptionPlanType.lifetime
+          : SubscriptionPlanType.yearly;
+    } else {
+      _selectedPlan = variant.hasMonthly
+          ? SubscriptionPlanType.monthly
+          : SubscriptionPlanType.weekly;
+    }
     _initBackButton();
     _checkPlansReady();
   }
@@ -129,7 +144,12 @@ class _PaywallPageState extends State<PaywallPage>
   }
 
   void _showSuccessDialog(UserSubscription subscription) {
-    final date = DateFormat('yMMMMd').format(subscription.expiresAt);
+    final isLifetime = subscription.planType == SubscriptionPlanType.lifetime;
+    final subtitle = isLifetime
+        ? _strings.successSubtitleLifetime
+        : _strings.successSubtitleBuilder(
+            DateFormat('yMMMd').format(subscription.expiresAt),
+          );
     showDialog<void>(
       context: context,
       barrierDismissible: false,
@@ -141,7 +161,7 @@ class _PaywallPageState extends State<PaywallPage>
         reverseCurve: Curves.fastEaseInToSlowEaseOut,
       ),
       builder: (_) => _SuccessDialog(
-        expiryDate: date,
+        subtitle: subtitle,
         theme: widget.theme,
         strings: _strings,
         onDismiss: () {
@@ -200,6 +220,9 @@ class _PaywallPageState extends State<PaywallPage>
                 final monthlyActive =
                     state.subscription?.planType == SubscriptionPlanType.monthly &&
                     (state.subscription?.isActive ?? false);
+                final lifetimeActive =
+                    state.subscription?.planType == SubscriptionPlanType.lifetime &&
+                    (state.subscription?.isActive ?? false);
 
                 return Column(
                   children: [
@@ -227,16 +250,18 @@ class _PaywallPageState extends State<PaywallPage>
                       yearlyActive: yearlyActive,
                       weeklyActive: weeklyActive,
                       monthlyActive: monthlyActive,
+                      lifetimeActive: lifetimeActive,
                     ),
                   ],
                 );
               },
             ),
-            Positioned(
-              right: 24,
-              top: widget.mediaQuery.padding.top + 12,
-              child: _buildCloseButton(),
-            ),
+            if (widget.showCloseButton)
+              Positioned(
+                right: 24,
+                top: widget.mediaQuery.padding.top + 12,
+                child: _buildCloseButton(),
+              ),
           ],
         ),
       ),
@@ -245,7 +270,7 @@ class _PaywallPageState extends State<PaywallPage>
 
   Widget _buildTitle() {
     return Text(
-      _strings.title,
+      widget.title ?? _strings.title,
       style: TextStyle(
         fontSize: 32,
         fontWeight: FontWeight.bold,
@@ -313,20 +338,24 @@ class _PaywallPageState extends State<PaywallPage>
     required bool yearlyActive,
     required bool weeklyActive,
     required bool monthlyActive,
+    required bool lifetimeActive,
   }) {
     final productIds = context.read<SubscriptionCubit>().config.productIds;
     final variant = productIds.variant;
     final trialPeriodDays = productIds.trialPeriodDays;
     final expirySubtitle = state.subscription != null
-        ? _strings.activePlanSubtitleBuilder(
-            DateFormat('yMMMd').format(state.subscription!.expiresAt),
-          )
+        ? (state.subscription!.planType == SubscriptionPlanType.lifetime
+            ? _strings.lifetimePlanTitle
+            : _strings.activePlanSubtitleBuilder(
+                DateFormat('yMMMd').format(state.subscription!.expiresAt),
+              ))
         : null;
 
     final selectedPlanIsActive =
         (_selectedPlan == SubscriptionPlanType.yearly && yearlyActive) ||
         (_selectedPlan == SubscriptionPlanType.weekly && weeklyActive) ||
-        (_selectedPlan == SubscriptionPlanType.monthly && monthlyActive);
+        (_selectedPlan == SubscriptionPlanType.monthly && monthlyActive) ||
+        (_selectedPlan == SubscriptionPlanType.lifetime && lifetimeActive);
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -334,19 +363,32 @@ class _PaywallPageState extends State<PaywallPage>
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SizedBox(height: 12),
-          _YearlyPlanTile(
-            theme: widget.theme,
-            strings: _strings,
-            isSelected: _selectedPlan == SubscriptionPlanType.yearly,
-            isActiveSubscription: yearlyActive,
-            activeExpirySubtitle: yearlyActive ? expirySubtitle : null,
-            actualPrice: _yearlyActualPrice(state),
-            originalPrice: _yearlyOriginalPrice(state),
-            discountPercent: state.plans?.yearlyDiscountPercent ?? 0,
-            onTap: () => _selectPlan(SubscriptionPlanType.yearly),
-          ),
+          // Long-cycle plan tile: yearly or lifetime depending on variant
+          if (variant.hasLifetime)
+            _LifetimePlanTile(
+              theme: widget.theme,
+              strings: _strings,
+              isSelected: _selectedPlan == SubscriptionPlanType.lifetime,
+              isActiveSubscription: lifetimeActive,
+              activeExpirySubtitle: lifetimeActive ? expirySubtitle : null,
+              price: _lifetimePrice(state),
+              onTap: () => _selectPlan(SubscriptionPlanType.lifetime),
+            )
+          else
+            _YearlyPlanTile(
+              theme: widget.theme,
+              strings: _strings,
+              isSelected: _selectedPlan == SubscriptionPlanType.yearly,
+              isActiveSubscription: yearlyActive,
+              activeExpirySubtitle: yearlyActive ? expirySubtitle : null,
+              actualPrice: _yearlyActualPrice(state),
+              originalPrice: _yearlyOriginalPrice(state),
+              discountPercent: state.plans?.yearlyDiscountPercent ?? 0,
+              onTap: () => _selectPlan(SubscriptionPlanType.yearly),
+            ),
           const SizedBox(height: 10),
-          if (variant == SubscriptionVariant.weekly)
+          // Short-cycle plan tile: weekly or monthly
+          if (variant.hasWeekly)
             _WeeklyPlanTile(
               theme: widget.theme,
               strings: _strings,
@@ -433,8 +475,8 @@ class _PaywallPageState extends State<PaywallPage>
   }
 
   String _yearlyActualPrice(SubscriptionState state) =>
-      state.plans?.yearly.formattedPriceString ??
-      state.plans?.yearly.package.storeProduct.priceString ??
+      state.plans?.yearly?.formattedPriceString ??
+      state.plans?.yearly?.package.storeProduct.priceString ??
       '-';
 
   String _weeklyPrice(SubscriptionState state) =>
@@ -447,6 +489,11 @@ class _PaywallPageState extends State<PaywallPage>
       state.plans?.monthly?.package.storeProduct.priceString ??
       '-';
 
+  String _lifetimePrice(SubscriptionState state) =>
+      state.plans?.lifetime?.formattedPriceString ??
+      state.plans?.lifetime?.package.storeProduct.priceString ??
+      '-';
+
   void _selectPlan(SubscriptionPlanType plan) {
     setState(() => _selectedPlan = plan);
     HapticFeedback.mediumImpact();
@@ -456,9 +503,14 @@ class _PaywallPageState extends State<PaywallPage>
     final plans = state.plans;
     if (plans == null) return;
     _isRestoreOperation = false;
-    final plan = _selectedPlan == SubscriptionPlanType.yearly
-        ? plans.yearly
-        : plans.shortPlan;
+    final SubscriptionPlan plan;
+    if (_selectedPlan == SubscriptionPlanType.yearly) {
+      plan = plans.yearly!;
+    } else if (_selectedPlan == SubscriptionPlanType.lifetime) {
+      plan = plans.lifetime!;
+    } else {
+      plan = plans.shortPlan;
+    }
     context.read<SubscriptionCubit>().purchase(plan);
     HapticFeedback.mediumImpact();
   }
@@ -471,7 +523,7 @@ class _PaywallPageState extends State<PaywallPage>
 
   String _yearlyOriginalPrice(SubscriptionState state) {
     final plans = state.plans;
-    if (plans == null) return '-';
+    if (plans == null || plans.yearly == null) return '-';
     final short = plans.shortPlan;
     final shortProduct = short.package.storeProduct;
     final multiplier = short.type == SubscriptionPlanType.weekly ? 52 : 12;

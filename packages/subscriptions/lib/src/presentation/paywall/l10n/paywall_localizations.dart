@@ -47,6 +47,10 @@ class PaywallLocalizations {
       successDialogTitle: 'Welcome to Premium!',
       successSubtitle: 'Your plan is active until {0}. Thanks a ton for your support! ❤️',
       successDialogButtonLabel: 'Continue',
+      lifetimePlanTitle: 'Lifetime Access',
+      perLifetime: '{0} one-time',
+      bestValueBadge: 'BEST VALUE',
+      successSubtitleLifetime: 'You now have lifetime access. Thanks a ton for your support! ❤️',
       errors: _ErrorMessages(
         configuration: 'Subscription service is unavailable. Please try again later.',
         purchaseNotAllowed: 'Purchases are not allowed on this device.',
@@ -87,6 +91,10 @@ class PaywallLocalizations {
       successDialogTitle: '¡Bienvenido a Premium!',
       successSubtitle: 'Tu plan está activo hasta {0}. ¡Muchísimas gracias por tu apoyo! ❤️',
       successDialogButtonLabel: 'Continuar',
+      lifetimePlanTitle: 'Acceso de por vida',
+      perLifetime: '{0} pago único',
+      bestValueBadge: 'MEJOR OFERTA',
+      successSubtitleLifetime: 'Ahora tienes acceso de por vida. ¡Muchísimas gracias por tu apoyo! ❤️',
       errors: _ErrorMessages(
         configuration: 'Servicio de suscripción no disponible. Inténtalo de nuevo más tarde.',
         purchaseNotAllowed: 'Las compras no están permitidas en este dispositivo.',
@@ -127,6 +135,10 @@ class PaywallLocalizations {
       successDialogTitle: 'Bienvenue dans Premium !',
       successSubtitle: 'Votre abonnement est actif jusqu\'au {0}. Merci infiniment pour votre soutien ! ❤️',
       successDialogButtonLabel: 'Continuer',
+      lifetimePlanTitle: 'Accès à vie',
+      perLifetime: '{0} paiement unique',
+      bestValueBadge: 'MEILLEURE OFFRE',
+      successSubtitleLifetime: 'Vous avez maintenant un accès à vie. Merci infiniment pour votre soutien ! ❤️',
       errors: _ErrorMessages(
         configuration: 'Service d\'abonnement indisponible. Réessayez plus tard.',
         purchaseNotAllowed: 'Les achats ne sont pas autorisés sur cet appareil.',
@@ -167,6 +179,10 @@ class PaywallLocalizations {
       successDialogTitle: 'Willkommen bei Premium!',
       successSubtitle: 'Dein Plan ist aktiv bis {0}. Vielen herzlichen Dank für deine Unterstützung! ❤️',
       successDialogButtonLabel: 'Weiter',
+      lifetimePlanTitle: 'Lebenslanger Zugang',
+      perLifetime: '{0} einmalig',
+      bestValueBadge: 'BESTES ANGEBOT',
+      successSubtitleLifetime: 'Du hast jetzt lebenslangen Zugang. Vielen herzlichen Dank für deine Unterstützung! ❤️',
       errors: _ErrorMessages(
         configuration: 'Abonnementdienst nicht verfügbar. Versuche es später erneut.',
         purchaseNotAllowed: 'Käufe sind auf diesem Gerät nicht erlaubt.',
@@ -207,6 +223,10 @@ class PaywallLocalizations {
       successDialogTitle: 'Bem-vindo ao Premium!',
       successSubtitle: 'Seu plano está ativo até {0}. Muito obrigado pelo seu apoio! ❤️',
       successDialogButtonLabel: 'Continuar',
+      lifetimePlanTitle: 'Acesso vitalício',
+      perLifetime: '{0} pagamento único',
+      bestValueBadge: 'MELHOR OFERTA',
+      successSubtitleLifetime: 'Agora você tem acesso vitalício. Muito obrigado pelo seu apoio! ❤️',
       errors: _ErrorMessages(
         configuration: 'Serviço de assinatura indisponível. Tente novamente mais tarde.',
         purchaseNotAllowed: 'Compras não são permitidas neste dispositivo.',
@@ -407,6 +427,10 @@ class PaywallLocalizations {
       successDialogTitle: 'Добро пожаловать в Premium!',
       successSubtitle: 'Ваш план активен до {0} Огромное спасибо за вашу поддержку! ❤️',
       successDialogButtonLabel: 'Продолжить',
+      lifetimePlanTitle: 'Навсегда',
+      perLifetime: '{0} один раз',
+      bestValueBadge: 'ЛУЧШАЯ ЦЕНА',
+      successSubtitleLifetime: 'Теперь у вас пожизненный доступ. Огромное спасибо за вашу поддержку! ❤️',
       errors: _ErrorMessages(
         configuration: 'Сервис подписки недоступен. Попробуйте позже.',
         purchaseNotAllowed: 'Покупки не разрешены на этом устройстве.',
@@ -1140,7 +1164,16 @@ class _LD {
     required this.successSubtitle,
     required this.successDialogButtonLabel,
     required this.errors,
-  }) : monthlyPlanTitle = monthlyPlanTitle ?? weeklyPlanTitle;
+    String? lifetimePlanTitle,
+    String? perLifetime,
+    String? bestValueBadge,
+    String? successSubtitleLifetime,
+  }) : monthlyPlanTitle = monthlyPlanTitle ?? weeklyPlanTitle,
+       lifetimePlanTitle = lifetimePlanTitle ?? 'Lifetime Access',
+       perLifetime = perLifetime ?? '{0} one-time',
+       bestValueBadge = bestValueBadge ?? 'BEST VALUE',
+       successSubtitleLifetime = successSubtitleLifetime ??
+           'You now have lifetime access. Thanks a ton for your support! ❤️';
 
   final String title;
   final String yearlyPlanTitle;
@@ -1177,6 +1210,11 @@ class _LD {
   final String successSubtitle;
   final String successDialogButtonLabel;
   final _ErrorMessages errors;
+  final String lifetimePlanTitle;
+  /// Price subtitle template for lifetime tile (e.g. "$11.99 one-time"). Use `{0}` for price.
+  final String perLifetime;
+  final String bestValueBadge;
+  final String successSubtitleLifetime;
 
   PaywallStrings toStrings(int? trialPeriodDays) => PaywallStrings(
     title: title,
@@ -1187,6 +1225,7 @@ class _LD {
     monthlyPlanTitle: trialPeriodDays != null
         ? monthlyPlanTitle.replaceFirst('{0}', '$trialPeriodDays')
         : monthlyPlanTitleNoTrial,
+    lifetimePlanTitle: lifetimePlanTitle,
     yearlyPriceSubtitleBuilder: (actual, original, style) => Text.rich(
       TextSpan(
         style: style,
@@ -1212,8 +1251,10 @@ class _LD {
     monthlyPriceSubtitleBuilder: (price) => trialPeriodDays != null
         ? thenPerMonth.replaceFirst('{0}', price)
         : perMonth.replaceFirst('{0}', price),
+    lifetimePriceSubtitleBuilder: (price) => perLifetime.replaceFirst('{0}', price),
     activePlanSubtitleBuilder: (date) => activeUntil.replaceFirst('{0}', date),
     discountBadgeBuilder: (pct) => discountBadge.replaceFirst('{0}', '$pct'),
+    bestValueBadgeText: bestValueBadge,
     freeTrialLabel: freeTrialLabel,
     freeTrialBadgeText: freeTrialBadgeText,
     tryForFreeLabel: tryForFreeLabel.replaceFirst('{0}', '${trialPeriodDays ?? 3}'),
@@ -1227,6 +1268,7 @@ class _LD {
     errorSubtitleBuilder: errors.forFailure,
     successDialogTitle: successDialogTitle,
     successSubtitleBuilder: (date) => successSubtitle.replaceFirst('{0}', date),
+    successSubtitleLifetime: successSubtitleLifetime,
     successDialogButtonLabel: successDialogButtonLabel,
   );
 }

@@ -28,3 +28,4 @@ export 'src/permissions/cubit/permissions_cubit.dart';
 export 'src/permissions/controller/permissions_controller.dart';
 export 'src/permissions/controller/permissions_injector.dart';
 export 'src/extensions/app_extensions.dart';
+export 'src/app_review/app_review_service.dart';

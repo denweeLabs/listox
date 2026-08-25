@@ -1,33 +1,26 @@
-import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/foundation.dart';
 
 @immutable
 class ConnectivityState {
-  final ConnectivityResult connectivityResult;
+  const ConnectivityState({required this.isConnected});
 
-  const ConnectivityState({required this.connectivityResult});
+  factory ConnectivityState.initial() =>
+      const ConnectivityState(isConnected: true);
 
-  factory ConnectivityState.initial() => const ConnectivityState(
-        connectivityResult: ConnectivityResult.wifi,
-      );
+  final bool isConnected;
 
-  bool get isConnected => connectivityResult != ConnectivityResult.none;
-
-  ConnectivityState copyWith({ConnectivityResult? connectivityResult}) {
-    return ConnectivityState(
-      connectivityResult: connectivityResult ?? this.connectivityResult,
-    );
+  ConnectivityState copyWith({bool? isConnected}) {
+    return ConnectivityState(isConnected: isConnected ?? this.isConnected);
   }
 
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is ConnectivityState &&
-          other.connectivityResult == connectivityResult;
+      other is ConnectivityState && other.isConnected == isConnected;
 
   @override
-  int get hashCode => connectivityResult.hashCode;
+  int get hashCode => isConnected.hashCode;
 
   @override
-  String toString() => 'ConnectivityState(connectivityResult: $connectivityResult)';
+  String toString() => 'ConnectivityState(isConnected: $isConnected)';
 }

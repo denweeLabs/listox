@@ -12,6 +12,8 @@ class AnimatedNumber extends StatelessWidget {
     this.duration = const Duration(milliseconds: 900),
     this.fractionDigits = 0,
     this.decimalSeparator = '.',
+    this.thousandSeparator,
+    this.wholeDigits = 1,
   });
 
   final num number;
@@ -22,6 +24,8 @@ class AnimatedNumber extends StatelessWidget {
   final Duration duration;
   final int fractionDigits;
   final String decimalSeparator;
+  final String? thousandSeparator;
+  final int wholeDigits;
 
   @override
   Widget build(BuildContext context) {
@@ -34,6 +38,8 @@ class AnimatedNumber extends StatelessWidget {
       prefix: prefix,
       fractionDigits: fractionDigits,
       decimalSeparator: decimalSeparator,
+      thousandSeparator: thousandSeparator,
+      wholeDigits: wholeDigits,
     );
   }
 }

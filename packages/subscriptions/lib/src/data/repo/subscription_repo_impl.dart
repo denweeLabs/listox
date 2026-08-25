@@ -140,14 +140,20 @@ class SubscriptionRepoImpl implements SubscriptionRepo {
     if (entitlement == null) return null;
 
     final expiresAt = DateTime.tryParse(entitlement.expirationDate ?? '');
-    if (expiresAt == null) return null;
+
+    // Lifetime purchases have no expiration date — use a far-future sentinel.
+    final effectiveExpiry = expiresAt ??
+        (_config.productIds.variant.hasLifetime
+            ? DateTime(2099, 12, 31, 23, 59, 59)
+            : null);
+    if (effectiveExpiry == null) return null;
 
     return UserSubscription(
       planType: SubscriptionPlanType.fromProductId(
         entitlement.productIdentifier,
         _config.productIds,
       ),
-      expiresAt: expiresAt,
+      expiresAt: effectiveExpiry,
     );
   }
 }

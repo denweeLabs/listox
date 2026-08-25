@@ -15,6 +15,8 @@ abstract class SubscriptionState with _$SubscriptionState {
 
   bool get isPremium => subscription?.isActive ?? false;
 
+  bool get isLifetime => subscription?.planType == SubscriptionPlanType.lifetime;
+
   DateTime? get expiry => subscription?.expiresAt;
 
   bool get isBusy => isInitializing || isPurchasing || isRestoring;

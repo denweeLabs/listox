@@ -7,7 +7,11 @@ class LocalSecureStorage {
 
   static LocalSecureStorage getInstance() {
     const aOptions = AndroidOptions(encryptedSharedPreferences: true);
-    final storage = FlutterSecureStorage(aOptions: aOptions);
+    // synchronizable: true stores the value in iCloud Keychain, which
+    // persists across app reinstalls on iOS as long as the user's iCloud
+    // account remains the same — prevents free-scan abuse via reinstall.
+    const iOptions = IOSOptions(synchronizable: true);
+    final storage = FlutterSecureStorage(aOptions: aOptions, iOptions: iOptions);
     return LocalSecureStorage._(storage);
   }
 
@@ -17,6 +21,15 @@ class LocalSecureStorage {
 
   Future<String?> getString({required String key}) {
     return _secureStorage.read(key: key);
+  }
+
+  Future<void> putInt({required String key, required int value}) async {
+    return _secureStorage.write(key: key, value: value.toString());
+  }
+
+  Future<int?> getInt({required String key}) async {
+    final value = await _secureStorage.read(key: key);
+    return value != null ? int.tryParse(value) : null;
   }
 
   Future<void> remove({required String key}) async {

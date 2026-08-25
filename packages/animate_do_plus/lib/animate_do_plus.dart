@@ -30,6 +30,7 @@ export 'src/route_aware_animations/route_aware_animated.dart';
 export 'src/route_aware_animations/route_observer_scope.dart';
 
 export 'src/loading_animations/loading_animation.dart';
+export 'src/loading_animations/time_based_loading_progress_widget.dart';
 
 export 'src/core/transforms/pixel_scale_transition.dart';
 export 'src/core/transforms/pixel_slide_transition.dart';

@@ -45,3 +45,18 @@ extension Unique<E, Id> on List<E> {
     return list;
   }
 }
+
+extension StringExtension on String {
+  String _capitalizeFirstCharacter(String text) {
+    if (text.isEmpty) {
+      return text;
+    }
+    final buffer = StringBuffer();
+    final raw = text;
+    buffer.write(raw[0].toUpperCase());
+    buffer.write(raw.substring(1));
+    return buffer.toString();
+  }
+
+  String get capitalizeFirstLetter => _capitalizeFirstCharacter(this);
+}

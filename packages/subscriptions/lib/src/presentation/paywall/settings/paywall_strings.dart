@@ -8,11 +8,14 @@ class PaywallStrings {
     required this.yearlyPlanTitle,
     required this.weeklyPlanTitle,
     required this.monthlyPlanTitle,
+    required this.lifetimePlanTitle,
     required this.yearlyPriceSubtitleBuilder,
     required this.weeklyPriceSubtitleBuilder,
     required this.monthlyPriceSubtitleBuilder,
+    required this.lifetimePriceSubtitleBuilder,
     required this.activePlanSubtitleBuilder,
     required this.discountBadgeBuilder,
+    required this.bestValueBadgeText,
     required this.freeTrialLabel,
     required this.freeTrialBadgeText,
     required this.tryForFreeLabel,
@@ -26,6 +29,7 @@ class PaywallStrings {
     required this.errorSubtitleBuilder,
     required this.successDialogTitle,
     required this.successSubtitleBuilder,
+    required this.successSubtitleLifetime,
     required this.successDialogButtonLabel,
   });
 
@@ -33,11 +37,14 @@ class PaywallStrings {
   final String yearlyPlanTitle;
   final String weeklyPlanTitle;
   final String monthlyPlanTitle;
+  final String lifetimePlanTitle;
   final Widget Function(String actualPrice, String originalPrice, TextStyle style) yearlyPriceSubtitleBuilder;
   final String Function(String price) weeklyPriceSubtitleBuilder;
   final String Function(String price) monthlyPriceSubtitleBuilder;
+  final String Function(String price) lifetimePriceSubtitleBuilder;
   final String Function(String expiryDate) activePlanSubtitleBuilder;
   final String Function(int percent) discountBadgeBuilder;
+  final String bestValueBadgeText;
   final String freeTrialLabel;
   final String freeTrialBadgeText;
   final String tryForFreeLabel;
@@ -51,5 +58,6 @@ class PaywallStrings {
   final String Function(SubscriptionFailure failure) errorSubtitleBuilder;
   final String successDialogTitle;
   final String Function(String expiryDate) successSubtitleBuilder;
+  final String successSubtitleLifetime;
   final String successDialogButtonLabel;
 }

@@ -55,7 +55,9 @@ class _PurchaseButton extends StatelessWidget {
     if (isActivePlan) {
       label = strings.activePlanLabel;
     } else {
-      label = selectedPlan != SubscriptionPlanType.yearly && hasTrial
+      final isShortPlan = selectedPlan == SubscriptionPlanType.weekly ||
+          selectedPlan == SubscriptionPlanType.monthly;
+      label = isShortPlan && hasTrial
           ? strings.tryForFreeLabel
           : strings.unlockLabel;
     }

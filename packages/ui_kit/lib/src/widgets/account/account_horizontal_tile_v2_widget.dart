@@ -49,6 +49,7 @@ class AccountHorizontalTileV2 extends StatelessWidget {
     this.iconGap = defaultIconGap,
     this.iconBoxSize = defaultIconBoxSize,
     this.iconSize = defaultIconSize,
+    this.actionIcon,
   });
 
   final String iconPath;
@@ -67,6 +68,7 @@ class AccountHorizontalTileV2 extends StatelessWidget {
   final double iconGap;
   final double iconBoxSize;
   final double iconSize;
+  final String? actionIcon;
 
   const AccountHorizontalTileV2.value({
     Key? key,
@@ -219,6 +221,7 @@ class AccountHorizontalTileV2 extends StatelessWidget {
     double iconGap = defaultIconGap,
     double iconBoxSize = defaultIconBoxSize,
     double iconSize = defaultIconSize,
+    String? actionIcon,
   }) : this._(
          key: key,
          iconPath: iconPath,
@@ -232,6 +235,7 @@ class AccountHorizontalTileV2 extends StatelessWidget {
          iconGap: iconGap,
          iconBoxSize: iconBoxSize,
          iconSize: iconSize,
+         actionIcon: actionIcon,
        );
 
   @override
@@ -335,7 +339,7 @@ class AccountHorizontalTileV2 extends StatelessWidget {
 
       case _TileType.more:
         return CommonAppIcon(
-          path: UiKitAssets.arrowRightIos,
+          path: actionIcon ?? UiKitAssets.arrowRightIos,
           color: context.iconColorTernary,
           size: 20,
         );

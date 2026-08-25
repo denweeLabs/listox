@@ -6,6 +6,8 @@ enum AppPermissionType {
   notifications,
   photosFull,
   photosAdd,
+  camera,
+  location,
 }
 
 extension AppPermissionTypeX on AppPermissionType {
@@ -27,6 +29,10 @@ extension AppPermissionTypeX on AppPermissionType {
       ),
       AppPermissionType.photosFull => AppSettings.openAppSettings(),
       AppPermissionType.photosAdd => AppSettings.openAppSettings(),
+      AppPermissionType.camera => AppSettings.openAppSettings(),
+      AppPermissionType.location => AppSettings.openAppSettings(
+        type: AppSettingsType.location,
+      ),
     };
   }
 }

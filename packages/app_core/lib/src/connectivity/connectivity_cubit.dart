@@ -1,7 +1,5 @@
 import 'dart:async';
 
-import 'package:connectivity_plus/connectivity_plus.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -17,16 +15,17 @@ extension ConnectivityX on BuildContext {
 class ConnectivityCubit extends Cubit<ConnectivityState> {
   final ConnectivityService _service = ConnectivityService();
 
-  StreamSubscription<ConnectivityResult>? _subscription;
+  StreamSubscription<bool>? _subscription;
 
   ConnectivityCubit() : super(ConnectivityState.initial()) {
+    _service.checkConnectivityNow().then(_onChanged);
     _subscription = _service.connectivityState().listen(_onChanged);
   }
 
-  Future<void> _onChanged(ConnectivityResult result) async {
-    if (state.connectivityResult != result) {
-      debugPrint('ConnectivityCubit: $result');
-      emit(state.copyWith(connectivityResult: result));
+  void _onChanged(bool isConnected) {
+    if (state.isConnected != isConnected) {
+      debugPrint('ConnectivityCubit: isConnected=$isConnected');
+      emit(state.copyWith(isConnected: isConnected));
     }
   }
 

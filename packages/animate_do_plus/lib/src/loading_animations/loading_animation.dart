@@ -2,7 +2,7 @@ import 'package:animate_do_plus/src/loading_animations/double_bounce_loader_widg
 import 'package:flutter/material.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 
-enum AppLoadingIndicatorType { doubleBounce, hexagonDots }
+enum AppLoadingIndicatorType { doubleBounce, hexagonDots, fourRotatingDots }
 
 const appLoadingIndicatorDefaultType = AppLoadingIndicatorType.doubleBounce;
 const appLoadingIndicatorDefaultSize = 22.0;
@@ -33,6 +33,8 @@ class AppLoadingIndicator extends StatelessWidget {
         return DoubleBounceLoader(color: color, size: size + 4);
       case AppLoadingIndicatorType.hexagonDots:
         return LoadingAnimationWidget.hexagonDots(color: color, size: size);
+      case AppLoadingIndicatorType.fourRotatingDots:
+        return LoadingAnimationWidget.fourRotatingDots(color: color, size: size);
     }
   }
 }

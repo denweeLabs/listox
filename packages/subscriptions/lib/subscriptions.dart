@@ -13,10 +13,11 @@ library;
 ///     google: '', // TBD
 ///     test: 'test_wnJuVXZzvgQRRSSGkwjCEMGHPUk',
 ///   ),
-///   productIds: const SubscriptionProductIds.weekly(
-///     weekly: 'denwee_listox_premium_week',
-///     yearly: 'denwee_listox_premium_year',
+///   productIds: const SubscriptionProductIds.weeklyAndLifetime(
+///     weekly: 'denwee_app_premium_week',
+///     lifetime: 'denwee_app_premium_lifetime',
 ///   ),
+///   // or: SubscriptionProductIds.weeklyAndYearly / monthlyAndYearly / monthlyAndLifetime
 ///   entitlementId: 'premium',
 ///   envPrefix: getIt<String>(instanceName: 'ENV_PREFIX'),
 ///   isDebug: getIt<String>(instanceName: 'ENV') == Env.dev,

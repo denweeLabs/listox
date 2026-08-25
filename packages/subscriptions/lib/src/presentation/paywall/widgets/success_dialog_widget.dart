@@ -2,13 +2,13 @@ part of 'package:subscriptions/src/presentation/paywall/paywall_page.dart';
 
 class _SuccessDialog extends StatelessWidget {
   const _SuccessDialog({
-    required this.expiryDate,
+    required this.subtitle,
     required this.theme,
     required this.strings,
     required this.onDismiss,
   });
 
-  final String expiryDate;
+  final String subtitle;
   final PaywallTheme theme;
   final PaywallStrings strings;
   final VoidCallback onDismiss;
@@ -27,7 +27,7 @@ class _SuccessDialog extends StatelessWidget {
         ),
         Center(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 32),
+            padding: const EdgeInsets.symmetric(horizontal: 42),
             child: Material(
               color: Colors.transparent,
               child: DecoratedBox(
@@ -49,22 +49,13 @@ class _SuccessDialog extends StatelessWidget {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      PhysicalModel(
-                        elevation: 2,
-                        shape: BoxShape.circle,
-                        color: theme.primaryContainer,
-                        shadowColor: Colors.black45,
-                        child: Padding(
-                          padding: const EdgeInsets.all(16),
-                          child: SvgPicture.asset(
-                            PaywallAssets.verify,
-                            colorFilter: ColorFilter.mode(
-                              theme.primaryAccentColor,
-                              BlendMode.srcIn,
-                            ),
-                            width: 42,
-                          ),
+                      SvgPicture.asset(
+                        PaywallAssets.verify,
+                        colorFilter: ColorFilter.mode(
+                          theme.primaryAccentColor,
+                          BlendMode.srcIn,
                         ),
+                        width: 72,
                       ),
                       const SizedBox(height: 24),
                       Text(
@@ -79,7 +70,7 @@ class _SuccessDialog extends StatelessWidget {
                       ),
                       const SizedBox(height: 8),
                       Text(
-                        strings.successSubtitleBuilder(expiryDate),
+                        subtitle,
                         style: TextStyle(
                           fontSize: 15,
                           color: theme.textColorSecondary,

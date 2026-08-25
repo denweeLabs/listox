@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
       google: '', // TBD
       test: 'test_wnJuVXZzvgQRRSSGkwjCEMGHPUk',
     ),
-    productIds: const SubscriptionProductIds.monthly(
+    productIds: const SubscriptionProductIds.monthlyAndYearly(
       monthly: 'denwee_listox_month',
       yearly: 'denwee_listox_year',
       trialPeriodDays: 3,

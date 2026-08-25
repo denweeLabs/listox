@@ -13,43 +13,44 @@ class FadeSlideupPageRouteBuilder<T> extends PageRouteBuilder<T> {
     Curve fadeReverseCurve = Curves.easeInOutQuart,
     Curve slideCurve = Curves.fastEaseInToSlowEaseOut,
     Curve slideReverseCurve = Curves.easeInOutQuad,
+    bool useFade = true,
     super.barrierDismissible,
     super.barrierColor,
   }) : super(
-          opaque: false,
-          transitionDuration: duration,
-          reverseTransitionDuration: reverseDuration,
-          pageBuilder: (context, animation, secondaryAnimation) => builder(context),
-          transitionsBuilder: (context, animation, secondaryAnimation, child) {
-            final fade = Tween<double>(
-              begin: 0.0,
-              end: 1.0,
-            ).animate(
-              CurvedAnimation(
-                parent: animation,
-                curve: fadeCurve,
-                reverseCurve: fadeReverseCurve,
-              ),
-            );
+         opaque: false,
+         transitionDuration: duration,
+         reverseTransitionDuration: reverseDuration,
+         pageBuilder: (context, animation, secondaryAnimation) =>
+             builder(context),
+         transitionsBuilder: (context, animation, secondaryAnimation, child) {
+           final slide =
+               Tween<Offset>(
+                 begin: Offset(0.0, slideBegin),
+                 end: Offset.zero,
+               ).animate(
+                 CurvedAnimation(
+                   parent: animation,
+                   curve: slideCurve,
+                   reverseCurve: slideReverseCurve,
+                 ),
+               );
 
-            final slide = Tween<Offset>(
-              begin: Offset(0.0, slideBegin),
-              end: Offset.zero,
-            ).animate(
-              CurvedAnimation(
-                parent: animation,
-                curve: slideCurve,
-                reverseCurve: slideReverseCurve,
-              ),
-            );
+           if (useFade) {
+             final fade = Tween<double>(begin: 0.0, end: 1.0).animate(
+               CurvedAnimation(
+                 parent: animation,
+                 curve: fadeCurve,
+                 reverseCurve: fadeReverseCurve,
+               ),
+             );
 
-            return SlideTransition(
-              position: slide,
-              child: FadeTransition(
-                opacity: fade,
-                child: child,
-              ),
-            );
-          },
-        );
+             return SlideTransition(
+               position: slide,
+               child: FadeTransition(opacity: fade, child: child),
+             );
+           }
+
+           return SlideTransition(position: slide, child: child);
+         },
+       );
 }
