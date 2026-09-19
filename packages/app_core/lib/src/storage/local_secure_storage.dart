@@ -6,7 +6,9 @@ class LocalSecureStorage {
   const LocalSecureStorage._(this._secureStorage);
 
   static LocalSecureStorage getInstance() {
-    const aOptions = AndroidOptions(encryptedSharedPreferences: true);
+    // encryptedSharedPreferences was dropped in flutter_secure_storage 10 —
+    // Android encrypts by default now.
+    const aOptions = AndroidOptions();
     // synchronizable: true stores the value in iCloud Keychain, which
     // persists across app reinstalls on iOS as long as the user's iCloud
     // account remains the same — prevents free-scan abuse via reinstall.
